@@ -5,6 +5,8 @@ export const theme = {
     grey: "#E4E6F0",
     lightBlue: "#D6E4FF",
     darkerGrey: "#7E839A",
+    woodsmoke: "#18181B",//navigation
+    waterloo: "#7E839A", //text input
   },
   breakpoint: {
     full: "1400px",
