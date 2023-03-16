@@ -1,9 +1,11 @@
+import HeaderMovies from "./Headre/movis/index"
 
 
 function App() {
   return (
     <div>
- <h1> MOVIE BROWSER</h1>
+      <HeaderMovies />
+      <h1> MOVIE BROWSER</h1>
     </div>
   );
 }
