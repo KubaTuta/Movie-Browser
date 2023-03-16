@@ -6,7 +6,7 @@ function App() {
     <div>
       <HeaderMovies />
       <h1> MOVIE BROWSER</h1>
-    </div>
+      </div>
   );
 }
 
