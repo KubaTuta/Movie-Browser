@@ -9,9 +9,9 @@ export const theme = {
     waterloo: "#7E839A", //text input
   },
   breakpoint: {
-    full: "1400px",
-    medium: "1052px",
-    small: "704px",
-    mobile: "450px",
+    full: "1400",
+    medium: "1052",
+    small: "704",
+    mobile: "450",
   }
 };
