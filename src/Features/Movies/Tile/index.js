@@ -23,7 +23,7 @@ const Tile = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch((fetchMoviesPending()));
+    dispatch((fetchMoviesPending(1)));
   }, [dispatch])
 
   const movies = useSelector(selectMovies);
