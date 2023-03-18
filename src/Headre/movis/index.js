@@ -1,26 +1,24 @@
-import { Image, Navigation, NavLinks, NavLinkStyled, NavH1, NavInput, NavigationBoxStyled } from "./styled"
-import stroke from "../../image/stroke.png";
-import { ReactComponent as Elipse } from '../../image/elipse.svg';
-
-
-
+import { NavIconInput,NavBoxLine, Navigation, NavLinks, NavLinkStyled, NavH1, NavInput, NavigationBoxStyled } from "./styled"
+import { ReactComponent as Stroke } from "../../image/stroke.svg"
 
 const HeaderMovies = () => {
   return (
     <NavigationBoxStyled>
       <Navigation>
-        <Image src={stroke} alt="" />
-        <NavH1>MOVIES BROWSER</NavH1>
-        <NavLinks>
-          <NavLinkStyled>movies</NavLinkStyled>
-          <NavLinkStyled>people</NavLinkStyled>
-        </NavLinks><Elipse />
+        <NavBoxLine>
+          <Stroke />
+          <NavH1>MOVIES BROWSER</NavH1>
+          <NavLinks>
+            <NavLinkStyled>movies</NavLinkStyled>
+            <NavLinkStyled>people</NavLinkStyled>
+          </NavLinks></NavBoxLine>
+        <NavIconInput>
         <NavInput
           type="text"
-          placeholder="Search for movies"></NavInput>
+          placeholder="Search for movies..."></NavInput>
+        </NavIconInput>
       </Navigation>
     </NavigationBoxStyled>)
-
-};
+    };
 
 export default HeaderMovies;
