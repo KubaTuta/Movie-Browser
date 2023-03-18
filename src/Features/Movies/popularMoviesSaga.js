@@ -2,9 +2,9 @@ import { call, put, takeLatest } from "redux-saga/effects";
 import { getApi } from "./getApi";
 import { fetchMoviesSuccess, fetchMoviesError, fetchMoviesPending } from "./popularMoviesSlice";
 
-function* fetchPopularMoviesHandler() {
+function* fetchPopularMoviesHandler({payload: page}) {
   try {
-    const popularMovies = yield call(getApi);
+    const popularMovies = yield call(getApi, page);
     yield put(fetchMoviesSuccess(popularMovies));
   }
   catch (error) {
