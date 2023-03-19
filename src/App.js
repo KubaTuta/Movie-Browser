@@ -1,13 +1,13 @@
 import HeaderMovies from "./Headre/movis/index"
-
+import Movies from "./Features/Movies";
 
 function App() {
   return (
-    <div>
-      <HeaderMovies />
-      <h1> MOVIE BROWSER</h1>
-      </div>
-  );
+  <>
+  <HeaderMovies />
+  <Movies />
+  </>
+  )
 }
 
 export default App;
