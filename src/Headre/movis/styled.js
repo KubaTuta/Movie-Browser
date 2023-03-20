@@ -14,10 +14,10 @@ export const Navigation = styled.div`
     justify-content: space-between;
     align-items:center;
     
-  @media(max-width:${({ theme }) => theme.breakpoint.full}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.full}) {
     margin:0 10px;
   };
-  @media(max-width:${({ theme }) => theme.breakpoint.medium}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
     justify-content:center;
     margin:auto;
     flex-wrap:wrap;
@@ -28,7 +28,7 @@ export const Navigation = styled.div`
 export const NavBoxLine = styled.div`
     display:flex;
     align-items: center;
-  @media(max-width:${({ theme }) => theme.breakpoint.small}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     flex-basis:90%;
    
   } ;
@@ -42,10 +42,10 @@ export const NavH1 = styled.h1`
     letter-spacing: -1.5px;
     text-transform: capitalize;
   
-  @media(max-width:${({ theme }) => theme.breakpoint.medium}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
    
   }
-  @media(max-width:${({ theme }) => theme.breakpoint.small}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     font-size: 80%;
     flex-wrap:nowrap;
   } 
@@ -59,7 +59,7 @@ export const NavLinks = styled.ul`
     margin-left:5px;
     flex-wrap:nowrap;
     
-  @media(max-width:${({ theme }) => theme.breakpoint.small}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     margin:auto;
     font-size:12px;
   }; 
@@ -73,7 +73,7 @@ export const NavLinkStyled = styled.li`
     padding:20px;
     align-self: flex-end;
  
-  @media(max-width:${({ theme }) => theme.breakpoint.small}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     
     margin:auto;
     font-size:12px;
@@ -91,7 +91,7 @@ export const NavIconInput = styled.label`
     flex-basis: 432px;
     display: flex;
   
-  @media(max-width:${({ theme }) => theme.breakpoint.small}px) {
+  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     flex-basis: 90%;}
 `;
 
