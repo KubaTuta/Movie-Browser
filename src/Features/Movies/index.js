@@ -1,5 +1,5 @@
-import { Container } from "../../styled";
-import { Header } from "./styled";
+import { Container } from "../../common/Container/styled";
+import { Header } from "../../common/Header/styled";
 import Pagination from "./Pagination";
 import Tile from "./Tile";
 const exampleData = require("./examplePopularMovies.json");
