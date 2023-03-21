@@ -28,6 +28,7 @@ export const Navigation = styled.div`
 export const NavBoxLine = styled.div`
     display:flex;
     align-items: center;
+    
   @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     flex-basis:90%;
    
@@ -42,9 +43,6 @@ export const NavH1 = styled.h1`
     letter-spacing: -1.5px;
     text-transform: capitalize;
   
-  @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
-   
-  }
   @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     font-size: 80%;
     flex-wrap:nowrap;
@@ -72,9 +70,8 @@ export const NavLinkStyled = styled.li`
     text-transform: uppercase;
     padding:20px;
     align-self: flex-end;
- 
+
   @media(max-width:${({ theme }) => theme.breakpoint.small}) {
-    
     margin:auto;
     font-size:12px;
     padding:20px 10px;
