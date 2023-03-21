@@ -7,9 +7,9 @@ export const Container = styled.main`
         max-width: 1020px;
   }
   @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
-    max-width: 592px;
+    max-width: 600px;
   }
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    max-width: 288px;
+    width: 288px;
   }
   `;
