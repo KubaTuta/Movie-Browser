@@ -9,11 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   
-  body {
+  #root {
     background-color: ${({ theme }) => theme.color.background};
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; 
-    padding: 0 16px;
- }
+  }
  
 `
