@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import elipse from "../../image/elipse.svg"
+
 
 export const NavigationBoxStyled = styled.div`
     background:${({ theme }) => theme.color.woodsmoke};
@@ -16,13 +16,13 @@ export const Navigation = styled.div`
     
   @media(max-width:${({ theme }) => theme.breakpoint.full}) {
     margin:0 10px;
-  };
+  }
   @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
     justify-content:center;
     margin:auto;
     flex-wrap:wrap;
     flex-basis:80%;
-  };
+  }
 `;
 
 export const NavBoxLine = styled.div`
@@ -31,7 +31,7 @@ export const NavBoxLine = styled.div`
   @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     flex-basis:90%;
    
-  } ;
+  } 
 `;
 
 export const NavH1 = styled.h1`
@@ -81,16 +81,19 @@ export const NavLinkStyled = styled.li`
   };
 `;
 
-export const NavIconInput = styled.label`
-    background-image:url("${elipse}") ;
-    background-color:white;
-    background-repeat: no-repeat;
-    background-position:17px 50%;
-    border-radius: 33px;
-    border: 1px solid #E4E6F0;
+export const NavWrapperInput = styled.div`
     flex-basis: 432px;
     display: flex;
-  
+    padding: 16px;
+`;
+
+export const NavIconInput = styled.span`
+    position: absolute;
+    justify-content: center;
+    align-items:center;
+    align-self:center;
+    margin-left: 20px;
+ 
   @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     flex-basis: 90%;}
 `;
@@ -100,18 +103,18 @@ export const NavInput = styled.input`
     border: white;
     padding: 11px;
     font-size: 16px;
+    font-weight: 400;
+    padding-inline-start: 52px;
     flex-basis: 432px;
-    margin-left: 40px;
-    
+    width: 48px;
+    border-radius: 33px;
+    border: 1px solid #E4E6F0;
+  
   &:focus{
-    border:none;
-    color: none;
-    background-color: none;
-    background: none;
-    border-color: none;
+    outline:none
   }
+ 
   ::placeholder {
     color:${({ theme }) => theme.color.waterloo}
-     
   }
 `;
