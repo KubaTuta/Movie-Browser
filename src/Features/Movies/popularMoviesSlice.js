@@ -14,7 +14,6 @@ const popularMoviesSlice = createSlice({
       state.movies = movies.results;
       state.status = "success";
       state.page = movies.page;
-      state.total = movies.total_pages;
 
     },
     fetchMoviesError: state => {
@@ -33,7 +32,6 @@ export const selectMoviesState = state => state.popularMovies;
 export const selectStatus = state => selectMoviesState(state).status;
 export const selectMovies = state => selectMoviesState(state).movies;
 export const selectPages = state => selectMoviesState(state).page;
-export const selectTotal = state => selectMoviesState(state).total;
 
 export default popularMoviesSlice.reducer;
 
