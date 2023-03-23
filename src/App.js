@@ -1,12 +1,9 @@
-import HeaderMovies from "./Headre/movis/index"
-import Movies from "./Features/Movies";
+import Navigation from "./common/Navigation/index.js";
+
 
 function App() {
   return (
-  <>
-  <HeaderMovies />
-  <Movies />
-  </>
+  <Navigation />
   )
 }
 

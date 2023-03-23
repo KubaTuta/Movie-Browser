@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
 import { theme } from "./theme";
 import store from "./store";
@@ -11,12 +12,14 @@ import store from "./store";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <HashRouter>
     <Provider store={store}>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <App />
     </ThemeProvider>
     </Provider>
+    </HashRouter>
   </React.StrictMode>
 );
 
