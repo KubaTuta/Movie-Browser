@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Wrapper, Button, Text, InnerButtonText, RightArrow, LeftArrow } from "./styled";
-import { fetchMoviesPending, selectPages, selectTotal } from "../popularMoviesSlice";
+import { fetchMoviesPending, selectPages, selectTotal } from "../../Features/Movies/popularMoviesSlice";
 
 const Pagination = () => {
 
@@ -20,7 +20,7 @@ const Pagination = () => {
       >
         <LeftArrow />&nbsp;<InnerButtonText>Previous</InnerButtonText>
       </Button>
-      <Text>Page</Text><b>{page}</b><Text>of</Text><b>{total}</b>
+      <Text>Page</Text><b>{page}</b><Text>of</Text><b>500</b>
       <Button page={page} total={total}
         onClick={() => dispatch(fetchMoviesPending(page + 1))}
       >

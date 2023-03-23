@@ -1,8 +1,7 @@
-import { Container } from "../../common/Container/styled";
-import { Header } from "../../common/Header/styled";
-import Pagination from "./Pagination";
+import { Container } from "../../Common/Container/styled";
+import { Header } from "../../Common/Header/styled";
+import Pagination from "../../Common/Pagination/index";
 import Tile from "./Tile";
-const exampleData = require("./examplePopularMovies.json");
 
 const Movies = () => {
   return (
@@ -11,10 +10,7 @@ const Movies = () => {
         Popular movies
       </Header>
       <Tile />
-      <Pagination
-        page={exampleData.page}
-        total={exampleData.total_pages}
-      />
+      <Pagination />
     </Container>
   )
 };
