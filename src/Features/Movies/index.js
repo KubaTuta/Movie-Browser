@@ -1,6 +1,6 @@
-import { Container } from "../../Common/Container/styled";
-import { Header } from "../../Common/Header/styled";
-import Pagination from "../../Common/Pagination/index";
+import { Container } from "../../common/Container/styled";
+import { Header } from "../../common/Header/styled";
+import Pagination from "../../common/Pagination/index";
 import Tile from "./Tile";
 
 const Movies = () => {
