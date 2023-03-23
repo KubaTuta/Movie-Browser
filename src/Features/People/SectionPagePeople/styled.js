@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as poster } from "./poster.svg"
+
 
 export const WrapperPeople = styled.section`
     display: grid;
@@ -38,16 +38,16 @@ export const TileWrapperPeople = styled.div`
     }
 `;
 
-export const PosterPeople = styled(poster)`
+export const PosterPeople = styled.img`
     max-width: 177px;
     max-height: 264px;
-    margin:10px 16px 14px;
+    margin:10px 16px 8px 16px;
     border-radius: 5px;
   
   @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
     max-width: 120px;
     max-height: 178px;
-    margin: 8px;
+    margin: 8px 8px 0;
     }
 `;
 
@@ -55,7 +55,10 @@ export const NamePeople = styled.span`
     font-weight: 500;
     font-size: 22px;
     line-height: 130%;
-    margin-bottom:auto;
+    margin-bottom:8px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
     
   @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
     max-width: 136px;

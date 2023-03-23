@@ -27,7 +27,7 @@ const Tile = () => {
   }, [dispatch])
 
   const movies = useSelector(selectMovies);
-
+console.log(movies)
   const posterPath = "https://image.tmdb.org/t/p/w500";
   return (
     <GridWrapper>

@@ -1,5 +1,5 @@
 import PageTitle from "../../Comman/PageTitle";
-import SectionPeople from "../../Comman/SectionPagePeople";
+import SectionPeople from "./SectionPagePeople";
 import { Container } from "../../styled";
 
 const People = () => {
@@ -7,7 +7,7 @@ const People = () => {
     <>
       <Container>
         <PageTitle title="Popular people" />
-        <SectionPeople>nvnjk;jkljkl;jkgl;jkj;jkl;</SectionPeople>
+        <SectionPeople/>
       </Container>
     </>
 
