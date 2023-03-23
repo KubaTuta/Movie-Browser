@@ -84,7 +84,10 @@ export const StyledNavLink = styled(NavLink)`
     border: 1px solid ${({ theme }) => theme.color.white};
     border-radius: 24px;
     padding: 8px 24px;    
-  }    
+      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+        padding: 8px 12px;    
+      }    
+  }
   `;
 
 export const NavWrapperInput = styled.div`
