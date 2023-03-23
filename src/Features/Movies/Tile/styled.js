@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { ReactComponent as StarIco } from "./star.svg"
-import { ReactComponent as PosterIco } from "./no-poster.svg"
-
 
 export const GridWrapper = styled.div`
   display: grid;
@@ -49,14 +47,14 @@ margin-bottom: 8px;
   }
 `;
 
-export const noPoster = styled(PosterIco)`
-`
-
 export const TextInfoWrapper = styled.div`
 height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+@media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
+  justify-content: flex-start;
+  }
 `;
 
 export const TextWrapper = styled.div``
@@ -108,7 +106,6 @@ margin: 8px 8px;
   margin: 4px 4px;
 }
 `;
-
 
 export const VoteWrapper = styled.div`
 display: flex;
