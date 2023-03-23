@@ -75,6 +75,10 @@ export const NavLi = styled.li`
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.color.white};
+  padding: 8px 24px;    
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    padding: 8px 12px;    
+    }
     
   &:hover {
     cursor: pointer;
@@ -82,11 +86,7 @@ export const StyledNavLink = styled(NavLink)`
   
   &.active {
     border: 1px solid ${({ theme }) => theme.color.white};
-    border-radius: 24px;
-    padding: 8px 24px;    
-      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-        padding: 8px 12px;    
-      }    
+    border-radius: 24px;         
   }
   `;
 
