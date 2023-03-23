@@ -7,6 +7,8 @@ export const theme = {
     darkerGrey: "#7E839A",
     woodsmoke: "#18181B",
     waterloo: "#7E839A", 
+    active: "#0044CC",
+    inactive: "#7E839A",
   },
   breakpoint: {
     full: "1400px",
