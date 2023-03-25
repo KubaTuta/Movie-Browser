@@ -1,10 +1,15 @@
+import { Container } from "../../common/Container/styled";
+import { Header } from "../../common/Header/styled";
+import PagePeople from "./PagePeople";
+
 const People = () => {
   return (
-    <div>
-      <h1>
+    <Container>
+      <Header>
         People page
-      </h1>
-    </div>
+      </Header>
+      <PagePeople />
+    </Container>
   )
 };
 
