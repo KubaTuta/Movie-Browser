@@ -9,24 +9,28 @@ import {
   Poster,
   Title,
   Year,
-  GenersWrapper,
-  Genre,
   Star,
   VoteWrapper,
   VoteAverange,
   VoteCount,
-  GenerWrapper,
   TextInfoWrapper,
 } from "./styled";
+import Genres from "./Genres";
+import { fetchGenresPending, selectGenres } from "../../genresSlice";
 
 const Tile = () => {
   const dispatch = useDispatch();
   const movies = useSelector(selectMovies);
+  const genres = useSelector(selectGenres);
 
   useEffect(() => {
-    dispatch((fetchMoviesPending(1)));
-  }, [dispatch])
+    dispatch(fetchMoviesPending(1));
+  }, [dispatch]);
 
+  useEffect(() => {
+    dispatch(fetchGenresPending())
+  }, []);
+  
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
@@ -37,11 +41,7 @@ const Tile = () => {
           <TextInfoWrapper>
             <Title>{movie.original_title}</Title>
             <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
-            <GenersWrapper>
-              <GenerWrapper><Genre>Action</Genre></GenerWrapper>
-              <GenerWrapper><Genre>Comedy</Genre></GenerWrapper>
-              <GenerWrapper><Genre>Drama</Genre></GenerWrapper>
-            </GenersWrapper>
+            <Genres genres={genres} genreIds={movie.genre_ids}/>
             <VoteWrapper>
               <Star alt="" />
               <VoteAverange> {movie.vote_average}</VoteAverange>
