@@ -1,10 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Wrapper, Button, Text, InnerButtonText, RightArrow, LeftArrow, Bold } from "./styled";
-import { fetchMoviesPending, selectPages } from "../../Features/Movies/popularMoviesSlice";
 
-const Pagination = () => {
+const Pagination = ({ page, fetchApi }) => {
 
-  const page = useSelector(selectPages);
   const dispatch = useDispatch();
 
   return (
@@ -12,14 +10,14 @@ const Pagination = () => {
       <Button
         page={page}
         disabled={page === 1}
-        onClick={() => dispatch(fetchMoviesPending(1))}
+        onClick={() => dispatch(fetchApi(1))}
       >
         <LeftArrow page={page} /><LeftArrow page={page} />&nbsp;<InnerButtonText>First</InnerButtonText>
       </Button>
       <Button
         page={page}
         disabled={page === 1}
-        onClick={() => dispatch(fetchMoviesPending(page - 1))}
+        onClick={() => dispatch(fetchApi(page - 1))}
       >
         <LeftArrow page={page} />&nbsp;<InnerButtonText>Previous</InnerButtonText>
       </Button>
@@ -28,7 +26,7 @@ const Pagination = () => {
         page={page}
         total={500}
         disabled={page === 500}
-        onClick={() => dispatch(fetchMoviesPending(page + 1))}
+        onClick={() => dispatch(fetchApi(page + 1))}
       >
         <InnerButtonText>Next&nbsp;</InnerButtonText><RightArrow page={page} />
       </Button>
@@ -36,7 +34,7 @@ const Pagination = () => {
         page={page}
         total={500}
         disabled={page === 500}
-        onClick={() => dispatch(fetchMoviesPending(500))}
+        onClick={() => dispatch(fetchApi(500))}
       >
         <InnerButtonText>Last&nbsp;</InnerButtonText><RightArrow page={page} /><RightArrow page={page} />
       </Button>
