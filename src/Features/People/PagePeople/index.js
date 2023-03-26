@@ -6,19 +6,21 @@ import { selectPeople, fetchPeoplePending } from "../popularPeopleSlice";
 
 
 const PagePeople = () => {
+
   const dispatch = useDispatch();
+  const people = useSelector(selectPeople);
+
   useEffect(() => {
     dispatch((fetchPeoplePending(1)));
   }, [dispatch])
 
-  const people = useSelector(selectPeople);
-  console.log(people)
   const posterPath = "https://image.tmdb.org/t/p/w300";
+
   return (
 
     <WrapperPeople>
-      {people.map(person => (
-        <TileWrapperPeople key={person.id} >
+      {people.map((person, id) => (
+        <TileWrapperPeople key={id} >
           <PosterPeople src={`${posterPath}${person.profile_path}`} alt="" />
           <NamePeople>{person.name}</NamePeople>
         </TileWrapperPeople>
