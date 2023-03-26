@@ -21,7 +21,7 @@ const PagePeople = () => {
     <WrapperPeople>
       {people.map((person, id) => (
         <TileWrapperPeople key={id} >
-          <PosterPeople src={`${posterPath}${person.profile_path}`} alt="" />
+          <PosterPeople src={person.profile_path && `${posterPath}${person.profile_path}`} alt="" />
           <NamePeople>{person.name}</NamePeople>
         </TileWrapperPeople>
       ))}
