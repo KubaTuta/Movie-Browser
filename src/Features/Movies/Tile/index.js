@@ -25,11 +25,11 @@ const Tile = () => {
 
   useEffect(() => {
     dispatch(fetchMoviesPending(1));
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     dispatch(fetchGenresPending())
-  });
+  }, []);
   
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
