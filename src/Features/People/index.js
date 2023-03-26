@@ -6,7 +6,7 @@ const People = () => {
   return (
     <Container>
       <Header>
-        People page
+        Popular people
       </Header>
       <PagePeople />
     </Container>
