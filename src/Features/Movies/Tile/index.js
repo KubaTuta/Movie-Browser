@@ -27,17 +27,16 @@ const Tile = () => {
     dispatch((fetchMoviesPending(1)));
   }, [dispatch])
 
-
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
     <GridWrapper>
       {movies.map((movie, id) => (
         <TileWrapper key={id}>
-          <Poster src={`${posterPath}${movie.poster_path}`} alt="" />
+          <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
           <TextInfoWrapper>
             <Title>{movie.original_title}</Title>
-            <Year>{new Date(movie.release_date).getFullYear()}</Year>
+            <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
             <GenersWrapper>
               <GenerWrapper><Genre>Action</Genre></GenerWrapper>
               <GenerWrapper><Genre>Comedy</Genre></GenerWrapper>
@@ -50,8 +49,7 @@ const Tile = () => {
             </VoteWrapper>
           </TextInfoWrapper>
         </TileWrapper>
-      )
-      )}
+      ))}
     </GridWrapper>
   )
 }
