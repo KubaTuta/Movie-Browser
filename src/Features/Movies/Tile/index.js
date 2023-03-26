@@ -16,7 +16,7 @@ import {
   TextInfoWrapper,
 } from "./styled";
 import Genres from "./Genres";
-import { fetchGenresPending, selectGenres } from "../../genresSlice";
+import { fetchGenresPending, selectGenres } from "./Genres/genresSlice";
 
 const Tile = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Tile = () => {
 
   useEffect(() => {
     dispatch(fetchGenresPending())
-  }, []);
+  });
   
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
