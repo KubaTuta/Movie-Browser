@@ -21,18 +21,19 @@ import {
 
 const Tile = () => {
   const dispatch = useDispatch();
+  const movies = useSelector(selectMovies);
 
   useEffect(() => {
     dispatch((fetchMoviesPending(1)));
   }, [dispatch])
 
-  const movies = useSelector(selectMovies);
 
   const posterPath = "https://image.tmdb.org/t/p/w500";
+
   return (
     <GridWrapper>
-      {movies.map(movie => (
-        <TileWrapper key={movie.id}>
+      {movies.map((movie, id) => (
+        <TileWrapper key={id}>
           <Poster src={`${posterPath}${movie.poster_path}`} alt="" />
           <TextInfoWrapper>
             <Title>{movie.original_title}</Title>
