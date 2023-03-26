@@ -16,7 +16,6 @@ const popularPeopleSlice = createSlice({
           state.status = "success";
           state.page = person.page;
           state.name = person.name;
-    console.log(state.person)
         },
         fetchPeopleError: state => {
           state.status = "error";
