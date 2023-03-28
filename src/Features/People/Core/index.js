@@ -1,20 +1,20 @@
 import { useSelector } from "react-redux";
-import { selectStatus } from "../popularMoviesSlice";
-import Loading from "../../../common/Loading"
+import ErrorPage from "../../../common/ErrorPage/index";
+import Loading from "../../../common/Loading/index";
+import { selectStatus } from "../popularPeopleSlice";
 import Success from "./Success";
-import ErrorPage from "../../../common/ErrorPage";
 
 const Core = () => {
 
   const status = useSelector(selectStatus);
 
-  switch (status) {
+  switch(status) {
     case "pending":
       return <Loading />;
     case "success":
       return <Success />;
     default:
-      return <ErrorPage />;
+      return <ErrorPage />
   }
 };
 

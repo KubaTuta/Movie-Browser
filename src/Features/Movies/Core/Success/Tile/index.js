@@ -11,9 +11,9 @@ import {
   VoteCount,
   TextInfoWrapper,
 } from "./styled";
-import Genres from "./Genres";
+import Genres from "./Genres/index";
 import { useSelector } from "react-redux";
-import { selectMovies } from "../popularMoviesSlice";
+import { selectMovies } from "../../../popularMoviesSlice";
 import { selectGenres } from "./Genres/genresSlice";
 
 const Tile = () => {

@@ -3,7 +3,7 @@ import { Header } from "../../common/Header/styled";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchMoviesPending } from "./popularMoviesSlice";
-import { fetchGenresPending } from "./Tile/Genres/genresSlice";
+import { fetchGenresPending } from "./Core/Success/Tile/Genres/genresSlice";
 import Core from "./Core";
 
 const Movies = () => {
