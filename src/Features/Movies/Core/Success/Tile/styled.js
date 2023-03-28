@@ -5,14 +5,16 @@ export const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
   grid-gap: 24px;
+
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     grid-gap: 16px;
-  } ;
+  };
+
   @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     grid-gap: 16px;
-  } ;
+  };
 `;
 
 export const TileWrapper = styled.div`
@@ -24,16 +26,18 @@ export const TileWrapper = styled.div`
   padding: 16px;
   display: flex;
   flex-direction: column;
+
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     flex-direction: row;
     height: 201px;
     gap: 16px;
-  } ;
+  };
+
   @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     flex-direction: row;
     height: 201px;
     gap: 16px;
-  } ;
+  };
 `;
 
 export const Poster = styled.img`
