@@ -1,21 +1,29 @@
-import { useSelector } from "react-redux";
-import { selectPages } from "./popularMoviesSlice";
-import { fetchMoviesPending } from "./popularMoviesSlice";
 import { Container } from "../../common/Container/styled";
 import { Header } from "../../common/Header/styled";
-import Pagination from "../../common/Pagination/index";
-import Tile from "./Tile";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchMoviesPending } from "./popularMoviesSlice";
+import { fetchGenresPending } from "./Tile/Genres/genresSlice";
+import Core from "./Core";
 
 const Movies = () => {
-  const page = useSelector(selectPages);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(fetchMoviesPending(1));
+    // eslint-disable-next-line
+  }, []);
+ 
+  useEffect(() => {
+    dispatch(fetchGenresPending())
+    // eslint-disable-next-line
+  }, []);
   return (
     <Container>
       <Header>
         Popular movies
       </Header>
-      <Tile />
-      <Pagination page={page} fetchApi={fetchMoviesPending}/>
+      <Core />
     </Container>
   )
 };
