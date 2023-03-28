@@ -10,6 +10,7 @@ import {
   VoteAverange,
   VoteCount,
   TextInfoWrapper,
+  MovieData,
 } from "./styled";
 import Genres from "./Genres/index";
 import { useSelector } from "react-redux";
@@ -19,7 +20,7 @@ import { selectGenres } from "./Genres/genresSlice";
 const Tile = () => {
   const movies = useSelector(selectMovies);
   const genres = useSelector(selectGenres);
-  
+
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
@@ -28,9 +29,11 @@ const Tile = () => {
         <TileWrapper key={id}>
           <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
           <TextInfoWrapper>
-            <Title>{movie.original_title}</Title>
-            <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
-            <Genres genres={genres} genreIds={movie.genre_ids}/>
+            <MovieData>
+              <Title>{movie.original_title}</Title>
+              <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
+              <Genres genres={genres} genreIds={movie.genre_ids} />
+            </MovieData>
             <VoteWrapper>
               <Star alt="" />
               <VoteAverange> {movie.vote_average}</VoteAverange>
