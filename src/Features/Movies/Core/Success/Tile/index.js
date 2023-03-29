@@ -11,6 +11,7 @@ import {
   VoteCount,
   TextInfoWrapper,
 } from "./styled";
+import noPoster from "./noposter.svg";
 import Genres from "./Genres/index";
 import { useSelector } from "react-redux";
 import { selectMovies } from "../../../popularMoviesSlice";
@@ -19,18 +20,27 @@ import { selectGenres } from "./Genres/genresSlice";
 const Tile = () => {
   const movies = useSelector(selectMovies);
   const genres = useSelector(selectGenres);
-  
+
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
     <GridWrapper>
       {movies.map((movie, id) => (
         <TileWrapper key={id}>
-          <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
+          <>
+            {
+              movie.poster_path ?
+                (
+                  <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
+                ) : (
+                  <Poster src={noPoster} alt="" />
+                )
+            }
+          </>
           <TextInfoWrapper>
             <Title>{movie.original_title}</Title>
             <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
-            <Genres genres={genres} genreIds={movie.genre_ids}/>
+            <Genres genres={genres} genreIds={movie.genre_ids} />
             <VoteWrapper>
               <Star alt="" />
               <VoteAverange> {movie.vote_average}</VoteAverange>
