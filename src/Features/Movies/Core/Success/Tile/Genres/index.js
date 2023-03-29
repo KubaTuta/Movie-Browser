@@ -1,21 +1,21 @@
-import { GenersWrapper, GenerWrapper, Genre } from "./styled";
+import { GenresWrapper, GenreWrapper, Genre } from "./styled";
 
 const Genres = ({ genres, genreIds }) => {
 
   return (
-    <GenersWrapper>
+    <GenresWrapper>
       {genreIds && genreIds.map((genreId, id) => {
         const genreName = genres.find(genre => genreId === genre.id);
         return (
-          <GenerWrapper key={id}>
+          <GenreWrapper key={id}>
             <Genre>
               {genreName ? genreName.name : null}
             </Genre>
-          </GenerWrapper>
+          </GenreWrapper>
         )
       }
       )}
-    </GenersWrapper>
+    </GenresWrapper>
   )
 };
 
