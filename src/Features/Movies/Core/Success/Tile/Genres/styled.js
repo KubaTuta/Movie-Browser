@@ -18,7 +18,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 140%;
 margin: 8px 8px;
-@media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
+@media(max-width: ${({ theme }) => theme.breakpoint.small}) {
   font-size: 10px;
   margin: 4px 4px;
 }
