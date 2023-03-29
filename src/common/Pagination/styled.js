@@ -30,7 +30,7 @@ export const Button = styled.button`
   &:disabled {
     box-shadow: unset;
     cursor: not-allowed;
-    background-color: ${({ page, theme }) => ((page === 1) ? theme.color.grey : theme.color.lightBlue)}
+    background-color: ${({ page, theme }) => ((page === 1) ? theme.color.grey : theme.color.grey)}
   };
 
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {

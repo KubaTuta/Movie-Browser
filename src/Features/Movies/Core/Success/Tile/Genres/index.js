@@ -1,4 +1,4 @@
-import { GenersWrapper, GenerWrapper, Genre } from "../styled";
+import { GenersWrapper, GenerWrapper, Genre } from "./styled";
 
 const Genres = ({ genres, genreIds }) => {
 

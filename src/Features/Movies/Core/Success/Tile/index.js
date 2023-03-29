@@ -1,8 +1,4 @@
 
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { selectMovies, fetchMoviesPending } from "../popularMoviesSlice";
 import {
   GridWrapper,
   TileWrapper,
@@ -15,21 +11,14 @@ import {
   VoteCount,
   TextInfoWrapper,
 } from "./styled";
-import Genres from "./Genres";
-import { fetchGenresPending, selectGenres } from "./Genres/genresSlice";
+import Genres from "./Genres/index";
+import { useSelector } from "react-redux";
+import { selectMovies } from "../../../popularMoviesSlice";
+import { selectGenres } from "./Genres/genresSlice";
 
 const Tile = () => {
-  const dispatch = useDispatch();
   const movies = useSelector(selectMovies);
   const genres = useSelector(selectGenres);
-
-  useEffect(() => {
-    dispatch(fetchMoviesPending(1));
-  }, []);
-
-  useEffect(() => {
-    dispatch(fetchGenresPending())
-  }, []);
   
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
