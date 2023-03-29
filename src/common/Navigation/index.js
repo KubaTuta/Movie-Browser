@@ -13,8 +13,9 @@ import {
   NavLi,
   StyledNavLink,
   NavBoxFrame,
+  Stroke,
 } from "./styled"
-import { ReactComponent as Stroke } from "../../image/stroke.svg"
+
 import { ReactComponent as Elipse } from "../../image/elipse.svg"
 
 const Navigation = () => {
