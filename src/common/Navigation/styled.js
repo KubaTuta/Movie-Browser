@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { ReactComponent as stroke } from "../../image/stroke.svg"
 
 export const NavigationBoxStyled = styled.div`
   background: ${({ theme }) => theme.color.woodsmoke};
@@ -7,9 +8,15 @@ export const NavigationBoxStyled = styled.div`
 `;
 
 export const NavBoxFrame = styled.div`
-    max-width: ${({ theme }) => theme.breakpoint.full};
-    padding: 0 16px;
-    margin: 0 auto;
+  max-width: ${({ theme }) => theme.breakpoint.full};
+  padding: 0 16px;
+  margin: 0 auto;
+  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
+    padding: 0;
+  }
+  @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
+    padding: 0;
+  }
 `;
 
 export const NavigationWrapper = styled.div`
@@ -22,7 +29,7 @@ export const NavigationWrapper = styled.div`
   @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
     justify-content: center;
   };
-  @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
+  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
     justify-content: center;
   };
 `;
@@ -41,12 +48,22 @@ export const NavBoxLine = styled.div`
   };
 `;
 
+export const Stroke = styled(stroke)`
+  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    height: 12px;
+  };
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+    height: 12px;
+  };
+`;
+
 export const NavH1 = styled.h1`
   font-weight: 500;
   font-size: 24px;
   margin-left: 16px;
   letter-spacing: -1.5px;
   text-transform: capitalize;
+  white-space: nowrap;
 
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     font-size: 80%;
@@ -54,6 +71,7 @@ export const NavH1 = styled.h1`
 
   @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     font-size: 80%;
+    margin-left: 6px;
   };
 `;
 
@@ -64,6 +82,13 @@ export const NavLinks = styled.ul`
   flex: auto;
   margin-left: 5px;
   flex-wrap: nowrap;
+  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    margin-left: -5px;
+  };
+
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+    margin-left: -5px;
+  };
 `;
 
 export const NavLi = styled.li`
@@ -79,6 +104,7 @@ export const NavLi = styled.li`
   
   @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
     font-size:12px;
+    padding: 0 10px;
   };
 `;
 
@@ -108,7 +134,8 @@ export const StyledNavLink = styled(NavLink)`
 export const NavWrapperInput = styled.div`
   flex-basis: 432px;
   display: flex;
-  padding: 16px;
+  margin: 16px;
+  
   @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
     flex-basis: 543px;
   };
@@ -116,7 +143,7 @@ export const NavWrapperInput = styled.div`
     flex-basis: 432px;
   };
   @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
-    
+    flex-basis: 432px;
   };
 `;
 
@@ -126,10 +153,6 @@ export const NavIconInput = styled.span`
   align-items: center;
   align-self: center;
   margin-left: 20px;
-
-  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
-    flex-basis: 90%;
-  };
 `;
 
 export const NavInput = styled.input`
