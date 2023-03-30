@@ -12,6 +12,7 @@ import {
   TextInfoWrapper,
   MovieData,
 } from "./styled";
+import noPoster from "./noposter.svg";
 import Genres from "./Genres/index";
 import { useSelector } from "react-redux";
 import { selectMovies } from "../../../popularMoviesSlice";
@@ -27,7 +28,16 @@ const Tile = () => {
     <GridWrapper>
       {movies.map((movie, id) => (
         <TileWrapper key={id}>
-          <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
+          <>
+            {
+              movie.poster_path ?
+                (
+                  <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
+                ) : (
+                  <Poster src={noPoster} alt="" />
+                )
+            }
+          </>
           <TextInfoWrapper>
             <MovieData>
               <Title>{movie.original_title}</Title>
