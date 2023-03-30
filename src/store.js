@@ -1,7 +1,7 @@
 import createSagaMiddleware from '@redux-saga/core';
 import { configureStore } from '@reduxjs/toolkit';
 import rootSaga from './rootSaga';
-import popularMoviesReducer from './Features/Movies/popularMoviesSlice';
+import popularMoviesReducer from './Features/Movies/PopularMovies/popularMoviesSlice';
 import popularPeopleReducer from './Features/People/popularPeopleSlice';
 import genresReducer from "./common/MovieTile/Genres/genresSlice";
 

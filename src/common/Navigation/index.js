@@ -1,5 +1,4 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import Movies from "../../Features/Movies";
 import People from "../../Features/People";
 import {
   NavWrapperInput,
@@ -17,6 +16,7 @@ import {
 } from "./styled"
 
 import { ReactComponent as Elipse } from "../../image/elipse.svg"
+import Movies from "../../Features/Movies/PopularMovies";
 
 const Navigation = () => {
   return (
@@ -45,7 +45,7 @@ const Navigation = () => {
 
       </NavigationBoxStyled>
       <Routes>
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies" element={<Movies/>} />
         <Route path="/people" element={<People />} />
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>
