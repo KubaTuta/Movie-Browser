@@ -1,15 +1,18 @@
 import { Header3 } from "../../../common/Header/styled";
-import Header from "./Backdrop";
+import Backdrop from "./Backdrop";
 import TileDetails from "./TileDetails";
+import { Container } from "../../../common/Container/styled"
 
 const SingleMovie = () => {
   return (
-  <>
-  <Header />
-  <TileDetails/>
-  <Header3>Cast</Header3>
-  <Header3>Crew</Header3>
-  </>
+    <>
+      <Backdrop />
+      <Container>
+        <TileDetails />
+        <Header3>Cast</Header3>
+        <Header3>Crew</Header3>
+      </Container>
+    </>
   )
 };
 
