@@ -1,4 +1,5 @@
 
+import { useSelector } from "react-redux";
 import {
   GridWrapper,
   TileWrapper,
@@ -14,14 +15,10 @@ import {
 } from "./styled";
 import noPoster from "./noposter.svg";
 import Genres from "./Genres/index";
-import { useSelector } from "react-redux";
-import { selectMovies } from "../../../popularMoviesSlice";
 import { selectGenres } from "./Genres/genresSlice";
 
-const Tile = () => {
-  const movies = useSelector(selectMovies);
+const MovieTile = ({movies}) => {
   const genres = useSelector(selectGenres);
-
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
@@ -55,4 +52,4 @@ const Tile = () => {
     </GridWrapper>
   )
 }
-export default Tile;
+export default MovieTile;
