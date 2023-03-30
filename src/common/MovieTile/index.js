@@ -12,7 +12,6 @@ import {
   MovieData,
   PosterWrapper,
 } from "./styled";
-import { MoviesGridWrapper } from "../MoviesGridWrapper/styled";
 import noPoster from "./noposter.svg";
 import Genres from "./Genres/index";
 import { selectGenres } from "./Genres/genresSlice";
@@ -23,7 +22,7 @@ const MovieTile = ({ movies }) => {
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <MoviesGridWrapper>
+    <>
       {movies.map((movie, id) => (
         <TileWrapper key={id}>
           <PosterWrapper>
@@ -52,7 +51,7 @@ const MovieTile = ({ movies }) => {
           </TextInfoWrapper>
         </TileWrapper>
       ))}
-    </MoviesGridWrapper>
+    </>
   )
 };
 
