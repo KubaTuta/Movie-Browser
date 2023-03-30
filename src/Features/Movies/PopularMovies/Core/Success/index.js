@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
-import Pagination from "../../../../common/Pagination";
+import Pagination from "../../../../../common/Pagination";
 import { fetchMoviesPending, selectPages } from "../../popularMoviesSlice";
-import MovieTile from "../../../../common/MovieTile/index";
+import MovieTile from "../../../../../common/MovieTile/index";
 import { selectMovies } from "../../popularMoviesSlice";
-import { MoviesGridWrapper } from "./MoviesGridWrapper/styled";
+import { MoviesGridWrapper } from "../MoviesGridWrapper/styled";
 
 const Success = () => {
   const page = useSelector(selectPages);
