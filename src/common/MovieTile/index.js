@@ -1,6 +1,5 @@
-
+import { useSelector } from "react-redux";
 import {
-  GridWrapper,
   TileWrapper,
   Poster,
   Title,
@@ -11,33 +10,33 @@ import {
   VoteCount,
   TextInfoWrapper,
   MovieData,
+  PosterWrapper,
 } from "./styled";
 import noPoster from "./noposter.svg";
 import Genres from "./Genres/index";
-import { useSelector } from "react-redux";
-import { selectMovies } from "../../../popularMoviesSlice";
 import { selectGenres } from "./Genres/genresSlice";
 
-const Tile = () => {
-  const movies = useSelector(selectMovies);
-  const genres = useSelector(selectGenres);
+const MovieTile = ({ movies }) => {
 
+  const genres = useSelector(selectGenres);
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <GridWrapper>
+    <>
       {movies.map((movie, id) => (
         <TileWrapper key={id}>
-          <>
-            {
-              movie.poster_path ?
-                (
-                  <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
-                ) : (
-                  <Poster src={noPoster} alt="" />
-                )
-            }
-          </>
+          <PosterWrapper>
+            <>
+              {
+                movie.poster_path ?
+                  (
+                    <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
+                  ) : (
+                    <Poster src={noPoster} alt="" />
+                  )
+              }
+            </>
+          </PosterWrapper>
           <TextInfoWrapper>
             <MovieData>
               <Title>{movie.original_title}</Title>
@@ -52,7 +51,8 @@ const Tile = () => {
           </TextInfoWrapper>
         </TileWrapper>
       ))}
-    </GridWrapper>
+    </>
   )
-}
-export default Tile;
+};
+
+export default MovieTile;
