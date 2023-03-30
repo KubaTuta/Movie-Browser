@@ -1,10 +1,14 @@
+import { Header3 } from "../../../common/Header/styled";
+import TileDetails from "./TileDetails";
+
 const SingleMovie = () => {
   return (
-    <div>
-      <h1>
-        Single movie page
-      </h1>
-    </div>
+  <>
+  <Header />
+  <TileDetails/>
+  <Header3>Cast</Header3>
+  <Header3>Crew</Header3>
+  </>
   )
 };
 
