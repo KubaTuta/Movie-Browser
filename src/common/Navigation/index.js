@@ -1,5 +1,4 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import People from "../../Features/People";
 import {
   NavWrapperInput,
   NavIconInput,
@@ -17,6 +16,7 @@ import {
 
 import { ReactComponent as Elipse } from "../../image/elipse.svg"
 import Movies from "../../Features/Movies/PopularMovies";
+import People from "../../Features/People/PopularPeople"
 
 const Navigation = () => {
   return (
