@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import {
-  GridWrapper,
   TileWrapper,
   Poster,
   Title,
@@ -12,6 +11,7 @@ import {
   TextInfoWrapper,
   MovieData,
 } from "./styled";
+import { MoviesGridWrapper } from "../MoviesGridWrapper/styled";
 import noPoster from "./noposter.svg";
 import Genres from "./Genres/index";
 import { selectGenres } from "./Genres/genresSlice";
@@ -22,7 +22,7 @@ const MovieTile = ({ movies }) => {
   const posterPath = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <GridWrapper>
+    <MoviesGridWrapper>
       {movies.map((movie, id) => (
         <TileWrapper key={id}>
           <>
@@ -49,7 +49,7 @@ const MovieTile = ({ movies }) => {
           </TextInfoWrapper>
         </TileWrapper>
       ))}
-    </GridWrapper>
+    </MoviesGridWrapper>
   )
 };
 
