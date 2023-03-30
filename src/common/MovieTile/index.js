@@ -10,6 +10,7 @@ import {
   VoteCount,
   TextInfoWrapper,
   MovieData,
+  PosterWrapper,
 } from "./styled";
 import { MoviesGridWrapper } from "../MoviesGridWrapper/styled";
 import noPoster from "./noposter.svg";
@@ -25,16 +26,18 @@ const MovieTile = ({ movies }) => {
     <MoviesGridWrapper>
       {movies.map((movie, id) => (
         <TileWrapper key={id}>
-          <>
-            {
-              movie.poster_path ?
-                (
-                  <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
-                ) : (
-                  <Poster src={noPoster} alt="" />
-                )
-            }
-          </>
+          <PosterWrapper>
+            <>
+              {
+                movie.poster_path ?
+                  (
+                    <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
+                  ) : (
+                    <Poster src={noPoster} alt="" />
+                  )
+              }
+            </>
+          </PosterWrapper>
           <TextInfoWrapper>
             <MovieData>
               <Title>{movie.original_title}</Title>

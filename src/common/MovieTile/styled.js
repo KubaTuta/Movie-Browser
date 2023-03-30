@@ -17,13 +17,22 @@ export const TileWrapper = styled.div`
     };
 `;
 
+export const PosterWrapper = styled.div`
+  min-width: 292px;
+  min-height: 434px;
+  margin-bottom: 8px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      min-width: 114px;
+      min-height: 169px;
+    };
+`;
+
 export const Poster = styled.img`
   width: 100%;
   height: 434px;
+  border-radius: 5px;
   object-fit: cover;
   object-position: top;
-  border-radius: 5px;
-  margin-bottom: 8px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       height: 169px;
       width: 114px;
