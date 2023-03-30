@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as StarIco } from "./star.svg"
+import { ReactComponent as StarIco } from "../image/star.svg"
 
 export const TileWrapper = styled.div`
   height: 650px;

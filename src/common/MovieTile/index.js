@@ -12,7 +12,7 @@ import {
   MovieData,
   PosterWrapper,
 } from "./styled";
-import noPoster from "./noposter.svg";
+import noPoster from "../image/noposter.svg";
 import Genres from "./Genres/index";
 import { selectGenres } from "./Genres/genresSlice";
 
