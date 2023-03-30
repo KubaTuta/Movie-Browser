@@ -1,22 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as StarIco } from "./star.svg"
 
-export const GridWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
-  grid-gap: 24px;
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-    grid-gap: 16px;
-  };
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-    grid-gap: 16px;
-  };
-`;
-
 export const TileWrapper = styled.div`
   height: 650px;
   width: 100%;
@@ -26,18 +10,11 @@ export const TileWrapper = styled.div`
   padding: 16px;
   display: flex;
   flex-direction: column;
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    flex-direction: row;
-    height: 201px;
-    gap: 16px;
-  };
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    flex-direction: row;
-    height: 201px;
-    gap: 16px;
-  };
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      flex-direction: row;
+      height: 201px;
+      gap: 16px;
+    };
 `;
 
 export const Poster = styled.img`
@@ -47,14 +24,10 @@ export const Poster = styled.img`
   object-position: top;
   border-radius: 5px;
   margin-bottom: 8px;
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    height: 169px;
-    width: 114px;
-  } ;
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    height: 169px;
-    width: 114px;
-  } ;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      height: 169px;
+      width: 114px;
+    };
 `;
 
 export const TextInfoWrapper = styled.div`
@@ -75,16 +48,11 @@ export const Title = styled.h3`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    font-style: normal;
-    font-size: 16px;
-    white-space: pre-wrap;
-  };
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    font-style: normal;
-    font-size: 16px;
-    white-space: pre-wrap;
-  };
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      font-style: normal;
+      font-size: 16px;
+      white-space: pre-wrap;
+    };
 `;
 
 export const Year = styled.p`
@@ -93,67 +61,49 @@ export const Year = styled.p`
   line-height: 150%;
   color: ${({ theme }) => theme.color.darkerGrey};
   margin: 8px 0px;
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    font-style: normal;
-    font-size: 13px;
-  };
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    font-style: normal;
-    font-size: 13px;
-  };
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      font-style: normal;
+      font-size: 13px;
+    };
 `;
 
-
-
 export const VoteWrapper = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 export const Star = styled(StarIco)`
-padding: 0px 8px 0px 0px;
-max-width: 24px;
-max-height: 24px;
-@media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-  max-width: 16px;
-  max-height: 16px;
-  padding: 0px;
-};
-@media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-  max-width: 16px;
-  max-height: 16px;
-  padding: 0px;
-};
+  padding: 0px 8px 0px 0px;
+  max-width: 24px;
+  max-height: 24px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      max-width: 16px;
+      max-height: 16px;
+      padding: 0px;
+    };
 `;
 
 export const VoteAverange = styled.p`
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-padding: 0px 8px 0px 0px;
-margin: 0px;
-@media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-  font-size: 13px;
-  padding: 0px 8px 0px 8px;
-};
-@media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-  font-size: 13px;
-  padding: 0px 8px 0px 8px;
-};
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 0px 8px 0px 0px;
+  margin: 0px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      font-size: 13px;
+      padding: 0px 8px 0px 8px;
+    };
 `;
 
 export const VoteCount = styled.p`
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 150%;
-color: ${({ theme }) => theme.color.grey};
-margin: 0px;
-@media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-  font-size: 13px;
-}
-@media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-  font-size: 13px;
-}
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: ${({ theme }) => theme.color.grey};
+  margin: 0px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    font-size: 13px;
+    };
 `;
