@@ -1,4 +1,5 @@
 import { Header3 } from "../../../common/Header/styled";
+import Header from "./Backdrop";
 import TileDetails from "./TileDetails";
 
 const SingleMovie = () => {

@@ -1,4 +1,19 @@
-const Header = () => {
+import {
+  BlackContainer,
+  WhiteHeader,
+  Poster,
+  Star,
+  VoteAverange,
+  VoteCount,
+  VoteWrapper,
+  HeadContainer,
+  TextWrapper,
+  VoteAverangeWrapper
+}
+  from "./styled";
+  import BigPoster from "../Backdrop/bigPoster.svg";
+
+const Backdrop = () => {
   return (
     <BlackContainer>
         <HeadContainer>
@@ -20,4 +35,4 @@ const Header = () => {
   )
 };
 
-export default Header;
+export default Backdrop;
