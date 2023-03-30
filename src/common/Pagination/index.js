@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Wrapper, Button, Text, InnerButtonText, RightArrow, LeftArrow, Bold } from "./styled";
 
 const Pagination = ({ page, fetchApi }) => {
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (page !== 1) {
+      window.scrollTo({ top: document.body.scrollHeight });
+    }
+  }, [page]);
 
   return (
     <Wrapper>

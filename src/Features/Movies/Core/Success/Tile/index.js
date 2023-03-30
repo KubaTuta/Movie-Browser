@@ -10,6 +10,7 @@ import {
   VoteAverange,
   VoteCount,
   TextInfoWrapper,
+  MovieData,
 } from "./styled";
 import noPoster from "./noposter.svg";
 import Genres from "./Genres/index";
@@ -38,9 +39,11 @@ const Tile = () => {
             }
           </>
           <TextInfoWrapper>
-            <Title>{movie.original_title}</Title>
-            <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
-            <Genres genres={genres} genreIds={movie.genre_ids} />
+            <MovieData>
+              <Title>{movie.original_title}</Title>
+              <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
+              <Genres genres={genres} genreIds={movie.genre_ids} />
+            </MovieData>
             <VoteWrapper>
               <Star alt="" />
               <VoteAverange> {movie.vote_average}</VoteAverange>

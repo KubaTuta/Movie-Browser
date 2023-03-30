@@ -13,7 +13,7 @@ export const theme = {
   breakpoint: {
     full: "1400px",
     medium: "1052px",
-    small: "704px",
+    small: "736px",
     mobile: "450px",
   }
 };

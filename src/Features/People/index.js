@@ -6,11 +6,10 @@ import Core from "./Core";
 import { fetchPeoplePending } from "./popularPeopleSlice";
 
 const People = () => {
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch((fetchPeoplePending(1)));
+    dispatch(fetchPeoplePending(1));
     // eslint-disable-next-line
   }, [])
 
