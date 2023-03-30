@@ -2,6 +2,7 @@ import { PosterPeople, WrapperPeople, TileWrapperPeople, NamePeople } from "./st
 import { useSelector } from "react-redux";
 import { selectPeople } from "../popularPeopleSlice";
 import noProfilePicture from "./noProfilePicture.svg"
+
 const Tile = () => {
 
   const people = useSelector(selectPeople);

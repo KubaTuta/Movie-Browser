@@ -12,32 +12,37 @@ import {
   NavigationWrapper,
   NavLi,
   StyledNavLink,
+  NavBoxFrame,
+  Stroke,
 } from "./styled"
-import { ReactComponent as Stroke } from "../../image/stroke.svg"
+
 import { ReactComponent as Elipse } from "../../image/elipse.svg"
 
 const Navigation = () => {
   return (
     <>
       <NavigationBoxStyled>
-        <NavigationWrapper>
-          <NavBoxLine>
-            <Stroke />
-            <NavH1>movies browser</NavH1>
-            <NavLinks           >
-              <NavLi><StyledNavLink to="/movies">movies</StyledNavLink></NavLi>
-              <NavLi><StyledNavLink to="/people">people</StyledNavLink></NavLi>
-            </NavLinks>
-          </NavBoxLine>
-          <NavWrapperInput>
-            <NavIconInput>
-              <Elipse />
-            </NavIconInput>
-            <NavInput
-              type="text"
-              placeholder="Search for movies..." />
-          </NavWrapperInput>
-        </NavigationWrapper>
+        <NavBoxFrame>
+          <NavigationWrapper>
+            <NavBoxLine>
+              <Stroke />
+              <NavH1>movies browser</NavH1>
+              <NavLinks           >
+                <NavLi><StyledNavLink to="/movies">movies</StyledNavLink></NavLi>
+                <NavLi><StyledNavLink to="/people">people</StyledNavLink></NavLi>
+              </NavLinks>
+            </NavBoxLine>
+            <NavWrapperInput>
+              <NavIconInput>
+                <Elipse />
+              </NavIconInput>
+              <NavInput
+                type="text"
+                placeholder="Search for movies..." />
+            </NavWrapperInput>
+          </NavigationWrapper>
+        </NavBoxFrame>
+
       </NavigationBoxStyled>
       <Routes>
         <Route path="/movies" element={<Movies />} />
