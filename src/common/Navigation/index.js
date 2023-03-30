@@ -17,6 +17,7 @@ import {
 import { ReactComponent as Elipse } from "../../image/elipse.svg"
 import Movies from "../../Features/Movies/PopularMovies";
 import People from "../../Features/People/PopularPeople"
+import SingleMovie from "../../Features/Movies/SingleMovie";
 
 const Navigation = () => {
   return (
@@ -30,6 +31,8 @@ const Navigation = () => {
               <NavLinks           >
                 <NavLi><StyledNavLink to="/movies">movies</StyledNavLink></NavLi>
                 <NavLi><StyledNavLink to="/people">people</StyledNavLink></NavLi>
+                <NavLi><StyledNavLink to="/movie">movie</StyledNavLink></NavLi>
+
               </NavLinks>
             </NavBoxLine>
             <NavWrapperInput>
@@ -47,6 +50,8 @@ const Navigation = () => {
       <Routes>
         <Route path="/movies" element={<Movies/>} />
         <Route path="/people" element={<People />} />
+        <Route path="/movie" element={<SingleMovie />} />
+
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>
     </>
