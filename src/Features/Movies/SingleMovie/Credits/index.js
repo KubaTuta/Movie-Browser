@@ -30,6 +30,26 @@ const Credits = () => {
         <NamePeople>Takkde Frdxqedqe</NamePeople>
         <Role>Actress</Role>
       </TileWrapperPeople> 
+      <TileWrapperPeople>
+        <PosterPeople src={noProfilePicture}/>
+        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <Role>Actress</Role>
+      </TileWrapperPeople> 
+      <TileWrapperPeople>
+        <PosterPeople src={noProfilePicture}/>
+        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <Role>Actress</Role>
+      </TileWrapperPeople> 
+      <TileWrapperPeople>
+        <PosterPeople src={noProfilePicture}/>
+        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <Role>Actress</Role>
+      </TileWrapperPeople> 
+      <TileWrapperPeople>
+        <PosterPeople src={noProfilePicture}/>
+        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <Role>Actress</Role>
+      </TileWrapperPeople> 
     </WrapperPeople>
   )
 };
