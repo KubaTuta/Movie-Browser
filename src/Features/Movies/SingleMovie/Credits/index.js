@@ -1,56 +1,75 @@
-import { NamePeople, PosterPeople, TileWrapperPeople, WrapperPeople } from "../../../../common/PersonTileStyles/styled";
+import { NamePeople, NamePeopleWrapper, PosterPeople, TileWrapperPeople, } from "../../../../common/PersonTileStyles/styled";
 import noProfilePicture from "../../../../common/PersonTileStyles/noProfilePicture.svg"
-import { Role } from "./styled";
+import { CreditWrapper, Role } from "./styled";
 
 const Credits = () => {
   return (
-    <WrapperPeople>
-      <TileWrapperPeople>
+    <CreditWrapper>
+       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
       </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
       </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
-      </TileWrapperPeople> 
+      </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
-      </TileWrapperPeople> 
+      </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
-      </TileWrapperPeople> 
+      </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
-      </TileWrapperPeople> 
+      </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
-      </TileWrapperPeople> 
+      </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
-      </TileWrapperPeople> 
+      </TileWrapperPeople>
       <TileWrapperPeople>
         <PosterPeople src={noProfilePicture}/>
-        <NamePeople>Takkde Frdxqedqe</NamePeople>
+        <NamePeopleWrapper>
+        <NamePeople>Hanna Nassalska</NamePeople>
+        </NamePeopleWrapper>
         <Role>Actress</Role>
-      </TileWrapperPeople> 
-    </WrapperPeople>
+      </TileWrapperPeople>
+      
+    </CreditWrapper>
   )
 };
 
