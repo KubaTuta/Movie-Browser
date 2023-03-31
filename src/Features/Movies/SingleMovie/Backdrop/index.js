@@ -4,6 +4,7 @@ import {
   Poster,
   Star,
   VoteAverange,
+  Scale,
   VoteCount,
   VoteWrapper,
   HeadContainer,
@@ -25,7 +26,8 @@ const Backdrop = () => {
             <VoteWrapper>
               <VoteAverangeWrapper>
                 <Star alt="" />
-                <VoteAverange> 7,6 / 10</VoteAverange>
+                <VoteAverange> 7,6</VoteAverange>
+                <Scale>/ 10</Scale>
                 </VoteAverangeWrapper>
               <VoteCount>786 votes</VoteCount>
             </VoteWrapper>

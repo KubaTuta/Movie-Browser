@@ -54,8 +54,8 @@ flex-direction: row;
 
 export const Star = styled(StarIco)`
 padding: 0px 8px 0px 0px;
-max-width: 24px;
-max-height: 24px;
+height: 40px;
+width: 40px;
   @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
     max-width: 16px;
     max-height: 16px;
@@ -76,6 +76,14 @@ margin: 0px;
     padding: 0px 8px 0px 8px;
   }
 `;
+
+export const Scale = styled.p`
+color:  ${({ theme }) => theme.color.white};
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+padding-left: 7px;
+`
 
 export const VoteCount = styled.p`
 color:  ${({ theme }) => theme.color.white};
