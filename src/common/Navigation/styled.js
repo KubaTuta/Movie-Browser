@@ -4,7 +4,7 @@ import { ReactComponent as stroke } from "../../image/stroke.svg"
 
 export const NavigationBoxStyled = styled.div`
   background: ${({ theme }) => theme.color.woodsmoke};
-  width: 100vw;
+  width: 100%;
 `;
 
 export const NavBoxFrame = styled.div`
