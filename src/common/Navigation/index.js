@@ -29,7 +29,7 @@ const Navigation = () => {
               <Stroke />
               <NavH1>movies browser</NavH1>
               <NavLinks           >
-                <NavLi><StyledNavLink to="/movies">movies</StyledNavLink></NavLi>
+                <NavLi><StyledNavLink to="/">movies</StyledNavLink></NavLi>
                 <NavLi><StyledNavLink to="/people">people</StyledNavLink></NavLi>
                 <NavLi><StyledNavLink to="/movie">movie</StyledNavLink></NavLi>
 
@@ -48,7 +48,7 @@ const Navigation = () => {
 
       </NavigationBoxStyled>
       <Routes>
-        <Route path="/movies" element={<Movies/>} />
+        <Route path="/" element={<Movies/>} />
         <Route path="/people" element={<People />} />
         <Route path="/movie" element={<SingleMovie />} />
 
