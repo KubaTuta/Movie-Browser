@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import rootSaga from './rootSaga';
 import popularMoviesReducer from './Features/Movies/PopularMovies/popularMoviesSlice';
 import popularPeopleReducer from './Features/People/PopularPeople/popularPeopleSlice';
-import genresReducer from "./common/MovieTile/Genres/genresSlice";
+import genresReducer from "./common/Genres/genresSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 

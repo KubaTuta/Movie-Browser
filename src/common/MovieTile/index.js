@@ -13,8 +13,8 @@ import {
   PosterWrapper,
 } from "./styled";
 import noPoster from "../image/noposter.svg";
-import Genres from "./Genres/index";
-import { selectGenres } from "./Genres/genresSlice";
+import Genres from "../Genres/index";
+import { selectGenres } from "../Genres/genresSlice";
 
 const MovieTile = ({ movies }) => {
 
