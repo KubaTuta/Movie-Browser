@@ -61,6 +61,7 @@ export const Poster = styled.img`
   grid-row-end: 4;  
     @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
       max-width: 228px;
+      max-height: 114px;
     };
 `;
 
