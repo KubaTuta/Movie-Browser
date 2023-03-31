@@ -7,7 +7,7 @@ export const BlackContainer = styled.div`
  max-height: 770px; 
 `;
 
-export const HeadContainer = styled.div`
+export const HeadContainer = styled.section`
   margin: 0 auto;
   max-width: 1368px;
   display: grid;
