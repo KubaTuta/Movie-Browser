@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ReactComponent as StarIco } from "../../../../common/image/star.svg"
+import { ReactComponent as StarIco } from "../../../../common/image/star.svg";
+import { GenreWrapper } from "../../../../common/Genres/styled";
 
 
 
@@ -46,3 +47,9 @@ line-height: 120%;
 margin-top: 8px;
 padding-left: 7px;
 `;
+
+export const GenreWrapperTD = styled(GenreWrapper)`
+margin-right: 16px;
+margin-top: 16px;
+`;
+

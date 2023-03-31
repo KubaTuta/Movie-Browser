@@ -2,6 +2,7 @@ import {
   InfoCategory,
   InfoText,
   InfoWrapper,
+  Overview,
   Poster,
   PosterWrapper,
   TextWrapper,
@@ -15,9 +16,12 @@ import {
   VoteAverange,
   Star,
   VoteCount,
+  GenreWrapperTD,
+  
 }
   from "./styled";
 import poster from "../../../../common/image/noposter.svg";
+import { Genre, GenresWrapper } from "../../../../common/Genres/styled";
 const TileDetails = () => {
   return (
     <TileDetailsWrapper>
@@ -34,6 +38,11 @@ const TileDetails = () => {
           <InfoCategory>hhxjd</InfoCategory>
           <InfoText>cdcdcdc</InfoText>
         </InfoWrapper>
+       <GenresWrapper>
+        <GenreWrapperTD><Genre>Drama</Genre></GenreWrapperTD>
+        <GenreWrapperTD><Genre>Actionkk</Genre></GenreWrapperTD>
+
+       </GenresWrapper>
         <VoteWrapper>
               <VoteAverangeWrapper>
                 <Star alt="" />
@@ -42,8 +51,11 @@ const TileDetails = () => {
                 </VoteAverangeWrapper>
               <VoteCount>786 votes</VoteCount>
             </VoteWrapper>
-            <InfoText>A young Chinese maiden disguises herself as a male warrior in order to save her father. 
-Disguises herself as a male warrior in order to save her father.  A young Chinese maiden disguises herself as a male warrior in order to save her father.</InfoText>
+            <Overview>
+              A young Chinese maiden disguises herself as a male warrior in order to save her father. 
+Disguises herself as a male warrior in order to save her father.  
+A young Chinese maiden disguises herself as a male warrior in order to save her father.
+</Overview>
       </TextWrapper>
     
     </TileDetailsWrapper>
