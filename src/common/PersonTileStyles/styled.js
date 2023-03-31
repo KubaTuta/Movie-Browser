@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const WrapperPeople = styled.section`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
-    grid-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-gap: 24px;
+  justify-items: center;
 
+  
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
     grid-gap: 16px;
     }
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
-    grid-gap: 16px;
-    }
+
 `;
 
 export const TileWrapperPeople = styled.div`
@@ -27,7 +26,8 @@ export const TileWrapperPeople = styled.div`
   padding: 16px;
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     min-height: 245px;
-    padding-bottom: 8px;
+    width: 136px;
+    padding: 8px;
     border-radius: 5px;
   };
 `;
@@ -44,7 +44,7 @@ export const PeoplePosterWrapper = styled.div`
 
 export const PosterPeople = styled.img`
   width: 100%;
-  height: 256px;
+  height: 100%;
   object-fit: cover;
   object-position: top;
   border-radius: 5px;
