@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const WrapperPeople = styled.section`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
@@ -17,65 +16,60 @@ export const WrapperPeople = styled.section`
 `;
 
 export const TileWrapperPeople = styled.div`
-  height: 339px;
+  min-height: 339px;
   width: 100%;
   background:${({ theme }) => theme.color.white};
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   text-align: center;
-
+  padding: 16px;
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    grid-gap: 16px;
-    height: 245px;
+    min-height: 245px;
+    padding-bottom: 8px;
+    border-radius: 5px;
   };
+`;
 
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    grid-gap: 16px;
-    height: 245px;
-  };
+export const PeoplePosterWrapper = styled.div`
+  min-width: 177px;
+  min-height: 256px;
+ 
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      min-width: 120px;
+      min-height: 178px;
+    };
 `;
 
 export const PosterPeople = styled.img`
   width: 100%;
-  height: 264px;
-  object-fit: contain;
-  margin: 16px;
+  height: 256px;
+  object-fit: cover;
+  object-position: top;
   border-radius: 5px;
-  
+
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     height: 178px;
-    margin: 8px 8px 0;
-  };
+    };
+  `;
 
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    height: 178px;
-    margin: 8px 8px 0;
-  };
+export const NamePeopleWrapper= styled.div`
+  display: flex;
+  justify-content: center;
+  min-height: 64px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      min-height: 42px;
+    };
 `;
 
-export const NamePeople = styled.span`
+export const NamePeople = styled.p`
   font-weight: 500;
   font-size: 22px;
   line-height: 130%;
-  margin-bottom:8px;
-  display: flex;
-  align-items:center;
-  justify-content:center;
-    
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    max-width: 136px;
-    max-height: 245px;
-    font-weight: 500;
-    font-size: 14px;
-  };
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    max-width: 136px;
-    max-height: 245px;
-    font-weight: 500;
-    font-size: 14px;
-  };
+  margin: 0px;
+  padding-top: 8px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      font-size: 14px;
+    };   
 `;

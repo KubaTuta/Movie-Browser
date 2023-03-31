@@ -2,13 +2,14 @@ import {
   PosterPeople,
   WrapperPeople,
   TileWrapperPeople,
-  NamePeople
+  NamePeople,
+  PeoplePosterWrapper,
+  NamePeopleWrapper,
 }
   from "../../../../../../common/PersonTileStyles/styled";
-
+import noProfilePicture from "../../../../../../common/PersonTileStyles/noProfilePicture.svg"
 import { useSelector } from "react-redux";
 import { selectPeople } from "../../../popularPeopleSlice";
-import noProfilePicture from "../../../../../../common/PersonTileStyles/noProfilePicture.svg"
 
 const Tile = () => {
 
@@ -20,16 +21,19 @@ const Tile = () => {
     <WrapperPeople>
       {people.map((person, id) => (
         <TileWrapperPeople key={id} >
-          <>
+          <PeoplePosterWrapper>
+          
             {person.profile_path
               ? (
                 <PosterPeople src={person.profile_path && `${personsProfilePicturePath}${person.profile_path}`} alt="" />
               ) : (
-                <PosterPeople src={noProfilePicture} alt="" />
+                                < PosterPeople src={noProfilePicture} alt="" />
               )
             }
-          </>
+          </PeoplePosterWrapper>
+          <NamePeopleWrapper>
           <NamePeople>{person.name}</NamePeople>
+          </NamePeopleWrapper>
         </TileWrapperPeople>
       ))};
     </WrapperPeople>

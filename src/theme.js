@@ -11,6 +11,7 @@ export const theme = {
     inactive: "#7E839A",
     stormGrey: "#74788B",
   },
+
   breakpoint: {
     full: "1400px",
     medium: "1052px",
