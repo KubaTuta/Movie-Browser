@@ -9,7 +9,5 @@ export const Container = styled.main`
       @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
         max-width: 592px;
       }
-        @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-          max-width: 288px;
-        } 
+        
   `;

@@ -8,6 +8,7 @@ import {
   TextWrapper,
   TileDetailsWrapper,
   Title,
+  OverviewWrapper,
 } from "../../../../common/DetailsTileStyles/styled";
 import {
   VoteWrapper,
@@ -17,6 +18,7 @@ import {
   Star,
   VoteCount,
   GenreWrapperTD,
+  Year,
   
 }
   from "./styled";
@@ -30,6 +32,7 @@ const TileDetails = () => {
       </PosterWrapper>
       <TextWrapper>
         <Title> Mulan</Title>
+        <Year>2022</Year>
         <InfoWrapper>
           <InfoCategory>hhxjd</InfoCategory>
           <InfoText>cdcdcdc</InfoText>
@@ -51,12 +54,16 @@ const TileDetails = () => {
                 </VoteAverangeWrapper>
               <VoteCount>786 votes</VoteCount>
             </VoteWrapper>
+            </TextWrapper>
+            <OverviewWrapper>
             <Overview>
               A young Chinese maiden disguises herself as a male warrior in order to save her father. 
 Disguises herself as a male warrior in order to save her father.  
 A young Chinese maiden disguises herself as a male warrior in order to save her father.
 </Overview>
-      </TextWrapper>
+</OverviewWrapper>
+     
+      
     
     </TileDetailsWrapper>
   )
