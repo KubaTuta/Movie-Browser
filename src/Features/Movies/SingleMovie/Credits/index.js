@@ -1,73 +1,84 @@
-import { NamePeople, NamePeopleWrapper, PosterPeople, TileWrapperPeople, } from "../../../../common/PersonTileStyles/styled";
+import { NamePeople, NamePeopleWrapper, PosterPeople, } from "../../../../common/PersonTileStyles/styled";
 import noProfilePicture from "../../../../common/PersonTileStyles/noProfilePicture.svg"
-import { CreditWrapper, Role } from "./styled";
+import { CreditWrapper, Role, CreditPeopleWrapper } from "./styled";
 
 const Credits = () => {
   return (
     <CreditWrapper>
-       <TileWrapperPeople>
+     <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
-      <TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+      <CreditPeopleWrapper>
         <PosterPeople src={noProfilePicture}/>
         <NamePeopleWrapper>
-        <NamePeople>Hanna Nassalska</NamePeople>
-        </NamePeopleWrapper>
+        <NamePeople>Scott Jason Lee</NamePeople>
         <Role>Actress</Role>
-      </TileWrapperPeople>
+        </NamePeopleWrapper>
+        
+      </CreditPeopleWrapper>
+
       
     </CreditWrapper>
   )
