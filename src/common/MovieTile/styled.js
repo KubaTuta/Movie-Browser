@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { ReactComponent as StarIco } from "../image/star.svg"
 
 export const TileWrapper = styled.div`
-  height: 650px;
-  width: 100%;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   border-radius: 5px;
@@ -18,7 +16,7 @@ export const TileWrapper = styled.div`
 `;
 
 export const PosterWrapper = styled.div`
-  min-width: 292px;
+  min-width: 208px;
   min-height: 434px;
   margin-bottom: 8px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
@@ -29,7 +27,7 @@ export const PosterWrapper = styled.div`
 
 export const Poster = styled.img`
   width: 100%;
-  height: 434px;
+  max-height: 434px;
   border-radius: 5px;
   object-fit: cover;
   object-position: top;
