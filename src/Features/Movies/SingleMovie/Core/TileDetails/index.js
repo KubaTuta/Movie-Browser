@@ -9,7 +9,7 @@ import {
   TileDetailsWrapper,
   Title,
   OverviewWrapper,
-} from "../../../../common/DetailsTileStyles/styled";
+} from "../../../../../common/DetailsTileStyles/styled";
 import {
   InfoTextWrapper,
   VoteAverangeWrapper,
@@ -21,8 +21,8 @@ import {
   Year,
 }
   from "./styled";
-import noPoster from "../../../../common/image/noposter.svg"
-import { Genre, GenresWrapper } from "../../../../common/Genres/styled";
+import noPoster from "../../../../../common/image/noposter.svg"
+import { Genre, GenresWrapper } from "../../../../../common/Genres/styled";
 
 const TileDetails = (
   { poster, title, year, countries, release, genres, vote, votes, overview }

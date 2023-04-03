@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ReactComponent as StarIco } from "../../../../common/image/star.svg";
-import { GenreWrapper } from "../../../../common/Genres/styled";
+import { ReactComponent as StarIco } from "../../../../../common/image/star.svg";
+import { GenreWrapper } from "../../../../../common/Genres/styled";
 
 export const Year = styled.p`
   font-weight: 400;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { WrapperPeople, TileWrapperPeople } from  "../../../../common/PersonTileStyles/styled";
+import { WrapperPeople, TileWrapperPeople } from  "../../../../../common/PersonTileStyles/styled";
 
 export const CreditWrapper = styled(WrapperPeople)`
   display: grid;

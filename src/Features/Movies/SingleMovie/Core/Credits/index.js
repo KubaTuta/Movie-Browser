@@ -3,9 +3,9 @@ import {
   NamePeopleWrapper, 
   PeoplePosterWrapper, 
   PosterPeople 
-} from "../../../../common/PersonTileStyles/styled";
+} from "../../../../../common/PersonTileStyles/styled";
 import { CreditWrapper, Role, CreditPeopleWrapper } from "./styled";
-import noProfilePicture from "../../../../common/PersonTileStyles/noProfilePicture.svg";
+import noProfilePicture from "../../../../../common/PersonTileStyles/noProfilePicture.svg";
 
 const Credits = ({ credits }) => {
 
