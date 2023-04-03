@@ -11,11 +11,11 @@ import {
   TextInfoWrapper,
   MovieData,
   PosterWrapper,
+  StyledLink,
 } from "./styled";
 import noPoster from "../image/noposter.svg";
 import Genres from "../Genres/index";
 import { selectGenres } from "../Genres/genresSlice";
-import { Link } from "react-router-dom";
 
 const MovieTile = ({ movies }) => {
 
@@ -25,7 +25,7 @@ const MovieTile = ({ movies }) => {
   return (
     <>
       {movies.map((movie, id) => (
-       <Link to={`/movie/${movie.id}`}>
+       <StyledLink to={`/movie/${movie.id}`}>
         <TileWrapper key={id}>
           <PosterWrapper>
             <>
@@ -52,7 +52,7 @@ const MovieTile = ({ movies }) => {
             </VoteWrapper>
           </TextInfoWrapper>
         </TileWrapper>
-        </Link>
+        </StyledLink>
 
       ))}
     </>
