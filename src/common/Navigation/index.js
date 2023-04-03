@@ -31,8 +31,6 @@ const Navigation = () => {
               <NavLinks           >
                 <NavLi><StyledNavLink to="/">movies</StyledNavLink></NavLi>
                 <NavLi><StyledNavLink to="/people">people</StyledNavLink></NavLi>
-                <NavLi><StyledNavLink to="/movie">movie</StyledNavLink></NavLi>
-
               </NavLinks>
             </NavBoxLine>
             <NavWrapperInput>
@@ -50,7 +48,8 @@ const Navigation = () => {
       <Routes>
         <Route path="/" element={<Movies/>} />
         <Route path="/people" element={<People />} />
-        <Route path="/movie" element={<SingleMovie />} />
+        <Route path="/movie/:id" element={<SingleMovie />} />
+
 
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>
