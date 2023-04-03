@@ -1,27 +1,27 @@
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Header3 } from "../../../common/Header/styled";
 import Backdrop from "./Backdrop";
 import TileDetails from "./TileDetails";
 import Credits from "./Credits";
 import { SingleMovieContainer, Wrapper } from "./styled";
-import { useDispatch, useSelector } from "react-redux";
-import { selectMovie, setMovieId } from "./movieSlice";
-import { useEffect } from "react";
-import { fetchMoviePending } from "./movieSlice";
-import { useParams } from "react-router-dom";
+import { selectMovie, setMovieId, selectCredits } from "./movieSlice";
+import { fetchPending } from "./movieSlice";
 
 const SingleMovie = () => {
 
   const dispatch = useDispatch();
-  const { id } = useParams();
-  const movie = useSelector(selectMovie);
 
-  //const credits = useSelector(selectCredits);
+  const { id } = useParams();
+
+  const movie = useSelector(selectMovie);
+  const credits = useSelector(selectCredits);
 
   useEffect(() => {
     dispatch(setMovieId(id))
-    dispatch(fetchMoviePending());
+    dispatch(fetchPending());
   }, [id, dispatch]);
-
 
   return (
     <SingleMovieContainer>
@@ -33,11 +33,23 @@ const SingleMovie = () => {
       />
       <Wrapper>
         <TileDetails
+          poster={movie.poster_path}
+          title={movie.title}
+          year={movie.release_date}
+          countries={movie.production_countries}
+          release={movie.release_date}
+          genres={movie.genres}
+          vote={movie.vote_average}
+          votes={movie.vote_count}
+          overview={movie.overview}
         />
         <Header3>Cast</Header3>
-        <Credits/>
+        <Credits
+          credits={credits.cast}
+        />
         <Header3>Crew</Header3>
-        <Credits />
+        <Credits
+          credits={credits.crew} />
       </Wrapper>
     </SingleMovieContainer>
   )

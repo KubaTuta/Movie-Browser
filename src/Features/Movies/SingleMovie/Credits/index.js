@@ -1,85 +1,34 @@
-import { NamePeople, NamePeopleWrapper, PosterPeople, } from "../../../../common/PersonTileStyles/styled";
-import noProfilePicture from "../../../../common/PersonTileStyles/noProfilePicture.svg"
+import { 
+  NamePeople, 
+  NamePeopleWrapper, 
+  PeoplePosterWrapper, 
+  PosterPeople 
+} from "../../../../common/PersonTileStyles/styled";
 import { CreditWrapper, Role, CreditPeopleWrapper } from "./styled";
+import noProfilePicture from "../../../../common/PersonTileStyles/noProfilePicture.svg";
 
-const Credits = () => {
+const Credits = ({ credits }) => {
+
+  const personsProfilePicturePath = "https://image.tmdb.org/t/p/w300";
+
   return (
     <CreditWrapper>
-     <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-      <CreditPeopleWrapper>
-        <PosterPeople src={noProfilePicture}/>
-        <NamePeopleWrapper>
-        <NamePeople>Scott Jason Lee</NamePeople>
-        <Role>Actress</Role>
-        </NamePeopleWrapper>
-        
-      </CreditPeopleWrapper>
-
-      
+      {credits && credits.map((credit) => (
+        <CreditPeopleWrapper key={credit.id}>
+          <PeoplePosterWrapper>
+            {credit.profile_path ?
+              (<PosterPeople src={`${personsProfilePicturePath}${credit.profile_path}`} />)
+              : (
+                <PosterPeople src={noProfilePicture} alt="" />
+              )
+            }
+          </PeoplePosterWrapper>
+          <NamePeopleWrapper>
+            <NamePeople>{credit.name}</NamePeople>
+            <Role>{(credit.character || credit.job)}</Role>
+          </NamePeopleWrapper>
+        </CreditPeopleWrapper>
+      ))}
     </CreditWrapper>
   )
 };
