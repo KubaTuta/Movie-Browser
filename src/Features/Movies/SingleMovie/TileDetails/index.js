@@ -11,7 +11,7 @@ import {
   OverviewWrapper,
 } from "../../../../common/DetailsTileStyles/styled";
 import {
-  VoteWrapper,
+  InfoTextWrapper,
   VoteAverangeWrapper,
   Scale,
   VoteAverange,
@@ -19,52 +19,70 @@ import {
   VoteCount,
   GenreWrapperTD,
   Year,
-  
 }
   from "./styled";
-import poster from "../../../../common/image/noposter.svg";
+import noPoster from "../../../../common/image/noposter.svg"
 import { Genre, GenresWrapper } from "../../../../common/Genres/styled";
-const TileDetails = () => {
+
+const TileDetails = (
+  { poster, title, year, countries, release, genres, vote, votes, overview }
+) => {
+
+  const posterPath = "https://image.tmdb.org/t/p/w500";
+
   return (
     <TileDetailsWrapper>
       <PosterWrapper>
-        <Poster src={poster} />
+        {
+          poster ?
+            (
+              <Poster src={`${posterPath}${poster}`} alt="" />
+            ) : (
+              <Poster src={noPoster} alt="" />
+            )
+        }
       </PosterWrapper>
       <TextWrapper>
-        <Title> Mulan</Title>
-        <Year>2022</Year>
+        <Title> {title}</Title>
+        <Year>{year && year.slice(0, 4)}</Year>
         <InfoWrapper>
-          <InfoCategory>hhxjd</InfoCategory>
-          <InfoText>cdcdcdc</InfoText>
+          <InfoCategory>Production</InfoCategory>
+          {
+            countries && countries.map((country) => (
+              <InfoTextWrapper key={country.iso_3166_1}>
+                <InfoText>{country.name}</InfoText>
+              </InfoTextWrapper>
+            ))
+          }
         </InfoWrapper>
         <InfoWrapper>
-          <InfoCategory>hhxjd</InfoCategory>
-          <InfoText>cdcdcdc</InfoText>
+          <InfoCategory>Release date</InfoCategory>
+          <InfoText>{new Date(release).toLocaleDateString()}</InfoText>
         </InfoWrapper>
-       <GenresWrapper>
-        <GenreWrapperTD><Genre>Drama</Genre></GenreWrapperTD>
-        <GenreWrapperTD><Genre>Actionkk</Genre></GenreWrapperTD>
+        <GenresWrapper>
+          {
+            genres && genres.map((genre) => (
 
-       </GenresWrapper>
-        <VoteWrapper>
-              <VoteAverangeWrapper>
-                <Star alt="" />
-                <VoteAverange> 7,6</VoteAverange>
-                <Scale>/ 10</Scale>
-                </VoteAverangeWrapper>
-              <VoteCount>786 votes</VoteCount>
-            </VoteWrapper>
-            </TextWrapper>
-            <OverviewWrapper>
-            <Overview>
-              A young Chinese maiden disguises herself as a male warrior in order to save her father. 
-Disguises herself as a male warrior in order to save her father.  
-A young Chinese maiden disguises herself as a male warrior in order to save her father.
-</Overview>
-</OverviewWrapper>
-     
-      
-    
+              <GenreWrapperTD key={genre.id}>
+                <Genre>{genre.name}</Genre>
+              </GenreWrapperTD>
+            ))
+          }
+        </GenresWrapper>
+        <InfoTextWrapper>
+          <VoteAverangeWrapper>
+            <Star alt="" />
+            <VoteAverange>{vote && vote.toFixed(1)}</VoteAverange>
+            <Scale>/ 10</Scale>
+          </VoteAverangeWrapper>
+          <VoteCount>{votes}</VoteCount>
+        </InfoTextWrapper>
+      </TextWrapper>
+      <OverviewWrapper>
+        <Overview>
+          {overview}
+        </Overview>
+      </OverviewWrapper>
     </TileDetailsWrapper>
   )
 };

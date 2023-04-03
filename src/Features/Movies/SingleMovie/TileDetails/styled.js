@@ -14,11 +14,10 @@ export const Year = styled.p`
     };
 `;
 
-export const VoteWrapper = styled.div`
+export const InfoTextWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: row;
-     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       flex-direction: row;
     };
 `;
@@ -45,8 +44,6 @@ export const VoteAverange = styled.p`
   line-height: 130%;
   padding: 0px;
   margin: 0px;
-  max-width: 24px;
-  max-height: 24px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       font-weight: 600;
       font-size: 13px;
@@ -73,8 +70,10 @@ export const VoteCount = styled.p`
   margin-top: 8px;
   padding-left: 7px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      font-size: 12px;
+      font-size: 13px;
+      line-height: 130%;
       color: ${({ theme }) => theme.color.inactive};
+      margin: 0;
     };
 `;
 
@@ -82,8 +81,8 @@ export const GenreWrapperTD = styled(GenreWrapper)`
   margin-right: 16px;
   margin-top: 16px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      margin-right: 12px;
-      margin-top: 12px;    
+      margin-right: 8px;
+      margin-top: 0px;
     };
 `;
 
