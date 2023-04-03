@@ -17,7 +17,6 @@ const Backdrop = ({ title, poster, votes, vote }) => {
 
   const posterPath = "https://image.tmdb.org/t/p/original/";
 
-
   return (
     <>
       {
@@ -25,16 +24,18 @@ const Backdrop = ({ title, poster, votes, vote }) => {
           <BlackContainer>
             <HeadContainer>
 
-              {poster ? (
+              {
+              poster ? (
                 <Poster src={`${posterPath}${poster}`} alt="" />
-              ) : null}
+              ) : null
+              }
 
               <TextWrapper>
                 <WhiteHeader>{title}</WhiteHeader>
                 <VoteWrapper>
                   <VoteAverangeWrapper>
                     <Star alt="" />
-                    <VoteAverange>{vote && vote.toFixed(2)}</VoteAverange>
+                    <VoteAverange>{vote && vote.toFixed(1)}</VoteAverange>
                     <Scale>/ 10</Scale>
                   </VoteAverangeWrapper>
                   <VoteCount>{votes}</VoteCount>
@@ -45,9 +46,7 @@ const Backdrop = ({ title, poster, votes, vote }) => {
         ) : null
       }
     </>
-
   )
-
 };
 
 export default Backdrop;
