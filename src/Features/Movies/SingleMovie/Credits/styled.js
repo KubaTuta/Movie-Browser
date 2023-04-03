@@ -17,7 +17,7 @@ export const CreditPeopleWrapper = styled(TileWrapperPeople)`
   width: 208px;
   padding: 16px;
   border-radius: 5px;
-  grid-template-rows: 2fr auto; 
+  grid-template-rows: 3fr 1fr; 
   gap: 8px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       min-height: 245px;
