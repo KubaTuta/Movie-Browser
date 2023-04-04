@@ -13,7 +13,7 @@ import {
   PosterWrapper,
   StyledLink,
 } from "./styled";
-import noPoster from "../image/noposter.svg";
+import noPoster from "../img/noposter.svg";
 import Genres from "../Genres/index";
 import { selectGenres } from "../Genres/genresSlice";
 
