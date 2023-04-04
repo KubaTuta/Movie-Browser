@@ -1,7 +1,6 @@
 import {
   BlackContainer,
   WhiteHeader,
-  Poster,
   Star,
   VoteAverange,
   Scale,
@@ -15,21 +14,13 @@ import {
 
 const Backdrop = ({ title, poster, votes, vote }) => {
 
-  const posterPath = "https://image.tmdb.org/t/p/original/";
 
   return (
     <>
       {
         poster ? (
           <BlackContainer>
-            <HeadContainer>
-
-              {
-              poster ? (
-                <Poster src={`${posterPath}${poster}`} alt="" />
-              ) : null
-              }
-
+            <HeadContainer backdrop={poster}>
               <TextWrapper>
                 <WhiteHeader>{title}</WhiteHeader>
                 <VoteWrapper>

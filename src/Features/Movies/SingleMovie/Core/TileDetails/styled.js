@@ -4,7 +4,7 @@ import { GenreWrapper } from "../../../../../common/Genres/styled";
 
 export const Year = styled.p`
   font-weight: 400;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 150%;
   margin: 8px 0px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
@@ -12,7 +12,7 @@ export const Year = styled.p`
       font-style: normal;
       font-size: 13px;
     };
-`;
+    `;
 
 export const InfoTextWrapper = styled.div`
   display: flex;
