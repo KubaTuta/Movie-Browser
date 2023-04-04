@@ -21,7 +21,7 @@ import {
   Year,
 }
   from "./styled";
-import noPoster from "../../../../../common/image/noposter.svg"
+import noPoster from "../../../../../common/Image/noposter.svg"
 import { Genre, GenresWrapper } from "../../../../../common/Genres/styled";
 
 const TileDetails = (
