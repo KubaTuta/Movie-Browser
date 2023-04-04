@@ -9,7 +9,10 @@ export const theme = {
     waterloo: "#7E839A", 
     active: "#0044CC",
     inactive: "#7E839A",
+    stormGrey: "#74788B",
+    black: "#000000"
   },
+
   breakpoint: {
     full: "1400px",
     medium: "1052px",

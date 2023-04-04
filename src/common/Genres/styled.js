@@ -17,7 +17,7 @@ font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 140%;
-margin: 8px 8px;
+margin: 8px 16px 8px 16px;
 @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
   font-size: 10px;
   margin: 4px 4px;
