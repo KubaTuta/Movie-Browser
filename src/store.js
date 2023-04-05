@@ -3,6 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import rootSaga from './rootSaga';
 import popularMoviesReducer from './Features/Movies/PopularMovies/popularMoviesSlice';
 import popularPeopleReducer from './Features/People/PopularPeople/popularPeopleSlice';
+import searchedMoviesReducer from "./common/Navigation/Input/Search/searchSlice";
 import genresReducer from "./common/Genres/genresSlice";
 import movieReducer from './Features/Movies/SingleMovie/movieSlice';
 
@@ -14,6 +15,7 @@ const store = configureStore({
     popularPeople: popularPeopleReducer,
     genres: genresReducer,
     movie: movieReducer,
+    searchMovie: searchedMoviesReducer,
   },
   middleware: [sagaMiddleware]
 });
