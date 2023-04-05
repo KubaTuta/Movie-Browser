@@ -5,7 +5,6 @@ import {
   NavBoxLine,
   NavLinks,
   NavH1,
-  NavInput,
   NavigationBoxStyled,
   NavigationWrapper,
   NavLi,
@@ -18,6 +17,7 @@ import { ReactComponent as Elipse } from "../../common/img/elipse.svg";
 import Movies from "../../Features/Movies/PopularMovies";
 import People from "../../Features/People/PopularPeople"
 import SingleMovie from "../../Features/Movies/SingleMovie";
+import Input from "./Input";
 
 const Navigation = () => {
   return (
@@ -37,9 +37,7 @@ const Navigation = () => {
               <NavIconInput>
                 <Elipse />
               </NavIconInput>
-              <NavInput
-                type="text"
-                placeholder="Search for movies..." />
+              <Input />
             </NavWrapperInput>
           </NavigationWrapper>
         </NavBoxFrame>
