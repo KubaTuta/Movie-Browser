@@ -1,3 +1,4 @@
+import { Link, } from "react-router-dom";
 import styled from "styled-components";
 
 export const WrapperPeople = styled.section`
@@ -51,7 +52,7 @@ export const PosterPeople = styled.img`
       };
   `;
 
-export const NamePeopleWrapper= styled.div`
+export const NamePeopleWrapper = styled.div`
   min-height: 64px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       min-height: 42px;
@@ -67,4 +68,20 @@ export const NamePeople = styled.p`
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       font-size: 14px;
     };   
+`;
+
+export const StyledNavLink = styled(Link)`
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+  text-decoration:none;
+  padding:none;
+  color:${({ theme }) => theme.color.woodsmoke};
+  transition: all 0.4s;
+&:active {
+  text-decoration:none;
+  }
+&:hover {
+  transform: scale(1.1);
+  }
 `;

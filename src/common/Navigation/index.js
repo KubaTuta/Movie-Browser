@@ -18,6 +18,8 @@ import { ReactComponent as Elipse } from "../../image/elipse.svg"
 import Movies from "../../Features/Movies/PopularMovies";
 import People from "../../Features/People/PopularPeople"
 import SingleMovie from "../../Features/Movies/SingleMovie";
+import Profile from "../../Features/People/Profile";
+
 
 const Navigation = () => {
   return (
@@ -46,10 +48,11 @@ const Navigation = () => {
 
       </NavigationBoxStyled>
       <Routes>
-        <Route path="/" element={<Movies/>} />
+        <Route path="/" element={<Movies />} />
         <Route path="/people" element={<People />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route path="/movie/:id" element={<SingleMovie />} />
-
+        
 
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>

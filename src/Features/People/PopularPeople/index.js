@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Container } from "../../../common/Container/styled";
 import { Header } from "../../../common/Header/styled";
 import Core from "./Core";
-import { fetchPeoplePending } from "../PopularPeople/popularPeopleSlice";
+import { fetchPeoplePending } from "./popularPeopleSlice";
 
 const People = () => {
   const dispatch = useDispatch();
