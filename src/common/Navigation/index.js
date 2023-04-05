@@ -14,7 +14,7 @@ import {
   Stroke,
 } from "./styled"
 
-import { ReactComponent as Elipse } from "../../image/elipse.svg"
+import { ReactComponent as Elipse } from "../../common/img/elipse.svg";
 import Movies from "../../Features/Movies/PopularMovies";
 import People from "../../Features/People/PopularPeople"
 import SingleMovie from "../../Features/Movies/SingleMovie";
