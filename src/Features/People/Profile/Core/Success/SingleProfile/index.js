@@ -1,7 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
-import { fetchProfilePending, selectProfile } from "../../../profileSlice";
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+
 import { Wrapper } from "../../../../../Movies/SingleMovie/styled";
 import {
   InfoCategory,
@@ -12,55 +9,52 @@ import {
   Poster,
   PosterWrapper,
   TextWrapper,
+ 
   TileDetailsWrapper,
+ 
   Title
 } from "../../../../../../common/DetailsTileStyles/styled";
+import { useSelector } from "react-redux";
+import { selectProfile } from "../../../profileSlice";
 
-const SingleProfile = () => {
-  const profile = useSelector(selectProfile);
-
-
-
-
-
-
-  
+const SingleProfile = ({picture, name, birthday, placeOfBirth, biography}) => {
+ 
 
   const profilePicturePath = "https://image.tmdb.org/t/p/w300";
-
+  const profile = useSelector(selectProfile);
   return (
-    <>
-      <Wrapper>
+    
      
-        <TileDetailsWrapper >
-         
+
+        
+    <TileDetailsWrapper>
           <PosterWrapper >
-            <Poster src={profile.profile_path && `${profilePicturePath}${profile.profile_path}`} alt="" />
+            <Poster src={picture && `${profilePicturePath}${picture}`} alt="" />
             <TextWrapper>
-              <Title> {profile.name}</Title>
+              <Title> {name}</Title>
               <InfoWrapper>
                 <InfoCategory>Date of birth:</InfoCategory>
-                <InfoText>{profile.birthday}</InfoText> {/*Uwaga odwrócić kolejnośćw dacie */}
+                <InfoText>{birthday}</InfoText> {/*Uwaga odwrócić kolejnośćw w dacie */}
               </InfoWrapper>
               <InfoWrapper>
                 <InfoCategory>Place of brith:</InfoCategory>
-                <InfoText>{profile.place_of_birth}</InfoText>
+                <InfoText>{placeOfBirth}</InfoText>
               </InfoWrapper>
             </TextWrapper>
             <OverviewWrapper>
               <Overview>
-                {profile.biography}
+                {biography}
               </Overview>
             </OverviewWrapper>
           </PosterWrapper>
-
-        </TileDetailsWrapper>
-
+          </TileDetailsWrapper>
         
-        
-      </Wrapper>
 
-    </>
+
+
+      
+
+    
   )
 };
 export default SingleProfile;

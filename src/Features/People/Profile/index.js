@@ -4,15 +4,13 @@ import { useDispatch, useSelector, } from "react-redux";
 import { fetchProfilePending } from "./profileSlice";
 import { fetchCastCrewPending, selectCastCrew } from "./castCrewSlice";
 import { Container } from "../../../common/Container/styled";
-import SingleProfile from "./Core/Success/SingleProfile";
 import Core from "./Core";
 
 
 const ProfilePage = () => {
     const { id } = useParams();
-    
-
     const dispatch = useDispatch();
+    
     useEffect(() => {
         dispatch(fetchProfilePending(id));
         dispatch(fetchCastCrewPending(id));
@@ -20,15 +18,14 @@ const ProfilePage = () => {
 
 
     return (
-
         <>
             <Container>
-                <SingleProfile />
-
+                <Core />
             </Container>
         </>
-
-
     )
 }
 export default ProfilePage;
+
+
+

@@ -6,7 +6,7 @@ import Success from "./Success";
 
 const Core = () => {
     const status = useSelector(selcetStatus);
-    console.log(status)
+  
     switch (status) {
         case "pending":
             return <Loading />
