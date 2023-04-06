@@ -5,6 +5,7 @@ const profileSlice = createSlice({
     initialState: {
         status: "pending",
         profile: [""],
+        cast: [""],
 
 
     },
