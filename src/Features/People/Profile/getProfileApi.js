@@ -12,7 +12,8 @@ export const getCastCrewApi = async (id) => {
 
     if (!response.ok) {
         throw new Error(response.statusText);
+
     }
     return await response.json();
 
-};
+}; 

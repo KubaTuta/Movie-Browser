@@ -1,29 +1,27 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useDispatch, useSelector, } from "react-redux";
-import { fetchProfilePending } from "./profileSlice";
-import { fetchCastCrewPending, selectCastCrew } from "./castCrewSlice";
+import { useDispatch, } from "react-redux";
+import { fetchPending } from "./profileSlice";
 import { Container } from "../../../common/Container/styled";
 import Core from "./Core";
 
 
 const ProfilePage = () => {
-    const { id } = useParams();
-    const dispatch = useDispatch();
-    
-    useEffect(() => {
-        dispatch(fetchProfilePending(id));
-        dispatch(fetchCastCrewPending(id));
-    }, [dispatch, id]);
+  const { id } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPending(id));
+  }, [dispatch, id]);
 
 
-    return (
-        <>
-            <Container>
-                <Core />
-            </Container>
-        </>
-    )
+  return (
+    <>
+      <Container>
+        <Core />
+      </Container>
+    </>
+  )
 }
 export default ProfilePage;
 

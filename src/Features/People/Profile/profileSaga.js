@@ -1,29 +1,22 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import { getCastCrewApi, getProfileApi } from "./getProfileApi";
-import { fetchProfileSucces, fetchProfilePending, fetchProfileError } from "./profileSlice";
-import { fetchCastCrewError, fetchCastCrewPending, fetchCastCrewSucces } from "./castCrewSlice";
+import { fetchProfileSuccess, fetchPending, fetchError, fetchCastCrewSuccess } from "./profileSlice";
+
 
 function* fetchprofileHendler({ payload: id }) {
     try {
         const profileId = yield call(getProfileApi, id);
-        yield put(fetchProfileSucces(profileId));
-    }
-    catch (error) {
-        yield put(fetchProfileError(alert(" coś poszło nie tak")))
-    }
-}
-function* fetchCastCrewHendler({ payload: id }) {
-    try {
         const castCrew = yield call(getCastCrewApi, id);
-        yield put(fetchCastCrewSucces(castCrew));
+        yield put(fetchCastCrewSuccess(castCrew))
+        yield put(fetchProfileSuccess(profileId));
+        console.log(castCrew)
     }
     catch (error) {
-        yield put(fetchCastCrewError(alert("Coś sie zpier....")))
+        yield put(fetchError(alert(" coś poszło nie tak")))
     }
 }
-
 export function* profileIdSaga() {
 
-    yield takeLatest(fetchProfilePending.type, fetchprofileHendler)
-    yield takeLatest(fetchCastCrewPending.type, fetchCastCrewHendler)
+    yield takeLatest(fetchPending.type, fetchprofileHendler)
+
 };
