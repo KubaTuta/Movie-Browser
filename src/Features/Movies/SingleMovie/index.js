@@ -17,6 +17,7 @@ const SingleMovie = ({ cleaningHandler }) => {
     dispatch(setMovieId(id))
     dispatch(fetchPending());
     cleaningHandler();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, dispatch]);
 
   return (
