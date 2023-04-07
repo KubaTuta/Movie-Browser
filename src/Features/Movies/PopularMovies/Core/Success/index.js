@@ -16,6 +16,7 @@ import {
   selectSearchedTotalPages,
   selectSearchedTotalFrazes,
 } from "../../../../../common/Navigation/Input/Search/searchSlice";
+import HeaderTitle from "../../../../../common/Header";
 
 const Success = () => {
   const page = useSelector(selectPages);
@@ -30,6 +31,7 @@ const Success = () => {
 
   return (
     <>
+      <HeaderTitle />
       <MoviesGridWrapper>
         <MovieTile movies={searchQuery.length > 0 ? searchedMovies : movies} />
       </MoviesGridWrapper>
