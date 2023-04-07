@@ -9,7 +9,6 @@ function* fetchprofileHendler({ payload: id }) {
         const castCrew = yield call(getCastCrewApi, id);
         yield put(fetchCastCrewSuccess(castCrew))
         yield put(fetchProfileSuccess(profileId));
-        console.log(castCrew)
     }
     catch (error) {
         yield put(fetchError(alert(" coś poszło nie tak")))

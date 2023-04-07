@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
-import { selectCast } from "../../../profileSlice";
-import noPoster from "../../../../../../common/Image/noposter.svg"
-import { MoviesGridWrapper } from "../../../../../Movies/PopularMovies/Core/MoviesGridWrapper/styled";
+import { selectCrew } from "../../../profileSlice";
 import { selectGenres } from "../../../../../../common/Genres/genresSlice";
-import Genres from "../../../../../../common/Genres";
+import { MoviesGridWrapper } from "../../../../../Movies/PopularMovies/Core/MoviesGridWrapper/styled";
+
+import noPoster from "../../../../../../common/Image/noposter.svg"
 import {
   MovieData,
   Poster,
@@ -16,19 +16,20 @@ import {
   VoteCount,
   VoteWrapper,
   Year
-} from "../../../../../../common/MovieTile/styled"
+} from "../../../../../../common/MovieTile/styled";
+import Genres from "../../../../../../common/Genres/index";
 
+const MoviesCrew = () => {
 
-const MoviesCast = () => {
-
-  const cast = useSelector(selectCast);
-  const genres = useSelector(selectGenres)
+  const crew = useSelector(selectCrew);
+  const genres = useSelector(selectGenres);
   const profilePicturePath = "https://image.tmdb.org/t/p/w300";
+
 
   return (
     <>
       <MoviesGridWrapper>
-        {cast.map((cast, id) => (
+        {crew.map((cast, id) => (
           <TileWrapper >
 
             <PosterWrapper key={id}>
@@ -59,8 +60,6 @@ const MoviesCast = () => {
         ))}
       </MoviesGridWrapper>
     </>
-
-
   )
-}
-export default MoviesCast;
+};
+export default MoviesCrew;

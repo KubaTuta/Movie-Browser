@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
 import SingleProfile from "./SingleProfile";
-import { selectCast, selectProfile } from "../../profileSlice";
+import { selectProfile } from "../../profileSlice";
 import MoviesCast from "./MoviesCast";
 import { Header3 } from "../../../../../common/Header/styled";
+import MoviesCrew from "./MoviesCrew";
 
 const Success = () => {
 
   const profile = useSelector(selectProfile);
-  const cast = useSelector(selectCast);
-  console.log(cast)
+
 
   return (
     <>
@@ -20,10 +20,9 @@ const Success = () => {
         biography={profile.biography}
       />
       <Header3>Movies -cast</Header3>
-      <MoviesCast
-      poster={cast.poster_path}
-      title={cast.title}
-      />
+      <MoviesCast />
+      <Header3>Movies -crew</Header3>
+      <MoviesCrew />
     </>
   )
 };

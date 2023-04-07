@@ -1,8 +1,5 @@
-
-import { useSelector } from "react-redux";
-import { selectCast, selectCrew, } from "../../../profileSlice";
 import {
-InfoCategory,
+  InfoCategory,
   InfoText,
   InfoWrapper,
   Overview,
@@ -16,14 +13,8 @@ InfoCategory,
 
 const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => {
 
-
   const profilePicturePath = "https://image.tmdb.org/t/p/w500";
 
-
-  const cast = useSelector(selectCast)
-  console.log(cast)
-  const crew = useSelector(selectCrew)
-  console.log(crew)
   return (
 
     <TileDetailsWrapper>
@@ -34,7 +25,7 @@ const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => 
         <Title> {name}</Title>
         <InfoWrapper>
           <InfoCategory>Date of birth:</InfoCategory>
-          <InfoText>{birthday}</InfoText> {/*Uwaga odwrócić kolejnośćw w dacie */}
+          <InfoText>{birthday}</InfoText>
         </InfoWrapper>
         <InfoWrapper>
           <InfoCategory>Place of brith:</InfoCategory>
@@ -46,15 +37,7 @@ const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => 
           {biography}
         </Overview>
       </OverviewWrapper>
-
     </TileDetailsWrapper>
-
-
-
-
-
-
-
   )
 };
 export default SingleProfile;
