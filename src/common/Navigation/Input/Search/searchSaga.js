@@ -4,7 +4,6 @@ import { fetchSearchError, fetchSearchPending, fetchSearchSuccess } from "./sear
 
 function* fetchSearchedMoviesHandler({payload: {page, query}}) {
   try {
-    console.log(query);
     const searchForMovies = yield call(getSearchApi, page, query);
     yield put(fetchSearchSuccess(searchForMovies));
   }
