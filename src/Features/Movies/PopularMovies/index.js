@@ -1,10 +1,10 @@
 import { Container } from "../../../common/Container/styled";
-import { Header } from "../../../common/Header/styled";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchMoviesPending } from "./popularMoviesSlice";
 import { fetchGenresPending } from "../../../common/Genres/genresSlice";
 import Core from "./Core";
+import HeaderTitle from "../../../common/Header";
 
 const Movies = () => {
   const dispatch = useDispatch();
@@ -20,9 +20,7 @@ const Movies = () => {
   }, []);
   return (
     <Container>
-      <Header>
-        Popular movies
-      </Header>
+      <HeaderTitle />
       <Core />
     </Container>
   )
