@@ -8,12 +8,11 @@ const Input = () => {
 
   const input = useRef(null);
   const [query, setQuery] = useState("");
-  console.log(query);
   const dispatch = useDispatch();
 
   const queryHandler = (event) => {
     setQuery(event.target.value);
-    dispatch(fetchSearchPending(query));
+    dispatch(fetchSearchPending( { page: 1, query: query}))
   };
 
   return (
@@ -25,7 +24,6 @@ const Input = () => {
         ref={input}
         onChange={(event) => queryHandler(event)}
       />
-
     </>
   )
 };
