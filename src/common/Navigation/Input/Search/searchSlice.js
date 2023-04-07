@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const searchedMoviesSlice = createSlice({
   name: 'searchMovie',
   initialState: {
-    status: "pending",
+    status: "success",
     searchedMovies: [""],
     query: "",
   },
