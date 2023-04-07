@@ -11,11 +11,11 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: {
+    searchMovie: searchedMoviesReducer,
     popularMovies: popularMoviesReducer,
     popularPeople: popularPeopleReducer,
     genres: genresReducer,
     movie: movieReducer,
-    searchMovie: searchedMoviesReducer,
   },
   middleware: [sagaMiddleware]
 });
