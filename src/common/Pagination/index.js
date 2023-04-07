@@ -12,8 +12,6 @@ const Pagination = ({ page, fetchApi, query, total, frazes }) => {
     }
   }, [page]);
 
-  console.log(total);
-
   return (
     <Wrapper>
       <Button
