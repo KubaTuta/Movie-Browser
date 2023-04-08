@@ -5,11 +5,13 @@ import {
   NamePeople,
   PeoplePosterWrapper,
   NamePeopleWrapper,
+  StyledNavLink,
 }
   from "../../../../../../common/PersonTileStyles/styled";
 import noProfilePicture from "../../../../../../common/PersonTileStyles/noProfilePicture.svg"
 import { useSelector } from "react-redux";
 import { selectPeople } from "../../../popularPeopleSlice";
+
 
 const Tile = () => {
 
@@ -20,21 +22,23 @@ const Tile = () => {
   return (
     <WrapperPeople>
       {people.map((person, id) => (
+        <StyledNavLink to={`/profile/${person.id}`}>
         <TileWrapperPeople key={id} >
           <PeoplePosterWrapper>
-          
+
             {person.profile_path
               ? (
                 <PosterPeople src={person.profile_path && `${personsProfilePicturePath}${person.profile_path}`} alt="" />
               ) : (
-                                < PosterPeople src={noProfilePicture} alt="" />
+                < PosterPeople src={noProfilePicture} alt="" />
               )
             }
           </PeoplePosterWrapper>
           <NamePeopleWrapper>
-          <NamePeople>{person.name}</NamePeople>
+            <NamePeople>{person.name}</NamePeople>
           </NamePeopleWrapper>
         </TileWrapperPeople>
+        </StyledNavLink>
       ))};
     </WrapperPeople>
   );

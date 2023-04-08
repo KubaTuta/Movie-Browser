@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
-import Pagination from "../../../../../common/Pagination";
 import { fetchPeoplePending, selectPages } from "../../popularPeopleSlice";
+import Pagination from "../../../../../common/Pagination";
 import Tile from "../Success/Tile/index";
 
 const Success = () => {
+
   const page = useSelector(selectPages);
   return (
     <>

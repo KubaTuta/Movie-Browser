@@ -17,6 +17,7 @@ import { ReactComponent as Elipse } from "../../common/img/elipse.svg";
 import Movies from "../../Features/Movies/PopularMovies";
 import People from "../../Features/People/PopularPeople"
 import SingleMovie from "../../Features/Movies/SingleMovie";
+import Profile from "../../Features/People/Profile";
 import Input from "./Input";
 import { useDispatch } from "react-redux";
 import { fetchSearchPending } from "./Input/Search/searchSlice";
@@ -72,7 +73,7 @@ const Navigation = () => {
         <Route path="/" element={<Movies />} />
         <Route path="/people" element={<People />} />
         <Route path="/movie/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
-
+        <Route path="/profile/:id" element={<Profile />} />
 
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>

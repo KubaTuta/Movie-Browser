@@ -4,6 +4,8 @@ import { popularMoviesSaga } from "./Features/Movies/PopularMovies/popularMovies
 import { popularPeopleSaga } from "./Features/People/PopularPeople/popularPeopleSaga";
 import { movieSaga } from "./Features/Movies/SingleMovie/movieSaga";
 import { searchedMoviesSaga } from "./common/Navigation/Input/Search/searchSaga";
+import { profileIdSaga } from "./Features/People/Profile/profileSaga";
+
 export default function* rootSaga() {
   yield all([
     popularMoviesSaga(),
@@ -11,5 +13,6 @@ export default function* rootSaga() {
     genresSaga(),
     movieSaga(),
     searchedMoviesSaga(),
+    profileIdSaga(),
   ]);
 }  

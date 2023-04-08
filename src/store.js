@@ -6,6 +6,8 @@ import popularPeopleReducer from './Features/People/PopularPeople/popularPeopleS
 import searchedMoviesReducer from "./common/Navigation/Input/Search/searchSlice";
 import genresReducer from "./common/Genres/genresSlice";
 import movieReducer from './Features/Movies/SingleMovie/movieSlice';
+import profileReducer from "./Features/People/Profile/profileSlice";
+
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -16,6 +18,7 @@ const store = configureStore({
     popularPeople: popularPeopleReducer,
     genres: genresReducer,
     movie: movieReducer,
+    profileId: profileReducer,
   },
   middleware: [sagaMiddleware]
 });
