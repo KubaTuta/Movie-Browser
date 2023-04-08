@@ -5,7 +5,6 @@ import {
   NavBoxLine,
   NavLinks,
   NavH1,
-  NavInput,
   NavigationBoxStyled,
   NavigationWrapper,
   NavLi,
@@ -14,14 +13,25 @@ import {
   Stroke,
 } from "./styled"
 
-import { ReactComponent as Elipse } from "../../image/elipse.svg"
+import { ReactComponent as Elipse } from "../../common/img/elipse.svg";
 import Movies from "../../Features/Movies/PopularMovies";
 import People from "../../Features/People/PopularPeople"
 import SingleMovie from "../../Features/Movies/SingleMovie";
 import Profile from "../../Features/People/Profile";
-
+import Input from "./Input";
+import { useDispatch } from "react-redux";
+import { fetchSearchPending } from "./Input/Search/searchSlice";
+import { useState } from "react";
 
 const Navigation = () => {
+  const [query, setQuery] = useState("");
+  const dispatch = useDispatch();
+
+  const cleaningHandler = () => {
+    dispatch(fetchSearchPending({ page: 1, query: "" }));
+    setQuery("");
+  };
+
   return (
     <>
       <NavigationBoxStyled>
@@ -31,17 +41,29 @@ const Navigation = () => {
               <Stroke />
               <NavH1>movies browser</NavH1>
               <NavLinks           >
-                <NavLi><StyledNavLink to="/">movies</StyledNavLink></NavLi>
-                <NavLi><StyledNavLink to="/people">people</StyledNavLink></NavLi>
+                <NavLi>
+                  <StyledNavLink
+                    to="/"
+                    onClick={cleaningHandler}
+                  >
+                    movies
+                  </StyledNavLink>
+                </NavLi>
+                <NavLi>
+                  <StyledNavLink
+                    to="/people"
+                    onClick={cleaningHandler}
+                  >
+                    people
+                  </StyledNavLink>
+                </NavLi>
               </NavLinks>
             </NavBoxLine>
             <NavWrapperInput>
               <NavIconInput>
                 <Elipse />
               </NavIconInput>
-              <NavInput
-                type="text"
-                placeholder="Search for movies..." />
+              <Input query={query} setQuery={setQuery} />
             </NavWrapperInput>
           </NavigationWrapper>
         </NavBoxFrame>
@@ -50,9 +72,8 @@ const Navigation = () => {
       <Routes>
         <Route path="/" element={<Movies />} />
         <Route path="/people" element={<People />} />
+        <Route path="/movie/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
         <Route path="/profile/:id" element={<Profile />} />
-        <Route path="/movie/:id" element={<SingleMovie />} />
-        
 
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>

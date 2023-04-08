@@ -2,8 +2,7 @@ import { useSelector } from "react-redux";
 import { selectCrew } from "../../../profileSlice";
 import { selectGenres } from "../../../../../../common/Genres/genresSlice";
 import { MoviesGridWrapper } from "../../../../../Movies/PopularMovies/Core/MoviesGridWrapper/styled";
-
-import noPoster from "../../../../../../common/Image/noposter.svg"
+import noPoster from "../../../../../../common/img/noposter.svg"
 import {
   MovieData,
   Poster,

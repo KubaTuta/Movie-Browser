@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { ReactComponent as stroke } from "../../image/stroke.svg"
+import { ReactComponent as stroke } from "../../common/img/stroke.svg"
 
 export const NavigationBoxStyled = styled.div`
   background: ${({ theme }) => theme.color.woodsmoke};

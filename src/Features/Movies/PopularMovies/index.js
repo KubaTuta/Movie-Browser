@@ -1,5 +1,4 @@
 import { Container } from "../../../common/Container/styled";
-import { Header } from "../../../common/Header/styled";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchMoviesPending } from "./popularMoviesSlice";
@@ -20,9 +19,6 @@ const Movies = () => {
   }, []);
   return (
     <Container>
-      <Header>
-        Popular movies
-      </Header>
       <Core />
     </Container>
   )

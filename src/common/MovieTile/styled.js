@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as StarIco } from "../Image/star.svg"
+import { ReactComponent as StarIco } from "../../common/img/star.svg"
 import { Link } from "react-router-dom";
 
 

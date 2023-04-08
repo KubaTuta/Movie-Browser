@@ -13,8 +13,8 @@ const Credits = ({ credits }) => {
 
   return (
     <CreditWrapper>
-      {credits && credits.map((credit) => (
-        <CreditPeopleWrapper key={credit.id}>
+      {credits && credits.map((credit, id) => (
+        <CreditPeopleWrapper key={id}>
           <PeoplePosterWrapper>
             {credit.profile_path ?
               (<PosterPeople src={`${personsProfilePicturePath}${credit.profile_path}`} />)

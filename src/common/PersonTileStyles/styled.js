@@ -1,4 +1,4 @@
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const WrapperPeople = styled.section`
@@ -52,7 +52,7 @@ export const PosterPeople = styled.img`
       };
   `;
 
-export const NamePeopleWrapper = styled.div`
+export const NamePeopleWrapper= styled.div`
   min-height: 64px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       min-height: 42px;

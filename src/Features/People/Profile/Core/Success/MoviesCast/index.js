@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectCast } from "../../../profileSlice";
-import noPoster from "../../../../../../common/Image/noposter.svg"
+import noPoster from "../../../../../../common/img/noposter.svg"
 import { MoviesGridWrapper } from "../../../../../Movies/PopularMovies/Core/MoviesGridWrapper/styled";
 import { selectGenres } from "../../../../../../common/Genres/genresSlice";
 import Genres from "../../../../../../common/Genres";

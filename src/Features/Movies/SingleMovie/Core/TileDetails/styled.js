@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as StarIco } from "../../../../../common/Image/star.svg";
+import { ReactComponent as StarIco } from "../../../../../common/img/star.svg";
 import { GenreWrapper } from "../../../../../common/Genres/styled";
 
 export const Year = styled.p`
