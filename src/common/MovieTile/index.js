@@ -25,8 +25,8 @@ const MovieTile = ({ movies }) => {
   return (
     <>
       {movies.map((movie, id) => (
-       <StyledLink to={`/movie/${movie.id}`}>
-        <TileWrapper key={id}>
+       <StyledLink to={`/movie/${movie.id}`} key={id}>
+        <TileWrapper>
           <PosterWrapper>
             <>
               {
