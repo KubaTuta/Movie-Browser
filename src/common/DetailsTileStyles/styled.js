@@ -33,7 +33,7 @@ export const PosterWrapper = styled.div`
 `;
 
 export const Poster = styled.img`
-    //width: 100%;
+  width: 100%;
   max-height: 434px;
   border-radius: 5px;
   object-fit: cover;
