@@ -29,9 +29,9 @@ const MoviesCast = () => {
     <>
       <MoviesGridWrapper>
         {cast.map((cast, id) => (
-          <TileWrapper >
+          <TileWrapper key={id} >
 
-            <PosterWrapper key={id}>
+            <PosterWrapper>
               <>
                 {
                   cast.poster_path ?
