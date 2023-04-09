@@ -1,4 +1,4 @@
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import {
   NavWrapperInput,
   NavIconInput,
@@ -22,13 +22,17 @@ import Input from "./Input";
 import { useDispatch } from "react-redux";
 import { fetchSearchPending } from "./Input/Search/searchSlice";
 import { useState } from "react";
+import PeopleInput from "./PeopleInput";
+import { fetchSearchPeoplePending } from "./PeopleInput/Search/searchPeopleSlice";
 
 const Navigation = () => {
   const [query, setQuery] = useState("");
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const cleaningHandler = () => {
     dispatch(fetchSearchPending({ page: 1, query: "" }));
+    dispatch(fetchSearchPeoplePending({ page: 1, query: "" }));
     setQuery("");
   };
 
@@ -63,7 +67,11 @@ const Navigation = () => {
               <NavIconInput>
                 <Elipse />
               </NavIconInput>
-              <Input query={query} setQuery={setQuery} />
+              {
+                location.pathname.startsWith("/people") || location.pathname.startsWith("/profile") ?
+                  <PeopleInput query={query} setQuery={setQuery}/> :
+                  <Input query={query} setQuery={setQuery} />
+              }
             </NavWrapperInput>
           </NavigationWrapper>
         </NavBoxFrame>
@@ -73,7 +81,7 @@ const Navigation = () => {
         <Route path="/" element={<Movies />} />
         <Route path="/people" element={<People />} />
         <Route path="/movie/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
-        <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/profile/:id" element={<Profile cleaningHandler={cleaningHandler} />} />
 
         <Route path="*" element={<Navigate to="/movies" />} />
       </Routes>
