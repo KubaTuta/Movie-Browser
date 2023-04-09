@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Wrapper, Button, Text, InnerButtonText, RightArrow, LeftArrow, Bold } from "./styled";
 
-const Pagination = ({ page, fetchApi, query, total, frazes }) => {
+const Pagination = ({ page, fetchApi, query, total }) => {
 
   const dispatch = useDispatch();
 
@@ -41,7 +41,7 @@ const Pagination = ({ page, fetchApi, query, total, frazes }) => {
         page={page}
         total={total > 500 ? 500 : total}
         disabled={total > 500 ? page === 500 : page === total}
-        onClick={() => dispatch(fetchApi({ page: total, query: query }))}
+        onClick={() => dispatch(fetchApi({ page: (total > 500 ? 500 : total), query: query }))}
       >
         <InnerButtonText>Last&nbsp;</InnerButtonText><RightArrow page={page} /><RightArrow page={page} />
       </Button>
