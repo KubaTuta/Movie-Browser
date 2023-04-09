@@ -14,7 +14,6 @@ import {
   selectSearchedPages,
   selectSearchedQuery,
   selectSearchedTotalPages,
-  selectSearchedTotalFrazes,
 } from "../../../../../common/Navigation/Input/Search/searchSlice";
 import HeaderTitle from "../../../../../common/Header";
 
@@ -27,7 +26,6 @@ const Success = () => {
   const searchPage = useSelector(selectSearchedPages);
   const searchedMovies = useSelector(selectSearchedMovies);
   const searchedTotalPages = useSelector(selectSearchedTotalPages);
-  const searchedTotalFrazes = useSelector(selectSearchedTotalFrazes);
 
   return (
     <>
@@ -40,7 +38,6 @@ const Success = () => {
         fetchApi={searchQuery.length > 0 ? fetchSearchPending : fetchMoviesPending}
         query={searchQuery.length > 0 ? searchQuery : null}
         total={searchQuery.length > 0 ? searchedTotalPages : total}
-        frazes={searchQuery.length > 0 ? searchedTotalFrazes : null}
       />
     </>
   )
