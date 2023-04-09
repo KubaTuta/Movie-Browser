@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { NavInput } from "./styled";
+import { NavInput } from "../styled";
 import { fetchSearchPending } from "./Search/searchSlice";
 import { useDispatch } from "react-redux";
 
