@@ -16,6 +16,7 @@ const popularPeopleSlice = createSlice({
           state.status = "success";
           state.page = person.page;
           state.name = person.name;
+          state.total = person.total_pages;
         },
         fetchPeopleError: state => {
           state.status = "error";
@@ -34,6 +35,7 @@ export const selectStatus = state => selectPeopleState(state).status;
 export const selectPeople = state => selectPeopleState(state).person;
 export const selectPages = state => selectPeopleState(state).page;
 export const selectName = state => selectPeopleState(state).name;
+export const selectTotalPages = state => selectPeopleState(state).total;
 
 
      
