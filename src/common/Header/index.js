@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { Header } from "./styled";
 import { useSelector } from "react-redux";
 import { selectSearchedQuery, selectSearchedTotalFrazes } from "../Navigation/Input/Search/searchSlice";
+import { selectSearchedPeopleQuery, selectSearchedPeopleTotalFrazes } from "../Navigation/PeopleInput/Search/searchPeopleSlice";
 
 const HeaderTitle = () => {
 
@@ -12,6 +13,9 @@ const HeaderTitle = () => {
   const query = useSelector(selectSearchedQuery);
   const results = useSelector(selectSearchedTotalFrazes);
 
+  const queryPeople = useSelector(selectSearchedPeopleQuery);
+  const resultsPeople = useSelector(selectSearchedPeopleTotalFrazes);
+
   return (
     <Header>
       {
@@ -19,7 +23,7 @@ const HeaderTitle = () => {
           ?
           query.length > 0 ? `Search results for "${query}" (${results})` : "Popular movies"
           :
-          "Popular people"
+          queryPeople.length > 0 ? `Search results for "${queryPeople}" (${resultsPeople})` : "Popular people"
       }
     </Header>
   )
