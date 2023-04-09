@@ -14,7 +14,6 @@ const People = () => {
 
   return (
     <Container>
-      <HeaderTitle />
       <Core />
     </Container>
   )
