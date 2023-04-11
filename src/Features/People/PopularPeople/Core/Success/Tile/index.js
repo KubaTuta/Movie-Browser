@@ -9,21 +9,16 @@ import {
 }
   from "../../../../../../common/PersonTileStyles/styled";
 import noProfilePicture from "../../../../../../common/PersonTileStyles/noProfilePicture.svg"
-import { useSelector } from "react-redux";
-import { selectPeople } from "../../../popularPeopleSlice";
 
-
-const Tile = () => {
-
-  const people = useSelector(selectPeople);
+const Tile = ({people}) => {
 
   const personsProfilePicturePath = "https://image.tmdb.org/t/p/w300";
 
   return (
     <WrapperPeople>
       {people.map((person, id) => (
-        <StyledNavLink to={`/profile/${person.id}`}>
-        <TileWrapperPeople key={id} >
+        <StyledNavLink to={`/profile/${person.id}`} key={id}>
+        <TileWrapperPeople  >
           <PeoplePosterWrapper>
 
             {person.profile_path

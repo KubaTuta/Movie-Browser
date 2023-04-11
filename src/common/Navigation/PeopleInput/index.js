@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { NavInput } from "../styled";
-import { fetchSearchPending } from "./Search/searchSlice";
 import { useDispatch } from "react-redux";
+import { fetchSearchPeoplePending } from "./Search/searchPeopleSlice";
 
-const Input = ({query, setQuery}) => {
+const PeopleInput = ({query, setQuery}) => {
 
   const input = useRef(null);
   
@@ -12,7 +12,7 @@ const Input = ({query, setQuery}) => {
   const queryHandler = (event) => {
     const newQuery = event.target.value;
     setQuery(newQuery);
-    dispatch(fetchSearchPending({ page: 1, query: newQuery }))
+    dispatch(fetchSearchPeoplePending({ page: 1, query: newQuery }))
   };
 
   return (
@@ -20,7 +20,7 @@ const Input = ({query, setQuery}) => {
       <NavInput
         value={query}
         type="text"
-        placeholder="Search for movies..."
+        placeholder="Search for people..."
         ref={input}
         onChange={(event) => queryHandler(event)}
       />
@@ -28,4 +28,4 @@ const Input = ({query, setQuery}) => {
   )
 };
 
-export default Input;
+export default PeopleInput;

@@ -7,12 +7,13 @@ import searchedMoviesReducer from "./common/Navigation/Input/Search/searchSlice"
 import genresReducer from "./common/Genres/genresSlice";
 import movieReducer from './Features/Movies/SingleMovie/movieSlice';
 import profileReducer from "./Features/People/Profile/profileSlice";
-
+import searchedPeopleReducer from "./common/Navigation/PeopleInput/Search/searchPeopleSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: {
+    searchPeople: searchedPeopleReducer,
     searchMovie: searchedMoviesReducer,
     popularMovies: popularMoviesReducer,
     popularPeople: popularPeopleReducer,
