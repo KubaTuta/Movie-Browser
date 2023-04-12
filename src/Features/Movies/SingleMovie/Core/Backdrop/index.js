@@ -29,7 +29,7 @@ const Backdrop = ({ title, poster, votes, vote }) => {
                     <VoteAverange>{vote && vote.toFixed(1)}</VoteAverange>
                     <Scale>/ 10</Scale>
                   </VoteAverangeWrapper>
-                  <VoteCount>{votes}</VoteCount>
+                  <VoteCount>{votes} votes</VoteCount>
                 </VoteWrapper>
               </TextWrapper>
             </HeadContainer>
