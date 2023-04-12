@@ -1,30 +1,32 @@
 import styled from "styled-components";
-import { WrapperPeople, TileWrapperPeople } from  "../../../../../common/PersonTileStyles/styled";
+import { WrapperPeople} from  "../../../../../common/PersonTileStyles/styled";
 
 export const CreditWrapper = styled(WrapperPeople)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 24px;
-  justify-items: start;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
       grid-gap: 16px;
     };
 `;
 
-export const CreditPeopleWrapper = styled(TileWrapperPeople)`
-  min-height: 339px;
-  width: 208px;
+export const CreditPeopleWrapper = styled.div`
+  height: 100%;
+  width: 100%;
   padding: 16px;
   border-radius: 5px;
-  grid-template-rows: 3fr 1fr; 
+  background:${({ theme }) => theme.color.white};
+  box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+  display: grid;
+  grid-template-rows: 300px 1fr; 
   gap: 8px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       min-height: 245px;
-      width: 136px;
+      max-width: 136px;
       padding: 8px;
       border-radius: 5px;
-      grid-template-rows: 2fr auto; 
+      grid-template-rows: 2fr 1fr; 
       gap: 8px;
     };
 `;
