@@ -8,7 +8,7 @@ import {
   StyledNavLink,
 }
   from "../../../../../../common/PersonTileStyles/styled";
-import noProfilePicture from "../../../../../../common/PersonTileStyles/noProfilePicture.svg"
+import noProfilePicture from "../../../../../../common/img/noPersonPoster.png"
 
 const Tile = ({people}) => {
 
