@@ -10,7 +10,7 @@ import {
   TileDetailsWrapper,
   Title
 } from "../../../../../../common/DetailsTileStyles/styled";
-
+import noProfilePicture from "../../../../../../common/PersonTileStyles/noProfilePicture.svg"
 const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => {
 
   const profilePicturePath = "https://image.tmdb.org/t/p/w500";
@@ -19,7 +19,14 @@ const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => 
 
     <TileDetailsWrapper>
       <PosterWrapper >
-        <Poster src={picture && `${profilePicturePath}${picture}`} alt="" />
+        <>
+          {picture
+            ?
+            (<Poster src={picture && `${profilePicturePath}${picture}`} alt="" />)
+            :
+            (<Poster src={noProfilePicture} alt="" />)}
+        </>
+
       </PosterWrapper>
       <TextWrapper>
         <Title> {name}</Title>
