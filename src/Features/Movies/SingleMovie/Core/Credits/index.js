@@ -2,10 +2,9 @@ import {
   NamePeople, 
   NamePeopleWrapper, 
   PeoplePosterWrapper, 
-  PosterPeople 
-} from "../../../../../common/PersonTileStyles/styled";
-import { CreditWrapper, Role, CreditPeopleWrapper } from "./styled";
-import noProfilePicture from "../../../../../common/PersonTileStyles/noProfilePicture.svg";
+  } from "../../../../../common/PersonTileStyles/styled";
+import { CreditWrapper, Role, CreditPeopleWrapper, PosterPerson } from "./styled";
+import noProfilePicture from "../../../../../common/img/noPersonPoster.png";
 import { StyledLink } from "../../../../../common/MovieTile/styled";
 
 const Credits = ({ credits }) => {
@@ -19,9 +18,9 @@ const Credits = ({ credits }) => {
         <CreditPeopleWrapper >
           <PeoplePosterWrapper>
             {credit.profile_path ?
-              (<PosterPeople src={`${personsProfilePicturePath}${credit.profile_path}`} />)
+              (<PosterPerson src={`${personsProfilePicturePath}${credit.profile_path}`} />)
               : (
-                <PosterPeople src={noProfilePicture} alt="" />
+                <PosterPerson src={noProfilePicture} alt="" />
               )
             }
           </PeoplePosterWrapper>
