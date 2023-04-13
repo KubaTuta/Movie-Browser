@@ -118,6 +118,6 @@ export const StyledLink = styled(Link)`
  color: ${({ theme }) => theme.color.woodsmoke};
  transition: 1s;
  :hover{
-  transform: scale(1.05);
+  transform: scale(1.02);
  };
 `
