@@ -5,9 +5,12 @@ export const CreditWrapper = styled(WrapperPeople)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 24px;
+  justify-items: start;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
       grid-gap: 16px;
+      justify-items: center;
+
     };
 `;
 
