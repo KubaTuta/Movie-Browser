@@ -1,9 +1,8 @@
 import { 
   NamePeople, 
-  NamePeopleWrapper, 
-  PeoplePosterWrapper, 
+  NamePeopleWrapper,   
   } from "../../../../../common/PersonTileStyles/styled";
-import { CreditWrapper, Role, CreditPeopleWrapper, PosterPerson } from "./styled";
+import { CreditWrapper, Role, CreditPeopleWrapper, PosterPerson, PosterWrapper } from "./styled";
 import noProfilePicture from "../../../../../common/img/noPersonPoster.png";
 import { StyledLink } from "../../../../../common/MovieTile/styled";
 
@@ -16,14 +15,14 @@ const Credits = ({ credits }) => {
       {credits && credits.map((credit, id) => (
         <StyledLink to={`/profile/${credit.id}`} key={id}>
         <CreditPeopleWrapper >
-          <PeoplePosterWrapper>
+          <PosterWrapper>
             {credit.profile_path ?
               (<PosterPerson src={`${personsProfilePicturePath}${credit.profile_path}`} />)
               : (
                 <PosterPerson src={noProfilePicture} alt="" />
               )
             }
-          </PeoplePosterWrapper>
+          </PosterWrapper>
           <NamePeopleWrapper>
             <NamePeople>{credit.name}</NamePeople>
             <Role>{(credit.character || credit.job)}</Role>
