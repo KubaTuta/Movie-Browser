@@ -8,6 +8,7 @@ import {
   Poster,
   PosterWrapper,
   Star,
+  StyledLink,
   TextInfoWrapper,
   TileWrapper,
   Title,
@@ -29,8 +30,8 @@ const MoviesCrew = () => {
     <>
       <MoviesGridWrapper>
         {crew.map((cast, id) => (
+          <StyledLink to={`/movie/${cast.id}`} key={id}>
           <TileWrapper >
-
             <PosterWrapper key={id}>
               <>
                 {
@@ -56,6 +57,7 @@ const MoviesCrew = () => {
               </VoteWrapper>
             </TextInfoWrapper>
           </TileWrapper>
+          </StyledLink>
         ))}
       </MoviesGridWrapper>
     </>

@@ -19,7 +19,7 @@ const ProfilePage = ({ cleaningHandler }) => {
     dispatch(fetchCastCrewSuccess(id));
     cleaningHandler();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, id]);
+  }, [id, dispatch]);
 
   useEffect(() => {
     dispatch(fetchGenresPending())

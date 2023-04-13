@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import SingleProfile from "./SingleProfile";
-import { selectProfile } from "../../profileSlice";
+import { selectCast, selectCrew, selectProfile } from "../../profileSlice";
 import MoviesCast from "./MoviesCast";
 import { Header3 } from "../../../../../common/Header/styled";
 import MoviesCrew from "./MoviesCrew";
@@ -8,8 +8,8 @@ import MoviesCrew from "./MoviesCrew";
 const Success = () => {
 
   const profile = useSelector(selectProfile);
-
-
+  const cast = useSelector(selectCast);
+  const crew = useSelector(selectCrew);
   return (
     <>
       <SingleProfile
@@ -19,9 +19,17 @@ const Success = () => {
         placeOfBirth={profile.place_of_birth}
         biography={profile.biography}
       />
-      <Header3>Movies -cast</Header3>
+      {cast.length === 0 
+      ? "" 
+      :  
+      <Header3>Movies - cast ({cast.length})</Header3>}
+     
       <MoviesCast />
-      <Header3>Movies -crew</Header3>
+      {crew.length === 0 
+      ? "" 
+      : 
+      <Header3>Movies - crew ({crew.length})</Header3>}
+      
       <MoviesCrew />
     </>
   )

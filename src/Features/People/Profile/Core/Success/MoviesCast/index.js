@@ -9,6 +9,7 @@ import {
   Poster,
   PosterWrapper,
   Star,
+  StyledLink,
   TextInfoWrapper,
   TileWrapper,
   Title,
@@ -17,7 +18,6 @@ import {
   VoteWrapper,
   Year
 } from "../../../../../../common/MovieTile/styled"
-
 
 const MoviesCast = () => {
 
@@ -29,33 +29,34 @@ const MoviesCast = () => {
     <>
       <MoviesGridWrapper>
         {cast.map((cast, id) => (
-          <TileWrapper key={id} >
-
-            <PosterWrapper>
-              <>
-                {
-                  cast.poster_path ?
-                    (
-                      <Poster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
-                    ) : (
-                      <Poster src={noPoster} alt="" />
-                    )
-                }
-              </>
-            </PosterWrapper>
-            <TextInfoWrapper>
-              <MovieData>
-                <Title>{cast.original_title}</Title>
-                <Year>{cast.release_date && cast.release_date.slice(0, 4)}</Year>
-                <Genres genres={genres} genreIds={cast.genre_ids} />
-              </MovieData>
-              <VoteWrapper>
-                <Star alt="" />
-                <VoteAverange> {cast.vote_average}</VoteAverange>
-                <VoteCount>{cast.vote_count} votes</VoteCount>
-              </VoteWrapper>
-            </TextInfoWrapper>
-          </TileWrapper>
+          <StyledLink to={`/movie/${cast.id}`} key={id}>
+            <TileWrapper>
+              <PosterWrapper>
+                <>
+                  {
+                    cast.poster_path ?
+                      (
+                        <Poster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
+                      ) : (
+                        <Poster src={noPoster} alt="" />
+                      )
+                  }
+                </>
+              </PosterWrapper>
+              <TextInfoWrapper>
+                <MovieData>
+                  <Title>{cast.original_title}</Title>
+                  <Year>{cast.release_date && cast.release_date.slice(0, 4)}</Year>
+                  <Genres genres={genres} genreIds={cast.genre_ids} />
+                </MovieData>
+                <VoteWrapper>
+                  <Star alt="" />
+                  <VoteAverange> {cast.vote_average}</VoteAverange>
+                  <VoteCount>{cast.vote_count} votes</VoteCount>
+                </VoteWrapper>
+              </TextInfoWrapper>
+            </TileWrapper>
+          </StyledLink>
         ))}
       </MoviesGridWrapper>
     </>

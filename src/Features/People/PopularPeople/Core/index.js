@@ -10,7 +10,7 @@ const Core = () => {
   const status = useSelector(selectStatus);
   const queryStatus = useSelector(selectSearchedPeopleStatus);
 
-  switch(status) {
+  switch (status) {
     case "pending":
       return <Loading />;
     case "success":
