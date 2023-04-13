@@ -85,6 +85,7 @@ export const InfoText = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
+  padding-right: 8px;
   margin: 0;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       font-size: 12px;

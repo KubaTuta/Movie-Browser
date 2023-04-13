@@ -46,17 +46,26 @@ const TileDetails = (
         <Title> {title}</Title>
         <Year>{year && year.slice(0, 4)}</Year>
         <InfoWrapper>
-          <InfoCategory>Production</InfoCategory>
+          <InfoCategory>Production:</InfoCategory>
           {
-            countries && countries.map((country) => (
+            countries && countries.map((country, index) => (
               <InfoTextWrapper key={country.iso_3166_1}>
-                <InfoText>{country.name}</InfoText>
+                {
+                  (countries.length > 1) ?
+                    (
+                      countries[index - 1] ?
+                        <InfoText>{country.name}</InfoText> :
+                        <InfoText>{country.name},</InfoText>
+                    ) :
+                    <InfoText>{country.name}</InfoText>
+                }
+
               </InfoTextWrapper>
             ))
           }
         </InfoWrapper>
         <InfoWrapper>
-          <InfoCategory>Release date</InfoCategory>
+          <InfoCategory>Release date:</InfoCategory>
           <InfoText>{new Date(release).toLocaleDateString()}</InfoText>
         </InfoWrapper>
         <GenresWrapper>
