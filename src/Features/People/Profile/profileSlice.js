@@ -42,6 +42,6 @@ export const selcetStatus = state => selectProfileState(state).status;
 export const selectProfile = state => selectProfileState(state).profile;
 
 export const selectCastCrewState = state => state.profileId.castCrew;
-export const selectCast = state => selectCastCrewState(state).cast.slice(0, 8);
-export const selectCrew = state => selectCastCrewState(state).crew.slice(0, 8);
+export const selectCast = state => selectCastCrewState(state).cast;
+export const selectCrew = state => selectCastCrewState(state).crew;
 export default profileSlice.reducer;
