@@ -52,7 +52,7 @@ const MoviesCrew = () => {
               </MovieData>
               <VoteWrapper>
                 <Star alt="" />
-                <VoteAverange> {cast.vote_average}</VoteAverange>
+                <VoteAverange> {cast.vote_average.toFixed(1)}</VoteAverange>
                 <VoteCount>{cast.vote_count} votes</VoteCount>
               </VoteWrapper>
             </TextInfoWrapper>
