@@ -10,7 +10,7 @@ import {
   TileDetailsWrapper,
   Title
 } from "../../../../../../common/DetailsTileStyles/styled";
-import noProfilePicture from "../../../../../../common/PersonTileStyles/noProfilePicture.svg"
+import noProfilePicture from "../../../../../../common/img/noPersonPoster.png"
 const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => {
 
   const profilePicturePath = "https://image.tmdb.org/t/p/w500";
