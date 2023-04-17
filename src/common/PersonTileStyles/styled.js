@@ -54,6 +54,8 @@ export const PosterPeople = styled.img`
 
 export const NamePeopleWrapper= styled.div`
   min-height: 64px;
+  max-width: 190px;
+  margin: 0 auto;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       min-height: 42px;
     };

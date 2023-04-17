@@ -7,7 +7,7 @@ export const TileDetailsWrapper = styled.section`
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   padding: 40px;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: auto 1fr;
   grid-gap: 16px;
   margin: 64px 0 64px 0;
@@ -34,9 +34,8 @@ export const PosterWrapper = styled.div`
 
 export const Poster = styled.img`
     width: 100%;
-  max-height: 434px;
   border-radius: 5px;
-  object-fit: cover;
+ // object-fit: cover;
   object-position: top;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       height: 169px;
@@ -85,6 +84,7 @@ export const InfoText = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
+  padding-right: 8px;
   margin: 0;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       font-size: 12px;
