@@ -3,15 +3,15 @@ import { NavInput } from "../styled";
 import { useDispatch } from "react-redux";
 import { fetchSearchPeoplePending } from "./Search/searchPeopleSlice";
 
-const PeopleInput = ({query, setQuery}) => {
+const PeopleInput = ({ query, setQuery }) => {
 
   const input = useRef(null);
-  
+
   const dispatch = useDispatch();
 
   const queryHandler = (event) => {
     const newQuery = event.target.value;
-    setQuery({search: newQuery});
+    setQuery({ search: newQuery });
     dispatch(fetchSearchPeoplePending({ page: 1, query: newQuery }))
   };
 
