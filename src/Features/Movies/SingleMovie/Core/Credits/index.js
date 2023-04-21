@@ -24,7 +24,7 @@ const Credits = ({ credits }) => {
             }
           </PosterWrapper>
           <NamePeopleWrapper>
-            <NamePeople>{credit.name}</NamePeople>
+            <NamePeople>{(credit.name.length > 23) ? `${credit.name.slice(0, 21)}...` : credit.name}</NamePeople>
             <Role>{(credit.character || credit.job)}</Role>
           </NamePeopleWrapper>
         </CreditPeopleWrapper>
