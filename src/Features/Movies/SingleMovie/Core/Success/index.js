@@ -7,7 +7,7 @@ import Credits from "../Credits";
 import { SingleMovieContainer, Wrapper } from "../../styled";
 import { selectMovie, selectCredits } from "../../movieSlice";
 
-const Success = () => { 
+const Success = () => {
 
   const movie = useSelector(selectMovie);
   const credits = useSelector(selectCredits);
@@ -32,11 +32,20 @@ const Success = () => {
           votes={movie.vote_count}
           overview={movie.overview}
         />
-        <Header3>Cast</Header3>
+        {credits.cast.length === 0
+          ? ""
+          :
+          <Header3>Cast</Header3>
+        }
         <Credits
           credits={credits.cast}
         />
-        <Header3>Crew</Header3>
+
+        {credits.crew.length === 0
+          ? ""
+          :
+          <Header3>Crew</Header3>
+        }
         <Credits
           credits={credits.crew} />
       </Wrapper>
