@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { selectCrew } from "../../../profileSlice";
 import { selectGenres } from "../../../../../../common/Genres/genresSlice";
-import { MoviesGridWrapper } from "../../../../../Movies/PopularMovies/Core/MoviesGridWrapper/styled";
 import noPoster from "../../../../../../common/img/noposter.svg"
+
 import {
   MovieData,
   Poster,
@@ -18,6 +18,7 @@ import {
   Year
 } from "../../../../../../common/MovieTile/styled";
 import Genres from "../../../../../../common/Genres/index";
+import { MoviesGrid } from "../MoviesGrid/styled";
 
 const MoviesCrew = () => {
 
@@ -28,38 +29,38 @@ const MoviesCrew = () => {
 
   return (
     <>
-      <MoviesGridWrapper>
+      <MoviesGrid>
         {crew.map((cast, id) => (
           <StyledLink to={`/movie/${cast.id}`} key={id}>
-          <TileWrapper >
-            <PosterWrapper key={id}>
-              <>
-                {
-                  cast.poster_path ?
-                    (
-                      <Poster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
-                    ) : (
-                      <Poster src={noPoster} alt="" />
-                    )
-                }
-              </>
-            </PosterWrapper>
-            <TextInfoWrapper>
-              <MovieData>
-                <Title>{cast.original_title}</Title>
-                <Year>{cast.release_date && cast.release_date.slice(0, 4)}</Year>
-                <Genres genres={genres} genreIds={cast.genre_ids} />
-              </MovieData>
-              <VoteWrapper>
-                <Star alt="" />
-                <VoteAverange> {cast.vote_average.toFixed(1)}</VoteAverange>
-                <VoteCount>{cast.vote_count} votes</VoteCount>
-              </VoteWrapper>
-            </TextInfoWrapper>
-          </TileWrapper>
+            <TileWrapper >
+              <PosterWrapper key={id}>
+                <>
+                  {
+                    cast.poster_path ?
+                      (
+                        <Poster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
+                      ) : (
+                        <Poster src={noPoster} alt="" />
+                      )
+                  }
+                </>
+              </PosterWrapper>
+              <TextInfoWrapper>
+                <MovieData>
+                  <Title>{cast.original_title}</Title>
+                  <Year>{cast.release_date && cast.release_date.slice(0, 4)}</Year>
+                  <Genres genres={genres} genreIds={cast.genre_ids} />
+                </MovieData>
+                <VoteWrapper>
+                  <Star alt="" />
+                  <VoteAverange> {cast.vote_average.toFixed(1)}</VoteAverange>
+                  <VoteCount>{cast.vote_count} votes</VoteCount>
+                </VoteWrapper>
+              </TextInfoWrapper>
+            </TileWrapper>
           </StyledLink>
         ))}
-      </MoviesGridWrapper>
+      </MoviesGrid>
     </>
   )
 };

@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectCast } from "../../../profileSlice";
 import noPoster from "../../../../../../common/img/noposter.svg"
-import { MoviesGridWrapper } from "../../../../../Movies/PopularMovies/Core/MoviesGridWrapper/styled";
 import { selectGenres } from "../../../../../../common/Genres/genresSlice";
 import Genres from "../../../../../../common/Genres";
 import {
@@ -18,6 +17,7 @@ import {
   VoteWrapper,
   Year
 } from "../../../../../../common/MovieTile/styled"
+import { MoviesGrid } from "../MoviesGrid/styled";
 
 const MoviesCast = () => {
 
@@ -27,7 +27,7 @@ const MoviesCast = () => {
 
   return (
     <>
-      <MoviesGridWrapper>
+      <MoviesGrid>
         {cast.map((cast, id) => (
           <StyledLink to={`/movie/${cast.id}`} key={id}>
             <TileWrapper>
@@ -58,10 +58,8 @@ const MoviesCast = () => {
             </TileWrapper>
           </StyledLink>
         ))}
-      </MoviesGridWrapper>
+      </MoviesGrid>
     </>
-
-
   )
-}
+};
 export default MoviesCast;
