@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import { selcetStatus } from "../profileSlice"
-import Loading from "../../../../common/Loading";
-import ErrorPage from "../../../../common/ErrorPage";
+import Loading from "../../../../common/Search/Loading";
+import ErrorPage from "../../../../common/Search/ErrorPage";
 import Success from "./Success";
 
 const Core = () => {
