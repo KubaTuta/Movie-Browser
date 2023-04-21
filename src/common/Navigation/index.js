@@ -1,4 +1,4 @@
-import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useSearchParams } from "react-router-dom";
 import {
   NavWrapperInput,
   NavIconInput,
@@ -21,12 +21,11 @@ import Profile from "../../Features/People/Profile";
 import Input from "./Input";
 import { useDispatch } from "react-redux";
 import { fetchSearchPending } from "./Input/Search/searchSlice";
-import { useState } from "react";
 import PeopleInput from "./PeopleInput";
 import { fetchSearchPeoplePending } from "./PeopleInput/Search/searchPeopleSlice";
 
 const Navigation = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useSearchParams("");
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -83,7 +82,7 @@ const Navigation = () => {
         <Route path="/movie/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
         <Route path="/profile/:id" element={<Profile cleaningHandler={cleaningHandler} />} />
 
-        <Route path="*" element={<Navigate to="/movies" />} />
+        <Route path="*" element={<Movies to="/movies" />} />
       </Routes>
     </>
   )

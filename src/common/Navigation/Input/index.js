@@ -11,14 +11,14 @@ const Input = ({query, setQuery}) => {
 
   const queryHandler = (event) => {
     const newQuery = event.target.value;
-    setQuery(newQuery);
-    dispatch(fetchSearchPending({ page: 1, query: newQuery }))
+    setQuery({search: newQuery});
+    dispatch(fetchSearchPending({page: 1, query: newQuery}))
   };
 
   return (
     <>
       <NavInput
-        value={query}
+        value={query.get("search") || ""}
         type="text"
         placeholder="Search for movies..."
         ref={input}
