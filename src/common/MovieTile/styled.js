@@ -40,11 +40,11 @@ export const Poster = styled.img`
 
 export const TextInfoWrapper = styled.div`
   height: 100%;
-  width: 208px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      width: 208px;
       justify-content: flex-start;
     };
 `;
