@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { ReactComponent as StarIco } from "../../common/img/star.svg"
 import { Link } from "react-router-dom";
 
-
 export const TileWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
@@ -18,7 +17,7 @@ export const TileWrapper = styled.div`
 `;
 
 export const PosterWrapper = styled.div`
-  min-width: 208px;
+  min-width: 275px;
   min-height: 434px;
   margin-bottom: 8px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
@@ -28,7 +27,7 @@ export const PosterWrapper = styled.div`
 `;
 
 export const Poster = styled.img`
-   width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
@@ -41,9 +40,13 @@ export const Poster = styled.img`
 
 export const TextInfoWrapper = styled.div`
   height: 100%;
+  width: 208px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      justify-content: flex-start;
+    };
 `;
 
 export const MovieData = styled.div`
@@ -114,10 +117,10 @@ export const VoteCount = styled.p`
 `;
 
 export const StyledLink = styled(Link)`
- text-decoration: none;
- color: ${({ theme }) => theme.color.woodsmoke};
- transition: 1s;
- :hover{
-  transform: scale(1.05);
- };
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.woodsmoke};
+  transition: 1s;
+  :hover{
+    transform: scale(1.05);
+  };
 `

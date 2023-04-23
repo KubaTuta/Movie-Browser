@@ -15,6 +15,7 @@ export const theme = {
 
   breakpoint: {
     full: "1400px",
+    moviesMedium: "1270px",
     creditMedium: "1160px",
     medium: "1052px",
     small: "736px",

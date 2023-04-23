@@ -25,33 +25,33 @@ const MovieTile = ({ movies }) => {
   return (
     <>
       {movies.map((movie, id) => (
-        <StyledLink to={`/movie/${movie.id}`} key={id}>
-          <TileWrapper>
-            <PosterWrapper>
-              <>
-                {
-                  movie.poster_path ?
-                    (
-                      <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
-                    ) : (
-                      <Poster src={noPoster} alt="" />
-                    )
-                }
-              </>
-            </PosterWrapper>
-            <TextInfoWrapper>
-              <MovieData>
-                <Title>{movie.original_title}</Title>
-                <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
-                <Genres genres={genres} genreIds={movie.genre_ids} />
-              </MovieData>
-              <VoteWrapper>
-                <Star alt="" />
-                <VoteAverange> {movie.vote_average}</VoteAverange>
-                <VoteCount>{movie.vote_count} votes</VoteCount>
-              </VoteWrapper>
-            </TextInfoWrapper>
-          </TileWrapper>
+       <StyledLink to={`/movie/${movie.id}`} key={id}>
+        <TileWrapper>
+          <PosterWrapper>
+            <>
+              {
+                movie.poster_path ?
+                  (
+                    <Poster src={movie.poster_path && `${posterPath}${movie.poster_path}`} alt="" />
+                  ) : (
+                    <Poster src={noPoster} alt="" />
+                  )
+              }
+            </>
+          </PosterWrapper>
+          <TextInfoWrapper>
+            <MovieData>
+              <Title>{movie.original_title}</Title>
+              <Year>{movie.release_date && movie.release_date.slice(0, 4)}</Year>
+              <Genres genres={genres} genreIds={movie.genre_ids} />
+            </MovieData>
+            <VoteWrapper>
+              <Star alt="" />
+              <VoteAverange> {movie.vote_average.toFixed(1)}</VoteAverange>
+              <VoteCount>{movie.vote_count} votes</VoteCount>
+            </VoteWrapper>
+          </TextInfoWrapper>
+        </TileWrapper>
         </StyledLink>
 
       ))}
