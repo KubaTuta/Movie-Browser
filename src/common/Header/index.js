@@ -21,9 +21,24 @@ const HeaderTitle = () => {
       {
         isMoviesPage
           ?
-          query.length > 0 ? `Search results for "${query}" (${results})` : "Popular movies"
+          query.length > 0
+            ?
+            results === 0
+              ?
+              `Sorry, there are no results for "${query}"`
+              :
+              `Search results for "${query}" (${results})`
+            :
+            "Popular movies"
           :
-          queryPeople.length > 0 ? `Search results for "${queryPeople}" (${resultsPeople})` : "Popular people"
+          queryPeople.length > 0
+            ?
+            resultsPeople === 0 ?
+              `Sorry, there are no results for "${queryPeople}"`
+              :
+              `Search results for "${queryPeople}" (${resultsPeople})`
+            :
+            "Popular people"
       }
     </Header>
   )

@@ -23,6 +23,7 @@ import { useDispatch } from "react-redux";
 import { fetchSearchPending } from "./Input/Search/searchSlice";
 import PeopleInput from "./PeopleInput";
 import { fetchSearchPeoplePending } from "./PeopleInput/Search/searchPeopleSlice";
+import ErrorPage from "../Search/ErrorPage";
 
 const Navigation = () => {
   const [query, setQuery] = useSearchParams("");
@@ -68,21 +69,19 @@ const Navigation = () => {
               </NavIconInput>
               {
                 location.pathname.startsWith("/people") || location.pathname.startsWith("/profile") ?
-                  <PeopleInput query={query} setQuery={setQuery}/> :
+                  <PeopleInput query={query} setQuery={setQuery} /> :
                   <Input query={query} setQuery={setQuery} />
               }
             </NavWrapperInput>
           </NavigationWrapper>
         </NavBoxFrame>
-
       </NavigationBoxStyled>
       <Routes>
         <Route path="/" element={<Movies />} />
         <Route path="/people" element={<People />} />
         <Route path="/movie/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
         <Route path="/profile/:id" element={<Profile cleaningHandler={cleaningHandler} />} />
-
-        <Route path="*" element={<Movies to="/movies" />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   )

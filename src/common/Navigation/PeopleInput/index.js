@@ -16,15 +16,13 @@ const PeopleInput = ({ query, setQuery }) => {
   };
 
   return (
-    <>
-      <NavInput
-        value={query.get("search") || ""}
-        type="text"
-        placeholder="Search for people..."
-        ref={input}
-        onChange={(event) => queryHandler(event)}
-      />
-    </>
+    <NavInput
+      value={query.get("search") || ""}
+      type="text"
+      placeholder="Search for people..."
+      ref={input}
+      onChange={(event) => queryHandler(event)}
+    />
   )
 };
 
