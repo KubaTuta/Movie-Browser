@@ -79,11 +79,11 @@ export const StyledNavLink = styled(Link)`
   text-decoration:none;
   padding:none;
   color:${({ theme }) => theme.color.woodsmoke};
-  transition: all 0.4s;
+  transition: all 1s;
 &:active {
   text-decoration:none;
   }
 &:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   }
 `;
