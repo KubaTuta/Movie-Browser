@@ -15,10 +15,10 @@ export const theme = {
 
   breakpoint: {
     full: "1400px",
-    moviesMedium: "1270px",
+    moviesMedium: "1360px",
     creditMedium: "1160px",
-    medium: "1052px",
-    small: "736px",
+    medium: "1200px",
+    small: "784px",
     mobile: "450px",
   }
 };
