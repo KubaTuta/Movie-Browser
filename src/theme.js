@@ -18,7 +18,9 @@ export const theme = {
     moviesMedium: "1360px",
     creditMedium: "1160px",
     medium: "1200px",
+    creditsMediumSmaller: "1052px",
     small: "784px",
+    creditsSmall: "736px",
     mobile: "450px",
   }
 };

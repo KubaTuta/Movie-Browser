@@ -9,10 +9,10 @@ export const CreditWrapper = styled.div`
     @media(max-width: ${({ theme }) => theme.breakpoint.creditMedium}) {
       grid-template-columns: repeat(4, minmax(226px, 1fr));
     };
-      @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
+      @media(max-width: ${({ theme }) => theme.breakpoint.creditsMediumSmaller}) {
         grid-template-columns: repeat(3, minmax(226px, 1fr));
       };
-        @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+        @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
           grid-template-columns: repeat(3, minmax(136px, 1fr));
           grid-gap: 8px;
         };
