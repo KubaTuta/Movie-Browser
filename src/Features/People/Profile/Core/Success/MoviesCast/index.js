@@ -29,7 +29,7 @@ const MoviesCast = () => {
     <>
       <MoviesGrid>
         {cast.map((cast, id) => (
-          <StyledLink to={`/movie/${cast.id}`} key={id}>
+          <StyledLink to={`/movies/${cast.id}`} key={id}>
             <TileWrapper>
               <PosterWrapper>
                 <>
