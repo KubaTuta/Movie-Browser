@@ -13,7 +13,7 @@ const Credits = ({ credits }) => {
   return (
     <CreditWrapper>
       {credits && credits.map((credit, id) => (
-        <StyledLink to={`/profile/${credit.id}`} key={id}>
+        <StyledLink to={`/people/${credit.id}`} key={id}>
         <CreditPeopleWrapper >
           <PosterWrapper>
             {credit.profile_path ?

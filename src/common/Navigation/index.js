@@ -67,7 +67,7 @@ const Navigation = () => {
                 <Elipse />
               </NavIconInput>
               {
-                location.pathname.startsWith("/people") || location.pathname.startsWith("/profile") ?
+                location.pathname.startsWith("/people") ?
                   <PeopleInput query={query} setQuery={setQuery} /> :
                   <Input query={query} setQuery={setQuery} />
               }
