@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation, useSearchParams } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useSearchParams } from "react-router-dom";
 import {
   NavWrapperInput,
   NavIconInput,
@@ -23,7 +23,6 @@ import { useDispatch } from "react-redux";
 import { fetchSearchPending } from "./Input/Search/searchSlice";
 import PeopleInput from "./PeopleInput";
 import { fetchSearchPeoplePending } from "./PeopleInput/Search/searchPeopleSlice";
-import ErrorPage from "../Search/ErrorPage";
 
 const Navigation = () => {
   const [query, setQuery] = useSearchParams("");
@@ -68,7 +67,7 @@ const Navigation = () => {
                 <Elipse />
               </NavIconInput>
               {
-                location.pathname.startsWith("/people") || location.pathname.startsWith("/profile") ?
+                location.pathname.startsWith("/people") ?
                   <PeopleInput query={query} setQuery={setQuery} /> :
                   <Input query={query} setQuery={setQuery} />
               }
@@ -81,7 +80,7 @@ const Navigation = () => {
         <Route path="/people" element={<People />} />
         <Route path="/movies/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
         <Route path="/people/:id" element={<Profile cleaningHandler={cleaningHandler} />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate replace to="/movies" />} />
       </Routes>
     </>
   )
