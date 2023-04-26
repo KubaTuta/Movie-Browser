@@ -10,14 +10,17 @@ export const MoviesGrid = styled.div`
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
     @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
-      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-        grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-        grid-gap: 16px;
-      };
-        @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+      @media(max-width: ${({ theme }) => theme.breakpoint.creditsMediumSmaller}) {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      }
+        @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
           grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
           grid-gap: 16px;
         };
+          @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+            grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+            grid-gap: 16px;
+          };
 `;
