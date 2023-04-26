@@ -8,18 +8,27 @@ export const TileWrapper = styled.div`
   height: 100%;
   border-radius: 5px;
   padding: 16px;
-  display: flex;
-  flex-direction: column;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      flex-direction: row;
-      gap: 16px;
+  display: grid;
+  grid-template-rows: 2fr 1fr; 
+  @media(max-width: ${({ theme }) => theme.breakpoint.moviesMedium}) {
+    grid-template-rows: 3fr 1fr; 
+
     };
+        @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        width: 100%;
+        };
+        @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+          max-width: 400px;
+        };
 `;
 
 export const PosterWrapper = styled.div`
   min-width: 275px;
   min-height: 434px;
-  margin-bottom: 8px;
+  margin-bottom: 8px;  
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       min-width: 114px;
       min-height: 169px;
@@ -29,35 +38,37 @@ export const PosterWrapper = styled.div`
 export const Poster = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
   object-position: top;
   border-radius: 5px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      height: 169px;
-      width: 114px;
+      max-height: 590px;
     };
+      @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+        max-width: 114px;      
+      };
 `;
 
 export const TextInfoWrapper = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      width: 208px;
       justify-content: flex-start;
+      width: 208px;
     };
+      @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+        width: 180px;
+      };
 `;
 
 export const MovieData = styled.div`
 `;
 
-
 export const Title = styled.h3`
   font-weight: 500;
   font-size: 22px;
   margin: 0px;  
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       font-style: normal;
       font-size: 16px;
     };
@@ -69,7 +80,7 @@ export const Year = styled.p`
   line-height: 150%;
   color: ${({ theme }) => theme.color.darkerGrey};
   margin: 8px 0px;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       font-style: normal;
       font-size: 13px;
     };
@@ -84,7 +95,7 @@ export const Star = styled(StarIco)`
   padding: 0px 8px 0px 0px;
   max-width: 24px;
   max-height: 24px;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       max-width: 16px;
       max-height: 16px;
       padding: 0px;
@@ -98,7 +109,7 @@ export const VoteAverange = styled.p`
   line-height: 150%;
   padding: 0px 8px 0px 0px;
   margin: 0px;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       font-size: 13px;
       padding: 0px 8px 0px 8px;
     };
@@ -111,7 +122,7 @@ export const VoteCount = styled.p`
   line-height: 150%;
   color: ${({ theme }) => theme.color.grey};
   margin: 0px;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     font-size: 13px;
     };
 `;
@@ -121,6 +132,6 @@ export const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.color.woodsmoke};
   transition: 1s;
   :hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
   };
 `

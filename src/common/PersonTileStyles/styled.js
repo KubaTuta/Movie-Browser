@@ -3,14 +3,17 @@ import styled from "styled-components";
 
 export const WrapperPeople = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr;
   grid-gap: 24px;
   justify-items: center;
   justify-content: space-between;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
-      grid-gap: 16px;
-    }
+      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+        grid-gap: 16px;
+      }
+        @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+          grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+        }
 `;
 
 export const TileWrapperPeople = styled.div`
@@ -22,12 +25,12 @@ export const TileWrapperPeople = styled.div`
   padding: 16px;
   padding-bottom: 0;
   gap: 16px;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       min-height: 245px;
-      width: 136px;
+      max-width: 300px;
       padding: 8px;
       border-radius: 5px;
-      grid-template-rows: 2fr auto; 
+      grid-template-rows: auto auto; 
       gap: 8px;
     };
 `;
@@ -35,7 +38,7 @@ export const TileWrapperPeople = styled.div`
 export const PeoplePosterWrapper = styled.div`
   min-width: 177px;
   min-height: 256px;  
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       min-width: 120px;
       min-height: 178px;
     };
@@ -44,19 +47,14 @@ export const PeoplePosterWrapper = styled.div`
 export const PosterPeople = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
   border-radius: 5px;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      height: 178px;
-      };
   `;
 
 export const NamePeopleWrapper= styled.div`
   min-height: 64px;
   max-width: 190px;
   margin: 0 auto;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       min-height: 42px;
     };
 `;
@@ -67,7 +65,7 @@ export const NamePeople = styled.p`
   line-height: 130%;
   margin: 0px;
   text-align: center;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       font-size: 14px;
     };   
 `;
@@ -79,11 +77,11 @@ export const StyledNavLink = styled(Link)`
   text-decoration:none;
   padding:none;
   color:${({ theme }) => theme.color.woodsmoke};
-  transition: all 0.4s;
+  transition: all 1s;
 &:active {
   text-decoration:none;
   }
 &:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   }
 `;

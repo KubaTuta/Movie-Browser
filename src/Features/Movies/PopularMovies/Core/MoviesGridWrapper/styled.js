@@ -14,7 +14,7 @@ display: grid;
         justify-items: center;
       };
         @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-          grid-template-columns: repeat(1,  1fr);
+          grid-template-columns: 1fr;
           grid-gap: 16px;
           justify-items: center;
         };
