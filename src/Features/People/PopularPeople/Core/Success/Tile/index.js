@@ -17,7 +17,7 @@ const Tile = ({people}) => {
   return (
     <WrapperPeople>
       {people.map((person, id) => (
-        <StyledNavLink to={`/profile/${person.id}`} key={id}>
+        <StyledNavLink to={`/people/${person.id}`} key={id}>
         <TileWrapperPeople  >
           <PeoplePosterWrapper>
 

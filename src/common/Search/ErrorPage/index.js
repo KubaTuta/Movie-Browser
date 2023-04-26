@@ -8,7 +8,7 @@ const ErrorPage = () => (
     <StyledH1>Oooops! Something went wrong...</StyledH1>
     <Text>Please check your network connection</Text>
     <Text>and try again</Text>
-    <NavLink to="/">
+    <NavLink to="/movies">
       <Button>Back to homepage</Button>
     </NavLink>
   </Wrapper>

@@ -47,7 +47,7 @@ const Navigation = () => {
               <NavLinks           >
                 <NavLi>
                   <StyledNavLink
-                    to="/"
+                    to="/movies"
                     onClick={cleaningHandler}
                   >
                     movies
@@ -77,10 +77,10 @@ const Navigation = () => {
         </NavBoxFrame>
       </NavigationBoxStyled>
       <Routes>
-        <Route path="/" element={<Movies />} />
+        <Route path="/movies" element={<Movies />} />
         <Route path="/people" element={<People />} />
-        <Route path="/movie/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
-        <Route path="/profile/:id" element={<Profile cleaningHandler={cleaningHandler} />} />
+        <Route path="/movies/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
+        <Route path="/people/:id" element={<Profile cleaningHandler={cleaningHandler} />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
