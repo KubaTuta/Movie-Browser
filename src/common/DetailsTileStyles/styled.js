@@ -15,6 +15,8 @@ export const TileDetailsWrapper = styled.section`
     grid-template-columns:  1fr 3fr; 
     padding: 16px;
     grid-gap: 16px;
+    margin: 16px 0 16px 0;
+
   };
 `;
 
