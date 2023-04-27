@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as StarIco } from "../../../../../common/img/star.svg";
 import { GenreWrapper } from "../../../../../common/Genres/styled";
 
@@ -16,10 +16,39 @@ export const Year = styled.p`
 
 export const InfoTextWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  margin-bottom: 8px;
     @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
       flex-direction: row;
     };
+`;
+
+export const Countries = styled.p`
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  padding-right: 8px;
+  margin: 0;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      font-size: 12px;
+    };
+
+    ${({ $big }) =>
+    $big &&
+    css`
+      @media (max-width: ${({ theme }) => theme.breakpoint.creditsMediumSmaller}) {
+        display: none;
+      }
+    `}
+  ${({ $small }) =>
+    $small &&
+    css`
+      display: none;
+      @media (max-width: ${({ theme }) => theme.breakpoint.creditsMediumSmaller}) {
+        display: block;
+      }
+    `}
 `;
 
 export const VoteAverangeWrapper = styled.div`
