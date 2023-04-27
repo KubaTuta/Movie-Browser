@@ -4,16 +4,13 @@ import styled from "styled-components";
 export const WrapperPeople = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: 1fr;
   grid-gap: 24px;
   justify-items: center;
   justify-content: space-between;
-      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-        grid-gap: 16px;
-      }
-        @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-          grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
-        }
+    @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
+      grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+      grid-gap: 16px;
+    };
 `;
 
 export const TileWrapperPeople = styled.div`
@@ -25,8 +22,8 @@ export const TileWrapperPeople = styled.div`
   padding: 16px;
   padding-bottom: 0;
   gap: 16px;
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-      min-height: 245px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
+      min-height: 225px;
       max-width: 300px;
       padding: 8px;
       border-radius: 5px;
@@ -36,9 +33,9 @@ export const TileWrapperPeople = styled.div`
 `;
 
 export const PeoplePosterWrapper = styled.div`
-  min-width: 177px;
-  min-height: 256px;  
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+  min-width: 180px;
+  min-height: 260px;  
+    @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
       min-width: 120px;
       min-height: 178px;
     };
