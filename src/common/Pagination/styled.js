@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   align-items: center;
   gap: 12px;
   margin-top: 40px;
-  margin-bottom: 100px;
   @media(max-width: ${({theme})=>theme.breakpoint.mobile}) {
     font-size: 10px;
     gap: 4px;
