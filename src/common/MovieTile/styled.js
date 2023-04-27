@@ -10,19 +10,21 @@ export const TileWrapper = styled.div`
   padding: 16px;
   display: grid;
   grid-template-rows: 2fr 1fr; 
-  @media(max-width: ${({ theme }) => theme.breakpoint.moviesMedium}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.moviesMedium}) {
     grid-template-rows: 3fr 1fr; 
-
     };
-        @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+       @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
         display: flex;
         flex-direction: row;
         gap: 16px;
         width: 100%;
-        };
+       };
         @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-          max-width: 400px;
+          max-width: 330px;
         };
+          @media(max-width: ${({ theme }) => theme.breakpoint.smallMobile}) {
+            max-width: 298px;
+          };
 `;
 
 export const PosterWrapper = styled.div`
@@ -52,7 +54,7 @@ export const TextInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
       justify-content: flex-start;
       width: 208px;
     };
@@ -134,4 +136,14 @@ export const StyledLink = styled(Link)`
   :hover{
     transform: scale(1.02);
   };
-`
+      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+        :hover{
+        transform: scale(1.01);
+        };
+      }; 
+        @media(max-width: ${({ theme }) => theme.breakpoint.smallMobile}) {
+          :hover{
+          transform: none;
+          };
+        };
+`;
