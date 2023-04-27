@@ -5,7 +5,7 @@ export const WrapperPeople = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 24px;
-  justify-items: center;
+  justify-items: start;
   justify-content: space-between;
     @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
       grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
