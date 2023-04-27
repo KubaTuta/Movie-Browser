@@ -10,7 +10,7 @@ export const MoviesGrid = styled.div`
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
     @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
-      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     }
       @media(max-width: ${({ theme }) => theme.breakpoint.creditsMediumSmaller}) {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
