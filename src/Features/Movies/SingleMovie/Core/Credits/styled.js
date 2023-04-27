@@ -17,14 +17,10 @@ export const CreditWrapper = styled.div`
           grid-gap: 8px;
         };
           @media(max-width: ${({ theme }) => theme.breakpoint.biggerMobile}) {
-            grid-template-columns: repeat(3, minmax(136px, 1fr));
-            grid-gap: 8px;
+            grid-template-columns: repeat(2, minmax(136px, 1fr));
+            grid-gap: 16px;
+            justify-items: center;
           };
-            @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-              grid-template-columns: repeat(2, minmax(136px, 1fr));
-              grid-gap: 16px;
-              justify-items: center;
-            };
 `;
 
 export const CreditPeopleWrapper = styled.div`
