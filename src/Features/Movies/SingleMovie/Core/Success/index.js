@@ -4,8 +4,9 @@ import { Header3 } from "../../../../../common/Header/styled";
 import Backdrop from "../Backdrop";
 import TileDetails from "../TileDetails";
 import Credits from "../Credits";
-import { SingleMovieContainer, Wrapper } from "../../styled";
+import { Wrapper } from "../../styled";
 import { selectMovie, selectCredits } from "../../movieSlice";
+import { Container } from "../../../../../common/Container/styled";
 
 const Success = () => {
 
@@ -13,7 +14,7 @@ const Success = () => {
   const credits = useSelector(selectCredits);
 
   return (
-    <SingleMovieContainer>
+    <Container>
       <Backdrop
         title={movie.title}
         poster={movie.backdrop_path}
@@ -49,7 +50,7 @@ const Success = () => {
         <Credits
           credits={credits.crew} />
       </Wrapper>
-    </SingleMovieContainer>
+    </Container>
   )
 };
 
