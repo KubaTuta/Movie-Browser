@@ -35,15 +35,10 @@ export const PosterWrapper = styled.div`
 `;
 
 export const Poster = styled.img`
-    width: 100%;
+  width: 100%;
   border-radius: 5px;
- // object-fit: cover;
   object-position: top;
-    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-      height: 169px;
-      width: 114px;
-    };
-`;
+ `;
 
 export const TextWrapper = styled.div`
   grid-row-start: 1;
