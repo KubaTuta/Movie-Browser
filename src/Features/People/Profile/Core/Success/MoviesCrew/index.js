@@ -8,8 +8,6 @@ import {
   PosterWrapper,
   Star,
   StyledLink,
-  TextInfoWrapper,
-  TileWrapper,
   Title,
   VoteAverange,
   VoteCount,
@@ -18,7 +16,7 @@ import {
 } from "../../../../../../common/MovieTile/styled";
 import Genres from "../../../../../../common/Genres/index";
 import { MoviesGrid } from "../MoviesGrid/styled";
-import { CrewPoster } from "../styled";
+import { CrewPoster, CrewTextInfoWrapper, MoviesTileWrapper } from "../styled";
 
 const MoviesCrew = () => {
 
@@ -32,7 +30,7 @@ const MoviesCrew = () => {
       <MoviesGrid>
         {crew.map((cast, id) => (
           <StyledLink to={`/movies/${cast.id}`} key={id}>
-            <TileWrapper >
+            <MoviesTileWrapper >
               <PosterWrapper key={id}>
                 <>
                   {
@@ -45,7 +43,7 @@ const MoviesCrew = () => {
                   }
                 </>
               </PosterWrapper>
-              <TextInfoWrapper>
+              <CrewTextInfoWrapper>
                 <MovieData>
                   <Title>{cast.original_title}</Title>
                   <Year>{cast.release_date && cast.release_date.slice(0, 4)}</Year>
@@ -56,8 +54,8 @@ const MoviesCrew = () => {
                   <VoteAverange> {cast.vote_average.toFixed(1)}</VoteAverange>
                   <VoteCount>{cast.vote_count} votes</VoteCount>
                 </VoteWrapper>
-              </TextInfoWrapper>
-            </TileWrapper>
+              </CrewTextInfoWrapper>
+            </MoviesTileWrapper>
           </StyledLink>
         ))}
       </MoviesGrid>
