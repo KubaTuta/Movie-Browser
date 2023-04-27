@@ -1,6 +1,18 @@
 import styled from "styled-components";
 
-
+export const CrewPoster = styled.img`
+  width: 100%;
+  height: 100%;
+  object-position: top;
+  border-radius: 5px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      max-height: 590px;
+      height: auto;
+    };
+      @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+        max-width: 114px;      
+      };
+`;
 export const CrewPosterWrapper = styled.div`
   min-height: 434px;
   margin-bottom: 8px;  

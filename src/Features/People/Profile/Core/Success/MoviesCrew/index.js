@@ -1,11 +1,10 @@
 import { useSelector } from "react-redux";
 import { selectCrew } from "../../../profileSlice";
 import { selectGenres } from "../../../../../../common/Genres/genresSlice";
-import noPoster from "../../../../../../common/img/noposter.svg"
+import noPoster from "../../../../../../common/img/noPoster.png"
 
 import {
   MovieData,
-  Poster,
   PosterWrapper,
   Star,
   StyledLink,
@@ -19,6 +18,7 @@ import {
 } from "../../../../../../common/MovieTile/styled";
 import Genres from "../../../../../../common/Genres/index";
 import { MoviesGrid } from "../MoviesGrid/styled";
+import { CrewPoster } from "../styled";
 
 const MoviesCrew = () => {
 
@@ -38,9 +38,9 @@ const MoviesCrew = () => {
                   {
                     cast.poster_path ?
                       (
-                        <Poster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
+                        <CrewPoster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
                       ) : (
-                        <Poster src={noPoster} alt="" />
+                        <CrewPoster src={noPoster} alt="" />
                       )
                   }
                 </>
