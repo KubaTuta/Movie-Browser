@@ -11,14 +11,14 @@ export const TileWrapper = styled.div`
   display: grid;
   grid-template-rows: 2fr 1fr; 
     @media(max-width: ${({ theme }) => theme.breakpoint.moviesMedium}) {
-    grid-template-rows: 3fr 1fr; 
+      grid-template-rows: 3fr 1fr; 
     };
-       @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
-        display: flex;
+      @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
+         display: flex;
         flex-direction: row;
         gap: 16px;
         width: 100%;
-       };
+      };
         @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
           max-width: 330px;
         };
@@ -35,6 +35,7 @@ export const PosterWrapper = styled.div`
       min-width: 114px;
       min-height: 169px;
     };
+
 `;
 
 export const Poster = styled.img`
