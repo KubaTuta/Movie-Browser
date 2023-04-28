@@ -13,7 +13,7 @@ display: grid;
         grid-gap: 16px;
         justify-items: center;
       };
-        @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+        @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
           grid-template-columns: 1fr;
           grid-gap: 16px;
           justify-items: center;

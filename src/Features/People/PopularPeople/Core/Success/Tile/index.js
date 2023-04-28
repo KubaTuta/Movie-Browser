@@ -30,11 +30,11 @@ const Tile = ({people}) => {
             }
           </PeoplePosterWrapper>
           <NamePeopleWrapper>
-            <NamePeople>{(person.name.length > 23) ? `${person.name.slice(0, 21)}...` : person.name}</NamePeople>
+            <NamePeople>{(person.name.length > 23) ? `${person.name.slice(0, 20)}...` : person.name}</NamePeople>
           </NamePeopleWrapper>
         </TileWrapperPeople>
         </StyledNavLink>
-      ))};
+      ))}
     </WrapperPeople>
   );
 }

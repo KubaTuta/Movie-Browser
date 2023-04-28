@@ -1,16 +1,13 @@
 import { useSelector } from "react-redux";
 import { selectCrew } from "../../../profileSlice";
 import { selectGenres } from "../../../../../../common/Genres/genresSlice";
-import noPoster from "../../../../../../common/img/noposter.svg"
+import noPoster from "../../../../../../common/img/noPoster.png"
 
 import {
   MovieData,
-  Poster,
   PosterWrapper,
   Star,
   StyledLink,
-  TextInfoWrapper,
-  TileWrapper,
   Title,
   VoteAverange,
   VoteCount,
@@ -19,6 +16,7 @@ import {
 } from "../../../../../../common/MovieTile/styled";
 import Genres from "../../../../../../common/Genres/index";
 import { MoviesGrid } from "../MoviesGrid/styled";
+import { CrewPoster, CrewTextInfoWrapper, MoviesTileWrapper } from "../styled";
 
 const MoviesCrew = () => {
 
@@ -32,20 +30,20 @@ const MoviesCrew = () => {
       <MoviesGrid>
         {crew.map((cast, id) => (
           <StyledLink to={`/movies/${cast.id}`} key={id}>
-            <TileWrapper >
+            <MoviesTileWrapper >
               <PosterWrapper key={id}>
                 <>
                   {
                     cast.poster_path ?
                       (
-                        <Poster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
+                        <CrewPoster src={cast.poster_path && `${profilePicturePath}${cast.poster_path}`} alt="" />
                       ) : (
-                        <Poster src={noPoster} alt="" />
+                        <CrewPoster src={noPoster} alt="" />
                       )
                   }
                 </>
               </PosterWrapper>
-              <TextInfoWrapper>
+              <CrewTextInfoWrapper>
                 <MovieData>
                   <Title>{cast.original_title}</Title>
                   <Year>{cast.release_date && cast.release_date.slice(0, 4)}</Year>
@@ -56,8 +54,8 @@ const MoviesCrew = () => {
                   <VoteAverange> {cast.vote_average.toFixed(1)}</VoteAverange>
                   <VoteCount>{cast.vote_count} votes</VoteCount>
                 </VoteWrapper>
-              </TextInfoWrapper>
-            </TileWrapper>
+              </CrewTextInfoWrapper>
+            </MoviesTileWrapper>
           </StyledLink>
         ))}
       </MoviesGrid>

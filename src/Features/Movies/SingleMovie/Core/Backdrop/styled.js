@@ -20,8 +20,10 @@ export const HeadContainer = styled.section`
     @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
       max-height: 600px;
       max-width: 1067px;
+      box-shadow: inset 0px 0px 33px 33px rgba(0, 0, 0, 1);
+
     };
-      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
         grid-template-rows: 2fr 1fr;
         max-width: 320px;
         max-height: 148px;
@@ -33,6 +35,7 @@ export const TextWrapper = styled.div`
   grid-row-start: 2;
   justify-content: start;
   align-items: center;
+  padding: 8px;
     @media(max-width: ${({ theme }) => theme.breakpoint.medium}) {
       grid-row-start: 2;
       grid-row-end: 3;

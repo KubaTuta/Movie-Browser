@@ -12,11 +12,11 @@ export const CreditWrapper = styled.div`
       @media(max-width: ${({ theme }) => theme.breakpoint.creditsMediumSmaller}) {
         grid-template-columns: repeat(3, minmax(226px, 1fr));
       };
-        @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
-          grid-template-columns: repeat(3, minmax(136px, 1fr));
+        @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+          grid-template-columns: repeat(4, minmax(136px, 1fr));
           grid-gap: 8px;
         };
-          @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+          @media(max-width: ${({ theme }) => theme.breakpoint.biggerMobile}) {
             grid-template-columns: repeat(2, minmax(136px, 1fr));
             grid-gap: 16px;
             justify-items: center;

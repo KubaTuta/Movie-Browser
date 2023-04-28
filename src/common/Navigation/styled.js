@@ -29,9 +29,6 @@ export const NavigationWrapper = styled.div`
   @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
     justify-content: center;
   };
-  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
-    justify-content: center;
-  };
 `;
 
 export const NavBoxLine = styled.div`
@@ -40,21 +37,21 @@ export const NavBoxLine = styled.div`
   @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
     padding-left: 40px;
   };
-  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
-    padding-left: 25px;
-  };
-  @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
-    padding-left: unset;
-  };
+    @media(max-width:${({ theme }) => theme.breakpoint.small}) {
+      padding-left: 25px;
+    };
+      @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
+        padding-left: 0px;
+      };
 `;
 
 export const Stroke = styled(stroke)`
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     height: 12px;
   };
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    height: 12px;
-  };
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+      height: 12px;
+    };
 `;
 
 export const NavH1 = styled.h1`
@@ -68,11 +65,10 @@ export const NavH1 = styled.h1`
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     font-size: 80%;
   };
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    font-size: 80%;
-    margin-left: 6px;
-  };
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+      font-size: 80%;
+      margin-left: 6px;
+    };
 `;
 
 export const NavLinks = styled.ul`
@@ -82,13 +78,13 @@ export const NavLinks = styled.ul`
   flex: auto;
   margin-left: 5px;
   flex-wrap: nowrap;
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    margin-left: -5px;
-  };
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    margin-left: -5px;
-  };
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      margin-left: -5px;
+    };
+      @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+        margin-left: -5px;
+        padding-left: 20px;
+      };
 `;
 
 export const NavLi = styled.li`
@@ -97,29 +93,25 @@ export const NavLi = styled.li`
   text-transform: uppercase;
   padding: 0 20px;
   align-self: flex-end;
-
-  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
-    font-size:12px;
-  };
-  
-  @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
-    font-size:12px;
-    padding: 0 10px;
-  };
+    @media(max-width:${({ theme }) => theme.breakpoint.small}) {
+      font-size:12px;
+    };
+      @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
+        font-size:12px;
+        padding: 0 5px;
+      };
 `;
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.color.white};
-  padding: 8px 24px;    
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-    padding: 8px 12px;    
-  };
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    padding: 8px 12px;    
-  };
+  padding: 8px 24px;   
+    @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+      padding: 8px 12px;    
+    };
+      @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
+        padding: 8px 12px;    
+      };
     
   &:hover {
     cursor: pointer;
@@ -134,17 +126,16 @@ export const StyledNavLink = styled(NavLink)`
 export const NavWrapperInput = styled.div`
   flex-basis: 432px;
   display: flex;
-  margin: 16px;
-  
-  @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
-    flex-basis: 543px;
-  };
-  @media(max-width:${({ theme }) => theme.breakpoint.small}) {
-    flex-basis: 432px;
-  };
-  @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
-    flex-basis: 432px;
-  };
+  margin: 16px;  
+    @media(max-width:${({ theme }) => theme.breakpoint.medium}) {
+      flex-basis: 543px;
+    };
+      @media(max-width:${({ theme }) => theme.breakpoint.small}) {
+        flex-basis: 432px;
+      };
+        @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
+          flex-basis: 432px;
+        };
 `;
 
 export const NavIconInput = styled.span`

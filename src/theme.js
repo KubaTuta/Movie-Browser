@@ -21,6 +21,8 @@ export const theme = {
     creditsMediumSmaller: "1052px",
     small: "784px",
     creditsSmall: "736px",
+    biggerMobile: "670px",
     mobile: "450px",
+    smallMobile: "350px",
   }
 };
