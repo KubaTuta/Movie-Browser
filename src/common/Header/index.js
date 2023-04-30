@@ -8,7 +8,7 @@ const HeaderTitle = () => {
 
   const location = useLocation();
 
-  const isMoviesPage = location.pathname === "/" || location.pathname.startsWith("/movie/");
+  const isMoviesPage = location.pathname === "/movies" || location.pathname.startsWith("/movie/");
 
   const query = useSelector(selectSearchedQuery);
   const results = useSelector(selectSearchedTotalFrazes);
