@@ -20,7 +20,7 @@ const Core = () => {
       if (queryStatus === "pending") {
         return <Loading />
       }
-      return (resultsPeople === 0 && queryPeople.length > 0) ? <NoResult /> : <Success />
+      return (resultsPeople === 0 && queryPeople.length > 0) ? <NoResult query={queryPeople} /> : <Success />
     default:
       return <ErrorPage />
   }

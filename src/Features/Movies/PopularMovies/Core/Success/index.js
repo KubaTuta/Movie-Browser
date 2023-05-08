@@ -16,6 +16,7 @@ import {
   selectSearchedTotalPages,
 } from "../../../../../common/Navigation/Input/Search/searchSlice";
 import HeaderTitle from "../../../../../common/Header";
+import { selectSearchedTotalFrazes } from "../../../../../common/Navigation/Input/Search/searchSlice";
 
 const Success = () => {
   const page = useSelector(selectPages);
@@ -26,10 +27,11 @@ const Success = () => {
   const searchPage = useSelector(selectSearchedPages);
   const searchedMovies = useSelector(selectSearchedMovies);
   const searchedTotalPages = useSelector(selectSearchedTotalPages);
+  const searchedResults = useSelector(selectSearchedTotalFrazes);
 
   return (
     <>
-      <HeaderTitle />
+      <HeaderTitle title={"Popular movies"} query={searchQuery} results={searchedResults}/>
       <MoviesGridWrapper>
         <MovieTile movies={searchQuery.length > 0 ? searchedMovies : movies} />
       </MoviesGridWrapper>

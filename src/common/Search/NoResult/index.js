@@ -2,16 +2,15 @@ import HeaderTitle from "../../Header";
 import { Wrapper } from "../styled";
 import { Cloud } from "./styled";
 
-const NoResult = () => {
+const NoResult = ({ query }) => {
   return (
     <>
-      <HeaderTitle />
+      <HeaderTitle query={query} />
       <Wrapper>
         <Cloud />
       </Wrapper>
     </>
-
-  )
-}
+  );
+};
 
 export default NoResult;
