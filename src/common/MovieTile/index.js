@@ -47,7 +47,7 @@ const MovieTile = ({ movies }) => {
             </MovieData>
             <VoteWrapper>
               <Star alt="" />
-              <VoteAverange> {movie.vote_average.toFixed(1)}</VoteAverange>
+              <VoteAverange> {movie?.vote_average?.toFixed(1)}</VoteAverange>
               <VoteCount>{movie.vote_count} votes</VoteCount>
             </VoteWrapper>
           </TextInfoWrapper>
