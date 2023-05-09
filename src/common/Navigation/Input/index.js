@@ -1,34 +1,44 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { NavInput } from "../styled";
-import { fetchSearchPending, selectSearchedPages } from "./Search/searchSlice";
-import { useDispatch, useSelector } from "react-redux";
+import {
+  useQueryParameter,
+  useReplaceQueryParameter,
+} from "../../useParameter";
 
-const Input = ({ query, setQuery }) => {
+const Input = () => {
+  const location = useLocation();
+  const query = useQueryParameter("search");
 
   const input = useRef(null);
-  const page = useSelector(selectSearchedPages);
-  const dispatch = useDispatch();
+  const replaceQueryParameter = useReplaceQueryParameter();
 
-  const queryHandler = (event) => {
-    const newQuery = event.target.value;
-    setQuery(!!newQuery ? { search: newQuery, page: page } : "");
-    dispatch(fetchSearchPending({ page: 1, query: newQuery }))
+  const onInputChange = ({ target }) => {
+    replaceQueryParameter([
+      {
+        key: "search",
+        value: target.value.trim() !== "" ? target.value : undefined,
+      },
+      {
+        key: "page",
+        value: undefined,
+      },
+    ]);
   };
-
-  useEffect(() => {
-    setQuery(!!query.get("search") ? { search: query.get("search"), page: page } : {});
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page])
 
   return (
     <NavInput
-      value={query.get("search") || ""}
+      value={query || ""}
       type="text"
-      placeholder="Search for movies..."
+      placeholder={
+        location.pathname.includes("movies")
+          ? "Search for movies..."
+          : "Search for people..."
+      }
       ref={input}
-      onChange={(event) => queryHandler(event)}
+      onChange={onInputChange}
     />
-  )
+  );
 };
 
 export default Input;
