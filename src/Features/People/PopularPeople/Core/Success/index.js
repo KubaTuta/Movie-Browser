@@ -1,48 +1,35 @@
 import { useSelector } from "react-redux";
-import {
-  fetchPeoplePending,
-  selectPages,
-  selectPeople,
-  selectTotalPages,
-} from "../../popularPeopleSlice";
+import { selectPages, selectTotalPages } from "../../popularPeopleSlice";
 import Pagination from "../../../../../common/Pagination";
 import Tile from "../Success/Tile/index";
 import HeaderTitle from "../../../../../common/Header";
 import {
-  fetchSearchPeoplePending,
-  selectSearchedPeople,
   selectSearchedPeoplePages,
-  selectSearchedPeopleQuery,
   selectSearchedPeopleTotalFrazes,
   selectSearchedPeopleTotalPages,
 } from "../../../../../common/Navigation/PeopleInput/Search/searchPeopleSlice";
+import { useQueryParameter } from "../../../../../common/useParameter";
 
-const Success = () => {
-  const people = useSelector(selectPeople);
-  const page = useSelector(selectPages);
+const Success = ({ people }) => {
+  const peoplePage = useSelector(selectPages);
   const total = useSelector(selectTotalPages);
 
-  const searchedPeople = useSelector(selectSearchedPeople);
-  const searchQuery = useSelector(selectSearchedPeopleQuery);
+  const searchParam = useQueryParameter("search");
   const searchPage = useSelector(selectSearchedPeoplePages);
   const searchedTotalPages = useSelector(selectSearchedPeopleTotalPages);
-  const results = useSelector(selectSearchedPeopleTotalFrazes);
+  const searchedResults = useSelector(selectSearchedPeopleTotalFrazes);
 
   return (
     <>
       <HeaderTitle
         title={"Popular people"}
-        query={searchQuery}
-        results={results}
+        query={searchParam}
+        results={searchedResults}
       />
-      <Tile people={searchQuery.length > 0 ? searchedPeople : people} />
+      <Tile people={people} />
       <Pagination
-        page={searchQuery.length > 0 ? searchPage : page}
-        fetchApi={
-          searchQuery.length > 0 ? fetchSearchPeoplePending : fetchPeoplePending
-        }
-        query={searchQuery.length > 0 ? searchQuery : null}
-        total={searchQuery.length > 0 ? searchedTotalPages : total}
+        page={searchParam !== null ? searchPage : peoplePage}
+        total={searchParam !== null ? searchedTotalPages : total}
       />
     </>
   );
