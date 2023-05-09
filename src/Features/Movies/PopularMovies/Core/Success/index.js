@@ -1,49 +1,44 @@
 import { useSelector } from "react-redux";
-import Pagination from "../../../../../common/Pagination";
+import { useQueryParameter } from "../../../../../common/useParameter";
 import {
-  fetchMoviesPending,
   selectPages,
-  selectTotalMovies
+  selectTotalMovies,
 } from "../../popularMoviesSlice";
-import MovieTile from "../../../../../common/MovieTile/index";
-import { selectMovies } from "../../popularMoviesSlice";
-import { MoviesGridWrapper } from "../MoviesGridWrapper/styled";
 import {
-  fetchSearchPending,
-  selectSearchedMovies,
   selectSearchedPages,
-  selectSearchedQuery,
   selectSearchedTotalPages,
+  selectSearchedTotalFrazes
 } from "../../../../../common/Navigation/Input/Search/searchSlice";
+import MovieTile from "../../../../../common/MovieTile/index";
 import HeaderTitle from "../../../../../common/Header";
-import { selectSearchedTotalFrazes } from "../../../../../common/Navigation/Input/Search/searchSlice";
+import Pagination from "../../../../../common/Pagination";
+import { MoviesGridWrapper } from "./styled";
 
-const Success = () => {
-  const page = useSelector(selectPages);
-  const movies = useSelector(selectMovies);
+const Success = ({ movies }) => {
+  const moviesPage = useSelector(selectPages);
   const total = useSelector(selectTotalMovies);
 
-  const searchQuery = useSelector(selectSearchedQuery);
+  const searchParam = useQueryParameter("search");
   const searchPage = useSelector(selectSearchedPages);
-  const searchedMovies = useSelector(selectSearchedMovies);
   const searchedTotalPages = useSelector(selectSearchedTotalPages);
   const searchedResults = useSelector(selectSearchedTotalFrazes);
 
   return (
     <>
-      <HeaderTitle title={"Popular movies"} query={searchQuery} results={searchedResults}/>
+      <HeaderTitle
+        title={"Popular movies"}
+        query={searchParam}
+        results={searchedResults}
+      />
       <MoviesGridWrapper>
-        <MovieTile movies={searchQuery.length > 0 ? searchedMovies : movies} />
+        <MovieTile movies={movies} />
       </MoviesGridWrapper>
       <Pagination
-        page={searchQuery.length > 0 ? searchPage : page}
-        fetchApi={searchQuery.length > 0 ? fetchSearchPending : fetchMoviesPending}
-        query={searchQuery.length > 0 ? searchQuery : null}
-        total={searchQuery.length > 0 ? searchedTotalPages : total}
+        page={searchParam !== null ? searchPage : moviesPage}
+        total={searchParam !== null ? searchedTotalPages : total}
       />
     </>
-  )
+  );
 };
 
 export default Success;
-
