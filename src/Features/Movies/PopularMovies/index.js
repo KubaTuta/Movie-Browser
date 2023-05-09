@@ -14,31 +14,31 @@ const Movies = () => {
     dispatch(fetchMoviesPending(1));
     // eslint-disable-next-line
   }, []);
- 
+
   useEffect(() => {
-    dispatch(fetchGenresPending())
+    dispatch(fetchGenresPending());
     // eslint-disable-next-line
   }, []);
 
   const queryParam = useQueryParameter("search");
   const queryPage = useQueryParameter("page");
 
-  useEffect(()=>{
-    if (queryParam !==null) {
-      dispatch(fetchSearchPending({page: queryPage ?? 1, query: queryParam}))
-    }
-}, [queryParam])
+  useEffect(() => {
+    queryParam !== null
+      ? dispatch(
+          fetchSearchPending({ page: queryPage ?? 1, query: queryParam })
+        )
+      : dispatch(
+          fetchMoviesPending({ page: queryPage ?? 1, query: queryParam })
+        );
+    // eslint-disable-next-line
+  }, [queryParam, queryPage]);
 
   return (
     <Container>
       <Core queryParam={queryParam} />
     </Container>
-  )
+  );
 };
 
 export default Movies;
-
-
-
-
-
