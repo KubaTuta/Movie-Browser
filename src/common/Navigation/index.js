@@ -69,11 +69,11 @@ const Navigation = () => {
         <Route path="/people" element={<People />} />
         <Route
           path="/movies/:id"
-          element={<SingleMovie cleaningHandler={cleaningHandler} />}
+          element={<SingleMovie />}
         />
         <Route
           path="/people/:id"
-          element={<Profile cleaningHandler={cleaningHandler} />}
+          element={<Profile />}
         />
         <Route path="*" element={<Navigate replace to="/movies" />} />
       </Routes>
