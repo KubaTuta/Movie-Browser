@@ -1,5 +1,7 @@
+import { apiKey, apiUrl } from "../../../common/apiData";
+
 export const getMovie = async (id) => {
-  const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=fef5caf4726934d4be6d4893838ad041&language=en-US`);
+  const response = await fetch(`${apiUrl}/movie/${id}?api_key=${apiKey}&language=en-US`);
 
   if (!response.ok) {
     throw new Error(response.statusText);
@@ -9,7 +11,7 @@ export const getMovie = async (id) => {
 };
 
 export const getCredits = async (id) => {
-  const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=fef5caf4726934d4be6d4893838ad041&language=en-US`);
+  const response = await fetch(`${apiUrl}/movie/${id}/credits?api_key=${apiKey}&language=en-US`);
 
   if (!response.ok) {
     throw new Error(response.statusText);
