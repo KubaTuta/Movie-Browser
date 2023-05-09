@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const searchedPeopleSlice = createSlice({
   name: 'searchPeople',
   initialState: {
-    status: "success",
+    status: "idle",
     searchedPeople: [""],
     query: "",
   },
