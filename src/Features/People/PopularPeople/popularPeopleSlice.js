@@ -4,7 +4,7 @@ const popularPeopleSlice = createSlice({
     name: "popularPeople",
     initialState: {
       status: "pending",
-      person: [""],
+      person: null,
     },
 
     reducers: {

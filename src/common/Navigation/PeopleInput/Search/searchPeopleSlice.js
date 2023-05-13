@@ -4,7 +4,7 @@ const searchedPeopleSlice = createSlice({
   name: 'searchPeople',
   initialState: {
     status: "idle",
-    searchedPeople: [""],
+    searchedPeople: null,
   },
   reducers: {
     fetchSearchPeoplePending: state => {

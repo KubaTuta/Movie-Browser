@@ -4,7 +4,7 @@ const searchedMoviesSlice = createSlice({
   name: 'searchMovie',
   initialState: {
     status: "idle",
-    searchedMovies: [""],
+    searchedMovies: null,
   },
   reducers: {
     fetchSearchPending: (state) => {
