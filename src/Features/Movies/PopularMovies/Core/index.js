@@ -1,26 +1,33 @@
 import { useSelector } from "react-redux";
-import { selectStatus } from "../popularMoviesSlice";
-import Loading from "../../../../common/Search/Loading"
+import { selectMovies, selectStatus } from "../popularMoviesSlice";
+import Loading from "../../../../common/Search/Loading";
 import Success from "./Success";
 import ErrorPage from "../../../../common/Search/ErrorPage";
-import { selectSearchedQuery, selectSearchedStatus, selectSearchedTotalFrazes } from "../../../../common/Navigation/Input/Search/searchSlice";
+import {
+  selectSearchedMovies,
+  selectSearchedStatus,
+  selectSearchedTotalFrazes,
+} from "../../../../common/Navigation/Input/Search/searchSlice";
 import NoResult from "../../../../common/Search/NoResult";
 
-const Core = () => {
-
+const Core = ({ queryParam }) => {
   const status = useSelector(selectStatus);
   const queryStatus = useSelector(selectSearchedStatus);
-  const query = useSelector(selectSearchedQuery);
   const results = useSelector(selectSearchedTotalFrazes);
+  const movies = useSelector(selectMovies);
+  const searchedMovies = useSelector(selectSearchedMovies);
 
-  switch (status) {
+  switch (queryParam !== null ? queryStatus : status) {
     case "pending":
       return <Loading />;
     case "success":
-      if (queryStatus === "pending") {
-        return <Loading />
+      if (results !== 0) {
+        return (
+          <Success movies={queryParam !== null ? searchedMovies : movies} />
+        )
+      } else {
+        return <NoResult query={queryParam} />;
       }
-      return (results === 0 && query.length > 0) ? <NoResult /> : <Success />
     default:
       return <ErrorPage />;
   }

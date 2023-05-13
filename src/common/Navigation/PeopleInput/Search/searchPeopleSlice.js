@@ -3,14 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const searchedPeopleSlice = createSlice({
   name: 'searchPeople',
   initialState: {
-    status: "success",
-    searchedPeople: [""],
-    query: "",
+    status: "idle",
+    searchedPeople: null,
   },
   reducers: {
-    fetchSearchPeoplePending: (state, {payload: query}) => {
+    fetchSearchPeoplePending: state => {
       state.status = "pending";
-      state.query = query.query;
     },
     fetchSearchPeopleSuccess: (state, {payload: search}) => {
       state.searchedPeople = search.results;
@@ -33,7 +31,6 @@ export const {
 
 export const selectSearchedPeopleState = state => state.searchPeople;
 export const selectSearchedPeopleStatus = state => selectSearchedPeopleState(state).status;
-export const selectSearchedPeopleQuery = state => selectSearchedPeopleState(state).query;
 export const selectSearchedPeople = state => selectSearchedPeopleState(state).searchedPeople;
 export const selectSearchedPeoplePages = state => selectSearchedPeopleState(state).page;
 export const selectSearchedPeopleTotalPages = state => selectSearchedPeopleState(state).total;

@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const popularMoviesSlice = createSlice({
   name: 'popularMovies',
   initialState: {
-    status: "pending",
-    movies: [""],
+    status: "idle",
+    movies: null,
   },
   reducers: {
     fetchMoviesPending: state => {

@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation, useSearchParams } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import {
   NavWrapperInput,
   NavIconInput,
@@ -11,28 +11,21 @@ import {
   StyledNavLink,
   NavBoxFrame,
   Stroke,
-} from "./styled"
+} from "./styled";
 
 import { ReactComponent as Elipse } from "../../common/img/elipse.svg";
 import Movies from "../../Features/Movies/PopularMovies";
-import People from "../../Features/People/PopularPeople"
+import People from "../../Features/People/PopularPeople";
 import SingleMovie from "../../Features/Movies/SingleMovie";
 import Profile from "../../Features/People/Profile";
 import Input from "./Input";
-import { useDispatch } from "react-redux";
-import { fetchSearchPending } from "./Input/Search/searchSlice";
-import PeopleInput from "./PeopleInput";
-import { fetchSearchPeoplePending } from "./PeopleInput/Search/searchPeopleSlice";
 
 const Navigation = () => {
-  const [query, setQuery] = useSearchParams("");
-  const dispatch = useDispatch();
-  const location = useLocation();
+  
+  const navigate = useNavigate();
 
-  const cleaningHandler = () => {
-    dispatch(fetchSearchPending({ page: 1, query: "" }));
-    dispatch(fetchSearchPeoplePending({ page: 1, query: "" }));
-    setQuery("");
+  const cleaningHandler = (url) => {
+    navigate(url);
   };
 
   return (
@@ -43,11 +36,11 @@ const Navigation = () => {
             <NavBoxLine>
               <Stroke />
               <NavH1>movies browser</NavH1>
-              <NavLinks           >
+              <NavLinks>
                 <NavLi>
                   <StyledNavLink
                     to="/movies"
-                    onClick={cleaningHandler}
+                    onClick={() => cleaningHandler("/movies")}
                   >
                     movies
                   </StyledNavLink>
@@ -55,7 +48,7 @@ const Navigation = () => {
                 <NavLi>
                   <StyledNavLink
                     to="/people"
-                    onClick={cleaningHandler}
+                    onClick={() => cleaningHandler("/people")}
                   >
                     people
                   </StyledNavLink>
@@ -66,11 +59,7 @@ const Navigation = () => {
               <NavIconInput>
                 <Elipse />
               </NavIconInput>
-              {
-                location.pathname.startsWith("/people") ?
-                  <PeopleInput query={query} setQuery={setQuery} /> :
-                  <Input query={query} setQuery={setQuery} />
-              }
+              <Input />
             </NavWrapperInput>
           </NavigationWrapper>
         </NavBoxFrame>
@@ -78,12 +67,18 @@ const Navigation = () => {
       <Routes>
         <Route path="/movies" element={<Movies />} />
         <Route path="/people" element={<People />} />
-        <Route path="/movies/:id" element={<SingleMovie cleaningHandler={cleaningHandler} />} />
-        <Route path="/people/:id" element={<Profile cleaningHandler={cleaningHandler} />} />
+        <Route
+          path="/movies/:id"
+          element={<SingleMovie />}
+        />
+        <Route
+          path="/people/:id"
+          element={<Profile />}
+        />
         <Route path="*" element={<Navigate replace to="/movies" />} />
       </Routes>
     </>
-  )
+  );
 };
 
 export default Navigation;

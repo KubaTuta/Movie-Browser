@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { fetchMoviesPending } from "./popularMoviesSlice";
 import { fetchGenresPending } from "../../../common/Genres/genresSlice";
 import Core from "./Core";
+import { useQueryParameter } from "../../../common/useParameter";
+import { fetchSearchPending } from "../../../common/Navigation/Input/Search/searchSlice";
 
 const Movies = () => {
   const dispatch = useDispatch();
@@ -12,21 +14,31 @@ const Movies = () => {
     dispatch(fetchMoviesPending(1));
     // eslint-disable-next-line
   }, []);
- 
+
   useEffect(() => {
-    dispatch(fetchGenresPending())
+    dispatch(fetchGenresPending());
     // eslint-disable-next-line
   }, []);
+
+  const queryParam = useQueryParameter("search");
+  const queryPage = useQueryParameter("page");
+
+  useEffect(() => {
+    queryParam !== null
+      ? dispatch(
+          fetchSearchPending({ page: queryPage ?? 1, query: queryParam })
+        )
+      : dispatch(
+          fetchMoviesPending({ page: queryPage ?? 1, query: queryParam })
+        );
+    // eslint-disable-next-line
+  }, [queryParam, queryPage]);
+
   return (
     <Container>
-      <Core />
+      <Core queryParam={queryParam} />
     </Container>
-  )
+  );
 };
 
 export default Movies;
-
-
-
-
-
