@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { selectPages, selectTotalPages } from "../../popularPeopleSlice";
 import Pagination from "../../../../../common/Pagination";
 import Tile from "../Success/Tile/index";
-import HeaderTitle from "../../../../../common/Header";
+import HeaderTitle from "../../../../../common/HeaderTitle";
 import {
   selectSearchedPeoplePages,
   selectSearchedPeopleTotalFrazes,

@@ -1,4 +1,4 @@
-import HeaderTitle from "../../Header";
+import HeaderTitle from "../../HeaderTitle";
 import { Wrapper } from "../styled";
 import { Cloud } from "./styled";
 
