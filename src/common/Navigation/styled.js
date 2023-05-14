@@ -61,6 +61,10 @@ export const NavH1 = styled.h1`
   letter-spacing: -1.5px;
   text-transform: capitalize;
   white-space: nowrap;
+  
+    &:hover {
+    cursor:pointer;
+  }
 
   @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
     font-size: 80%;

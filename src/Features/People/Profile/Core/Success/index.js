@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import SingleProfile from "./SingleProfile";
 import { selectCast, selectCrew, selectProfile } from "../../profileSlice";
 import MoviesCast from "./MoviesCast";
-import { Header3 } from "../../../../../common/Header/styled";
+import { Header3 } from "../../../../../common/HeaderTitle/styled";
 import MoviesCrew from "./MoviesCrew";
 
 const Success = () => {

@@ -21,7 +21,7 @@ import Profile from "../../Features/People/Profile";
 import Input from "./Input";
 
 const Navigation = () => {
-  
+
   const navigate = useNavigate();
 
   const cleaningHandler = (url) => {
@@ -35,14 +35,14 @@ const Navigation = () => {
           <NavigationWrapper>
             <NavBoxLine>
               <Stroke />
-              <NavH1>movies browser</NavH1>
+              <NavH1 to="/movies"
+                onClick={() => cleaningHandler("/movies")}>movies browser</NavH1>
               <NavLinks>
                 <NavLi>
                   <StyledNavLink
                     to="/movies"
                     onClick={() => cleaningHandler("/movies")}
-                  >
-                    movies
+                  >movies
                   </StyledNavLink>
                 </NavLi>
                 <NavLi>

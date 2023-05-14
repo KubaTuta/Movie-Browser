@@ -10,7 +10,7 @@ import {
   selectSearchedTotalFrazes
 } from "../../../../../common/Navigation/Input/Search/searchSlice";
 import MovieTile from "../../../../../common/MovieTile/index";
-import HeaderTitle from "../../../../../common/Header";
+import HeaderTitle from "../../../../../common/HeaderTitle";
 import Pagination from "../../../../../common/Pagination";
 import { MoviesGridWrapper } from "./styled";
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as StarIco } from "../../../../../common/img/star.svg"
-import { Header } from "../../../../../common/Header/styled";
+import { Header } from "../../../../../common/HeaderTitle/styled";
 export const BlackContainer = styled.div`
  background: ${({ theme }) => theme.color.black};
  max-height: 770px; 
