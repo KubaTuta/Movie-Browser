@@ -1,6 +1,6 @@
 
 import { useSelector } from "react-redux";
-import { Header3 } from "../../../../../common/Header/styled";
+import { Header3 } from "../../../../../common/HeaderTitle/styled";
 import Backdrop from "../Backdrop";
 import TileDetails from "../TileDetails";
 import Credits from "../Credits";

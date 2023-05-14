@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const popularPeopleSlice = createSlice({
     name: "popularPeople",
     initialState: {
-      status: "pending",
+      status: "idle",
       person: null,
     },
 

@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
-import ErrorPage from "../../../../common/Search/ErrorPage/index";
-import Loading from "../../../../common/Search/Loading/index";
+import ErrorPage from "../../../../common/statuses/ErrorPage/index";
+import Loading from "../../../../common/statuses/Loading/index";
 import { selectPeople, selectStatus } from "../popularPeopleSlice";
 import Success from "./Success/";
 import {
   selectSearchedPeople,
   selectSearchedPeopleStatus,
   selectSearchedPeopleTotalFrazes,
-} from "../../../../common/Navigation/PeopleInput/Search/searchPeopleSlice";
-import NoResult from "../../../../common/Search/NoResult";
+} from "../../../../common/SearchBar/searchPeopleSlice";
+import NoResult from "../../../../common/statuses/NoResult";
 
 const Core = ({ queryParam }) => {
   const status = useSelector(selectStatus);

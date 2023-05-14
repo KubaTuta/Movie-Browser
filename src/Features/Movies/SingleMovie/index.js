@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { fetchPending, setMovieId } from "./movieSlice";
+import { fetchSingleMoviePending, setMovieId } from "./movieSlice";
 import Core from "./Core";
 
 const SingleMovie = () => {
@@ -11,7 +11,7 @@ const SingleMovie = () => {
 
   useEffect(() => {
     dispatch(setMovieId(id))
-    dispatch(fetchPending());
+    dispatch(fetchSingleMoviePending());
   }, [id, dispatch]);
 
   return (

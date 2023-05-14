@@ -5,7 +5,7 @@ import { fetchMoviesPending } from "./popularMoviesSlice";
 import { fetchGenresPending } from "../../../common/Genres/genresSlice";
 import Core from "./Core";
 import { useQueryParameter } from "../../../common/useParameter";
-import { fetchSearchPending } from "../../../common/Navigation/Input/Search/searchSlice";
+import { fetchSearchPending } from "../../../common/SearchBar/searchMoviesSlice";
 
 const Movies = () => {
   const dispatch = useDispatch();

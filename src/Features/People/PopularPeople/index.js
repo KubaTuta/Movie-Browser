@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Container } from "../../../common/Container/styled";
 import Core from "./Core";
 import { fetchPeoplePending } from "./popularPeopleSlice";
-import { fetchSearchPeoplePending } from "../../../common/Navigation/PeopleInput/Search/searchPeopleSlice";
+import { fetchSearchPeoplePending } from "../../../common/SearchBar/searchPeopleSlice";
 import { useQueryParameter } from "../../../common/useParameter";
 
 const People = () => {

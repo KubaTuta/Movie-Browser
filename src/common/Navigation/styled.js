@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { ReactComponent as stroke } from "../../common/img/stroke.svg"
+import {NavLink} from "react-router-dom";
+import {ReactComponent as stroke} from "../../common/img/stroke.svg"
 
 export const NavigationBoxStyled = styled.div`
   background: ${({ theme }) => theme.color.woodsmoke};
@@ -41,7 +41,7 @@ export const NavBoxLine = styled.div`
       padding-left: 25px;
     };
       @media(max-width:${({ theme }) => theme.breakpoint.mobile}) {
-        padding-left: 0px;
+        padding-left: 0;
       };
 `;
 
@@ -146,23 +146,3 @@ export const NavIconInput = styled.span`
   margin-left: 20px;
 `;
 
-export const NavInput = styled.input`
-  border-radius: 33px;
-  border: white;
-  padding: 11px;
-  font-size: 16px;
-  font-weight: 400;
-  padding-inline-start: 52px;
-  flex-basis: 100%;
-  width: 48px;
-  border-radius: 33px;
-  border: 1px solid #E4E6F0;
-  
-  &:focus{
-    outline: none;
-  };
- 
-  ::placeholder {
-    color: ${({ theme }) => theme.color.waterloo};
-  };
-`;
