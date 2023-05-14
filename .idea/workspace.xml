@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91cff7f2-d4e9-4634-aa32-3fb7a6afbf35" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/SearchBar/getSearchApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/SearchBar/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/PopularMovies/Core/Success/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/PopularMovies/Core/Success/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/PopularMovies/Core/Success/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/PopularMovies/Core/Success/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/PopularMovies/Core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/PopularMovies/Core/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/PopularMovies/getApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/PopularMovies/getApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/PopularMovies/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/PopularMovies/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/PopularMovies/popularMoviesSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/PopularMovies/popularMoviesSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/PopularMovies/popularMoviesSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/PopularMovies/popularMoviesSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/Backdrop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/Backdrop/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/Backdrop/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/Backdrop/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/Credits/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/Credits/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/Credits/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/Credits/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/Success/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/Success/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/TileDetails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/TileDetails/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/TileDetails/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/TileDetails/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/Core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/Core/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/getApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/getApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/movieSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/movieSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/movieSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/movieSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/Movies/SingleMovie/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/movies/SingleMovie/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/PopularPeople/Core/Success/Tile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/PopularPeople/Core/Success/Tile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/PopularPeople/Core/Success/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/PopularPeople/Core/Success/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/PopularPeople/Core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/PopularPeople/Core/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/PopularPeople/getApiPeople.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/PopularPeople/getApiPeople.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/PopularPeople/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/PopularPeople/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/PopularPeople/popularPeopleSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/PopularPeople/popularPeopleSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/PopularPeople/popularPeopleSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/PopularPeople/popularPeopleSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/Core/Success/MoviesCast/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/Core/Success/MoviesCast/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/Core/Success/MoviesCrew/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/Core/Success/MoviesCrew/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/Core/Success/MoviesGrid/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/Core/Success/MoviesGrid/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/Core/Success/SingleProfile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/Core/Success/SingleProfile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/Core/Success/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/Core/Success/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/Core/Success/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/Core/Success/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/Core/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/Core/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/getProfileApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/getPersonApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/profileSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/personSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Features/People/Profile/profileSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/people/SinglePerson/personSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/Input/Search/getSearchApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/Input/Search/searchSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SearchBar/searchSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/Input/Search/searchSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SearchBar/searchMoviesSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/Input/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SearchBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/PeopleInput/Search/getSearchApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/PeopleInput/Search/searchPeopleSaga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/PeopleInput/Search/searchPeopleSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SearchBar/searchPeopleSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/PeopleInput/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Navigation/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Navigation/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/ErrorPage/danger.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/ErrorPage/danger.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/ErrorPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/ErrorPage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/ErrorPage/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/ErrorPage/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/Loading/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/Loading/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/Loading/spinner.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/Loading/spinner.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/Loading/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/Loading/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/NoResult/cloud.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/NoResult/cloud.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/NoResult/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/NoResult/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/NoResult/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/NoResult/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Search/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/statuses/styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rootSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rootSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PmGO30Qwr7kLesN7ToQwDVnrxa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "structure",
+    "last_opened_file_path": "C:/Dev/Movie Browser/movie/src/common/SearchBar/searchSaga.js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\Movie Browser\movie\src\common\SearchBar" />
+      <recent name="C:\Dev\Movie Browser\movie\src\common\statuses" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Dev\Movie Browser\movie\src\common\SearchBar\searchSaga.js" />
+      <recent name="C:\Dev\Movie Browser\movie\src\common\SearchBar\getSearchMoviesApi.js" />
+      <recent name="C:\Dev\Movie Browser\movie\src\common\SearchBar\styled.js" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91cff7f2-d4e9-4634-aa32-3fb7a6afbf35" name="Changes" comment="" />
+      <created>1684054875280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684054875280</updated>
+      <workItem from="1684054887256" duration="1406000" />
+      <workItem from="1684056360137" duration="477000" />
+      <workItem from="1684056862628" duration="5579000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="structure" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
