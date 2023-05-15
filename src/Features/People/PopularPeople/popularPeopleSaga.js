@@ -8,7 +8,7 @@ function* fetchPopularPeopleHandler({ payload: {page} }) {
     yield put(fetchPeopleSuccess(popularPeople));
   }
   catch (error) {
-    yield put(fetchPeopleError(alert("problem z pobieranie mdanych")))
+    yield put(fetchPeopleError())
   }
 }
 

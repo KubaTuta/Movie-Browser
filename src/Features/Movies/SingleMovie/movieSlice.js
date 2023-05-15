@@ -3,24 +3,24 @@ import { createSlice } from '@reduxjs/toolkit';
 const movieSlice = createSlice({
   name: 'movie',
   initialState: {
-    status: "pending",
-    movie: [""],
-    credits: [""],
+    status: "idle",
+    movie: null,
+    credits: null,
     movieId: null,
 
   },
   reducers: {
-    fetchPending: state => {
+    fetchSingleMoviePending: state => {
       state.status = "pending";
     },
-    fetchMovieSuccess: (state, { payload: movie }) => {
+    fetchSingleMovieSuccess: (state, { payload: movie }) => {
       state.movie = movie;
     },
     fetchCreditsSuccess: (state, { payload: credits }) => {
       state.credits = credits;
       state.status = "success";
     },
-    fetchError: state => {
+    fetchSingleMovieError: state => {
       state.status = "error";
     },
     setMovieId: (state, { payload: id }) => {
@@ -31,9 +31,9 @@ const movieSlice = createSlice({
 });
 
 export const {
-  fetchPending,
-  fetchMovieSuccess,
-  fetchError,
+  fetchSingleMoviePending,
+  fetchSingleMovieSuccess,
+  fetchSingleMovieError,
   setMovieId,
   fetchCreditsSuccess,
 } = movieSlice.actions;

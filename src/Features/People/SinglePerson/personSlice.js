@@ -1,18 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const profileSlice = createSlice({
-    name: "profileId",
+const personSlice = createSlice({
+    name: "person",
     initialState: {
-        status: "pending",
-        profile: [""],
-        cast: [""],
+        status: "idle",
+        profile: null,
+        cast: null,
     },
 
     reducers: {
-        fetchPending: state => {
+        fetchPersonPending: state => {
             state.status = "pending";
         },
-        fetchProfileSuccess: (state, { payload: profile }) => {
+        fetchPersonSuccess: (state, { payload: profile }) => {
             state.status = "success";
             state.profile = profile;
         },
@@ -22,26 +22,26 @@ const profileSlice = createSlice({
         fetchCrewSuccess: (state, { payload: crew }) => {
             state.castCrew = crew;
         },
-        fetchError: state => {
+        fetchPersonError: state => {
             state.status = "error";
         },
     }
 });
 
 export const {
-    fetchPending,
-    fetchProfileSuccess,
-    fetchError,
+    fetchPersonPending,
+    fetchPersonSuccess,
+    fetchPersonError,
     fetchCastCrewSuccess,
     fetchCrewSuccess,
 
-} = profileSlice.actions;
+} = personSlice.actions;
 
 export const selectProfileState = state => state.profileId;
-export const selcetStatus = state => selectProfileState(state).status;
+export const selectStatus = state => selectProfileState(state).status;
 export const selectProfile = state => selectProfileState(state).profile;
 
 export const selectCastCrewState = state => state.profileId.castCrew;
 export const selectCast = state => selectCastCrewState(state).cast;
 export const selectCrew = state => selectCastCrewState(state).crew;
-export default profileSlice.reducer;
+export default personSlice.reducer;

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { selectStatus } from "../movieSlice";
-import Loading from "../../../../common/Search/Loading"
+import Loading from "../../../../common/statuses/Loading"
 import Success from "./Success";
-import ErrorPage from "../../../../common/Search/ErrorPage";
+import ErrorPage from "../../../../common/statuses/ErrorPage";
 
 const Core = () => {
 

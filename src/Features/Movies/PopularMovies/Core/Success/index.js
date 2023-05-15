@@ -8,7 +8,7 @@ import {
   selectSearchedPages,
   selectSearchedTotalPages,
   selectSearchedTotalFrazes
-} from "../../../../../common/Navigation/Input/Search/searchSlice";
+} from "../../../../../common/SearchBar/searchMoviesSlice";
 import MovieTile from "../../../../../common/MovieTile/index";
 import HeaderTitle from "../../../../../common/HeaderTitle";
 import Pagination from "../../../../../common/Pagination";

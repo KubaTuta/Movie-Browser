@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import { selectCrew } from "../../../profileSlice";
-import { selectGenres } from "../../../../../../common/Genres/genresSlice";
+import { selectCast } from "../../../personSlice";
 import noPoster from "../../../../../../common/img/noPoster.png"
-
+import { selectGenres } from "../../../../../../common/Genres/genresSlice";
+import Genres from "../../../../../../common/Genres";
 import {
   MovieData,
   PosterWrapper,
@@ -13,25 +13,23 @@ import {
   VoteCount,
   VoteWrapper,
   Year
-} from "../../../../../../common/MovieTile/styled";
-import Genres from "../../../../../../common/Genres/index";
+} from "../../../../../../common/MovieTile/styled"
 import { MoviesGrid } from "../MoviesGrid/styled";
 import { CrewPoster, CrewTextInfoWrapper, MoviesTileWrapper } from "../styled";
 
-const MoviesCrew = () => {
+const MoviesCast = () => {
 
-  const crew = useSelector(selectCrew);
-  const genres = useSelector(selectGenres);
+  const cast = useSelector(selectCast);
+  const genres = useSelector(selectGenres)
   const profilePicturePath = "https://image.tmdb.org/t/p/w300";
-
 
   return (
     <>
       <MoviesGrid>
-        {crew.map((cast, id) => (
+        {cast.map((cast, id) => (
           <StyledLink to={`/movies/${cast.id}`} key={id}>
-            <MoviesTileWrapper >
-              <PosterWrapper key={id}>
+            <MoviesTileWrapper>
+              <PosterWrapper>
                 <>
                   {
                     cast.poster_path ?
@@ -62,4 +60,4 @@ const MoviesCrew = () => {
     </>
   )
 };
-export default MoviesCrew;
+export default MoviesCast;

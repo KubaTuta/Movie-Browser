@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import SingleProfile from "./SingleProfile";
-import { selectCast, selectCrew, selectProfile } from "../../profileSlice";
+import { selectCast, selectCrew, selectProfile } from "../../personSlice";
 import MoviesCast from "./MoviesCast";
 import { Header3 } from "../../../../../common/HeaderTitle/styled";
 import MoviesCrew from "./MoviesCrew";

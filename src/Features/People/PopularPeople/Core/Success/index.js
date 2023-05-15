@@ -7,7 +7,7 @@ import {
   selectSearchedPeoplePages,
   selectSearchedPeopleTotalFrazes,
   selectSearchedPeopleTotalPages,
-} from "../../../../../common/Navigation/PeopleInput/Search/searchPeopleSlice";
+} from "../../../../../common/SearchBar/searchPeopleSlice";
 import { useQueryParameter } from "../../../../../common/useParameter";
 
 const Success = ({ people }) => {

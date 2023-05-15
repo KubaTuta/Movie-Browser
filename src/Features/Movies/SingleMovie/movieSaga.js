@@ -1,25 +1,25 @@
 import { call, put, takeLatest, select } from "redux-saga/effects";
 import { getCredits, getMovie } from "./getApi";
-import { fetchMovieSuccess, fetchError, fetchPending, selectId, fetchCreditsSuccess } from "./movieSlice";
+import { fetchSingleMovieSuccess, fetchSingleMovieError, fetchSingleMoviePending, selectId, fetchCreditsSuccess } from "./movieSlice";
 
-function* fetchMovieHandler() {
+function* fetchSingleMovieHandler() {
   try {
     const id = yield select(selectId);
     const movie = yield call(getMovie, id);
     const credits = yield call(getCredits, id);
-    yield put(fetchMovieSuccess(movie));
+    yield put(fetchSingleMovieSuccess(movie));
     yield put(fetchCreditsSuccess(credits));
 
   }
   catch (error) {
-    yield put(fetchError())
+    yield put(fetchSingleMovieError())
   }
 }
 
 
 export function* movieSaga() {
 
-  yield takeLatest(fetchPending.type, fetchMovieHandler);
+  yield takeLatest(fetchSingleMoviePending.type, fetchSingleMovieHandler);
 
 
 }

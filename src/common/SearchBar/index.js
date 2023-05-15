@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { NavInput } from "../styled";
 import {
   useQueryParameter,
   useReplaceQueryParameter,
-} from "../../useParameter";
+} from "../useParameter";
+import {NavInput} from "./styled";
 
-const Input = () => {
+const SearchBar = () => {
   const location = useLocation();
   const query = useQueryParameter("search");
 
@@ -41,4 +41,4 @@ const Input = () => {
   );
 };
 
-export default Input;
+export default SearchBar;

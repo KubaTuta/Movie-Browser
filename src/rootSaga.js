@@ -1,11 +1,10 @@
 import { all } from "redux-saga/effects";
 import { genresSaga } from "./common/Genres/genresSaga";
-import { popularMoviesSaga } from "./Features/Movies/PopularMovies/popularMoviesSaga";
-import { popularPeopleSaga } from "./Features/People/PopularPeople/popularPeopleSaga";
-import { movieSaga } from "./Features/Movies/SingleMovie/movieSaga";
-import { searchedMoviesSaga } from "./common/Navigation/Input/Search/searchSaga";
-import { profileIdSaga } from "./Features/People/Profile/profileSaga";
-import { searchedPeopleSaga } from "./common/Navigation/PeopleInput/Search/searchPeopleSaga";
+import { popularMoviesSaga } from "./features/movies/PopularMovies/popularMoviesSaga";
+import { popularPeopleSaga } from "./features/people/PopularPeople/popularPeopleSaga";
+import { movieSaga } from "./features/movies/SingleMovie/movieSaga";
+import {searchedMoviesSaga, searchedPeopleSaga} from "./common/SearchBar/searchSaga";
+import { personSaga } from "./features/people/SinglePerson/personSaga";
 
 export default function* rootSaga() {
   yield all([
@@ -15,6 +14,6 @@ export default function* rootSaga() {
     movieSaga(),
     searchedMoviesSaga(),
     searchedPeopleSaga(),
-    profileIdSaga(),
+    personSaga(),
   ]);
 }  

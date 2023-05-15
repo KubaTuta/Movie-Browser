@@ -14,11 +14,11 @@ import {
 } from "./styled";
 
 import { ReactComponent as Elipse } from "../../common/img/elipse.svg";
-import Movies from "../../Features/Movies/PopularMovies";
-import People from "../../Features/People/PopularPeople";
-import SingleMovie from "../../Features/Movies/SingleMovie";
-import Profile from "../../Features/People/Profile";
-import Input from "./Input";
+import Movies from "../../features/movies/PopularMovies";
+import People from "../../features/people/PopularPeople";
+import SingleMovie from "../../features/movies/SingleMovie";
+import Profile from "../../features/people/SinglePerson";
+import SearchBar from "../SearchBar";
 
 const Navigation = () => {
 
@@ -59,7 +59,7 @@ const Navigation = () => {
               <NavIconInput>
                 <Elipse />
               </NavIconInput>
-              <Input />
+              <SearchBar />
             </NavWrapperInput>
           </NavigationWrapper>
         </NavBoxFrame>
