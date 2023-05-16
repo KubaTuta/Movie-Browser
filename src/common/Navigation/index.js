@@ -14,10 +14,10 @@ import {
 } from "./styled";
 
 import { ReactComponent as Elipse } from "../../common/img/elipse.svg";
-import Movies from "../../featuresa/moviesa/PopularMovies";
-import People from "../../featuresa/peoplea/PopularPeople";
-import SingleMovie from "../../featuresa/moviesa/SingleMovie";
-import Profile from "../../featuresa/peoplea/SinglePerson";
+import Movies from "../../features/movies/PopularMovies";
+import People from "../../features/people/PopularPeople";
+import SingleMovie from "../../features/movies/SingleMovie";
+import Profile from "../../features/people/SinglePerson";
 import SearchBar from "../SearchBar";
 
 const Navigation = () => {

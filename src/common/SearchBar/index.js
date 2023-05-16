@@ -32,8 +32,8 @@ const SearchBar = () => {
       type="text"
       placeholder={
         location.pathname.includes("movies")
-          ? "Search for moviesa..."
-          : "Search for peoplea..."
+          ? "Search for movies..."
+          : "Search for people..."
       }
       ref={input}
       onChange={onInputChange}
