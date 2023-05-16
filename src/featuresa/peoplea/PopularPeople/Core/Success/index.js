@@ -22,7 +22,7 @@ const Success = ({ people }) => {
   return (
     <>
       <HeaderTitle
-        title={"Popular people"}
+        title={"Popular peoplea"}
         query={searchParam}
         results={searchedResults}
       />

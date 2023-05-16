@@ -26,7 +26,7 @@ const Success = ({ movies }) => {
   return (
     <>
       <HeaderTitle
-        title={"Popular movies"}
+        title={"Popular moviesa"}
         query={searchParam}
         results={searchedResults}
       />
