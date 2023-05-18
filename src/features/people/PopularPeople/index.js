@@ -9,11 +9,6 @@ import { useQueryParameter } from "../../../common/useParameter";
 const People = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchPeoplePending(1));
-    // eslint-disable-next-line
-  }, [])
-
   const queryParam = useQueryParameter("search");
   const queryPage = useQueryParameter("page");
 
