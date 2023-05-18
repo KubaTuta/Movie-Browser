@@ -11,11 +11,6 @@ const Movies = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMoviesPending(1));
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
     dispatch(fetchGenresPending());
     // eslint-disable-next-line
   }, []);
