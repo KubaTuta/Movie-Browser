@@ -2,10 +2,32 @@ import styled from "styled-components";
 import { ReactComponent as StarIco } from "../../common/img/star.svg"
 import { Link } from "react-router-dom";
 
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.woodsmoke};
+  transition: 1s;
+  width: 100%;
+  :hover{
+    transform: scale(1.02);
+  };
+      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
+        :hover{
+        transform: scale(1.01);
+        };
+      }; 
+        @media(max-width: ${({ theme }) => theme.breakpoint.smallMobile}) {
+          :hover{
+          transform: none;
+          };
+        };
+`;
+
+
 export const TileWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   height: 100%;
+  width: 100%;
   border-radius: 5px;
   padding: 16px;
   display: grid;
@@ -57,10 +79,10 @@ export const TextInfoWrapper = styled.div`
   justify-content: space-between;
     @media(max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
       justify-content: flex-start;
-      width: 208px;
+      width: 100%;
     };
       @media(max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-        width: 180px;
+        width: 100%;
       };
 `;
 
@@ -130,21 +152,3 @@ export const VoteCount = styled.p`
     };
 `;
 
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: ${({ theme }) => theme.color.woodsmoke};
-  transition: 1s;
-  :hover{
-    transform: scale(1.02);
-  };
-      @media(max-width: ${({ theme }) => theme.breakpoint.small}) {
-        :hover{
-        transform: scale(1.01);
-        };
-      }; 
-        @media(max-width: ${({ theme }) => theme.breakpoint.smallMobile}) {
-          :hover{
-          transform: none;
-          };
-        };
-`;
