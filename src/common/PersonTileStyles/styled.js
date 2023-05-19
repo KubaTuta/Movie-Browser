@@ -74,7 +74,7 @@ export const StyledNavLink = styled(Link)`
   text-decoration:none;
   padding:none;
   color:${({ theme }) => theme.color.woodsmoke};
-  transition: all 1s;
+  transition: all 0.5s;
 &:active {
   text-decoration:none;
   }
