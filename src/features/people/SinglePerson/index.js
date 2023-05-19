@@ -3,9 +3,10 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCastCrewSuccess, fetchPersonPending } from "./personSlice";
 import Core from "./Core";
+import { Container } from "../../../common/Container/styled";
 
 const SinglePerson = () => {
-  
+
   const dispatch = useDispatch();
   const { id } = useParams();
 
@@ -14,6 +15,10 @@ const SinglePerson = () => {
     dispatch(fetchCastCrewSuccess(id));
   }, [id, dispatch]);
 
-  return <Core />;
+  return (
+    <Container>
+      <Core />
+    </Container>
+  )
 };
 export default SinglePerson;
