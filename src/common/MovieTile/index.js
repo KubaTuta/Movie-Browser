@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { useImageUrl } from "../hooks/useImageUrl";
 import {
   TileWrapper,
   Poster,
@@ -16,32 +17,12 @@ import {
 import noPoster from "../img/noposter.svg";
 import Genres from "../Genres/index";
 import { selectGenres } from "../Genres/genresSlice";
-import { useLayoutEffect } from "react";
-import { useState } from "react";
 
 const MovieTile = ({ movies }) => {
-  const [pageWidth, setPageWidth] = useState(0);
-
-  useLayoutEffect(() => {
-    setPageWidth(window.innerWidth);
-  }, []);
-
-  const posterImageBaseUrl = "https://image.tmdb.org/t/p/";
-
-  const pathWidth = () => {
-    if (pageWidth > 1360) {
-      return `${posterImageBaseUrl}w300`;
-    } else if ((pageWidth < 1360) & (pageWidth > 550)) {
-      return `${posterImageBaseUrl}w500`;
-    } else if (pageWidth < 451) {
-      return `${posterImageBaseUrl}w154`;
-    } else {
-      return `${posterImageBaseUrl}w342`;
-    }
-  };
+  const { posterPathUrl } = useImageUrl();
 
   const genres = useSelector(selectGenres);
-  const posterPath = pathWidth();
+  const posterPath = posterPathUrl();
 
   return (
     <>
