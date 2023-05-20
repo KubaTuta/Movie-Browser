@@ -8,25 +8,31 @@ import {
   PosterWrapper,
   TextWrapper,
   TileDetailsWrapper,
-  Title
+  Title,
 } from "../../../../../../common/DetailsTileStyles/styled";
-import noProfilePicture from "../../../../../../common/img/noPersonPoster.png"
-const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => {
+import { useImageUrl } from "../../../../../../common/hooks/useImageUrl";
+import noProfilePicture from "../../../../../../common/img/noPersonPoster.png";
 
-  const profilePicturePath = "https://image.tmdb.org/t/p/w500";
+const SingleProfile = ({
+  picture,
+  name,
+  birthday,
+  placeOfBirth,
+  biography,
+}) => {
+  const { posterPathInSingleMovie } = useImageUrl();
+  const profilePicturePath = posterPathInSingleMovie();
 
   return (
-
     <TileDetailsWrapper>
-      <PosterWrapper >
+      <PosterWrapper>
         <>
-          {picture
-            ?
-            (<Poster src={picture && `${profilePicturePath}${picture}`} alt="" />)
-            :
-            (<Poster src={noProfilePicture} alt="" />)}
+          {picture ? (
+            <Poster src={picture && `${profilePicturePath}${picture}`} alt="" />
+          ) : (
+            <Poster src={noProfilePicture} alt="" />
+          )}
         </>
-
       </PosterWrapper>
       <TextWrapper>
         <Title> {name}</Title>
@@ -40,11 +46,9 @@ const SingleProfile = ({ picture, name, birthday, placeOfBirth, biography }) => 
         </InfoWrapper>
       </TextWrapper>
       <OverviewWrapper>
-        <Overview>
-          {biography}
-        </Overview>
+        <Overview>{biography}</Overview>
       </OverviewWrapper>
     </TileDetailsWrapper>
-  )
+  );
 };
 export default SingleProfile;
