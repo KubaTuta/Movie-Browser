@@ -1,8 +1,21 @@
+import { useState } from "react";
+import { useLayoutEffect } from "react";
+
 export const useImageUrl = () => {
-  const pageWidth = window.innerWidth;
+  const [pageWidth, setPageWidth] = useState(window.innerWidth);
 
   const posterImageBaseUrl = "https://image.tmdb.org/t/p/";
   const backdropImageBaseUrl = "https://image.tmdb.org/t/p/";
+
+  useLayoutEffect(() => {
+    const resizeWidth = () => {
+      setPageWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", resizeWidth);
+
+    return () => window.removeEventListener("resize", resizeWidth);
+  }, []);
 
   const posterPathUrl = () => {
     if (pageWidth > 1360) {
