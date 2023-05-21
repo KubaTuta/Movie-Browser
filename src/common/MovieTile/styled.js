@@ -76,7 +76,7 @@ export const TextInfoWrapper = styled.div`
   justify-content: space-between;
   height: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
