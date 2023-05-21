@@ -59,7 +59,6 @@ export const PosterWrapper = styled.div`
 
 export const Poster = styled.img`
   width: 100%;
-  aspect-ratio: 500/755;
   object-position: top;
   border-radius: 5px;
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
