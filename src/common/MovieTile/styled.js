@@ -39,12 +39,7 @@ export const TileWrapper = styled.div`
     gap: 16px;
     width: 100%;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    max-width: 330px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.smallMobile}) {
-    max-width: 298px;
-  }
+
 `;
 
 export const PosterWrapper = styled.div`
@@ -54,15 +49,16 @@ export const PosterWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
     min-width: 114px;
     min-height: 169px;
+    margin-bottom: 0;
   }
 `;
 
 export const Poster = styled.img`
   width: 100%;
-  object-position: top;
+  height: 100%;
   border-radius: 5px;
   @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
-    max-height: 590px;
+    height: unset;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     max-width: 114px;
@@ -75,7 +71,7 @@ export const TextInfoWrapper = styled.div`
   justify-content: space-between;
   height: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
