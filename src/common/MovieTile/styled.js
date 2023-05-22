@@ -2,6 +2,26 @@ import styled from "styled-components";
 import { ReactComponent as StarIco } from "../../common/img/star.svg";
 import { Link } from "react-router-dom";
 
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.woodsmoke};
+  transition: 1s;
+  width: 100%;
+  :hover {
+    transform: scale(1.02);
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
+    :hover {
+      transform: scale(1.01);
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.smallMobile}) {
+    :hover {
+      transform: none;
+    }
+  }
+`;
+
 export const TileWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
@@ -49,12 +69,13 @@ export const TextInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoint.creditsSmall}) {
     justify-content: flex-start;
     width: 100%;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
-    width: 180px;
+    width: 100%;
   }
 `;
 
@@ -120,24 +141,5 @@ export const VoteCount = styled.p`
   margin: 0px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     font-size: 13px;
-  }
-`;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: ${({ theme }) => theme.color.woodsmoke};
-  transition: 1s;
-  :hover {
-    transform: scale(1.02);
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.small}) {
-    :hover {
-      transform: scale(1.01);
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.smallMobile}) {
-    :hover {
-      transform: none;
-    }
   }
 `;
