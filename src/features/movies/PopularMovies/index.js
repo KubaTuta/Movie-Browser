@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { fetchMoviesPending } from "./popularMoviesSlice";
 import { fetchGenresPending } from "../../../common/Genres/genresSlice";
 import Core from "./Core";
-import { useQueryParameter } from "../../../common/useParameter";
+import { useQueryParameter } from "../../../common/hooks/useParameter";
 import { fetchSearchPending } from "../../../common/SearchBar/searchMoviesSlice";
 
 const Movies = () => {

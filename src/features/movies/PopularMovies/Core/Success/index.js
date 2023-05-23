@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useQueryParameter } from "../../../../../common/useParameter";
+import { useQueryParameter } from "../../../../../common/hooks/useParameter";
 import {
   selectPages,
   selectTotalMovies,
