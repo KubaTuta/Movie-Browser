@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
+import { Normalize } from 'styled-normalize';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
 import { theme } from "./theme";
@@ -14,6 +15,7 @@ root.render(
     <HashRouter>
     <Provider store={store}>
     <ThemeProvider theme={theme}>
+      <Normalize/>
       <GlobalStyle />
       <App />
     </ThemeProvider>
