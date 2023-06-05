@@ -4,7 +4,7 @@ import { Container } from "../../../common/Container/styled";
 import Core from "./Core";
 import { fetchPeoplePending } from "./popularPeopleSlice";
 import { fetchSearchPeoplePending } from "../../../common/SearchBar/searchPeopleSlice";
-import { useQueryParameter } from "../../../common/useParameter";
+import { useQueryParameter } from "../../../common/hooks/useParameter";
 
 const People = () => {
   const dispatch = useDispatch();

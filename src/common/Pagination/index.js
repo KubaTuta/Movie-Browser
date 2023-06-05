@@ -8,7 +8,7 @@ import {
   LeftArrow,
   Bold,
 } from "./styled";
-import { useReplaceQueryParameter } from "../useParameter";
+import { useReplaceQueryParameter } from "../hooks/useParameter";
 
 const Pagination = ({ page, total }) => {
 

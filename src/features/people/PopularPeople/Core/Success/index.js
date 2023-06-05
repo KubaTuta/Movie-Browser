@@ -8,7 +8,7 @@ import {
   selectSearchedPeopleTotalFrazes,
   selectSearchedPeopleTotalPages,
 } from "../../../../../common/SearchBar/searchPeopleSlice";
-import { useQueryParameter } from "../../../../../common/useParameter";
+import { useQueryParameter } from "../../../../../common/hooks/useParameter";
 
 const Success = ({ people }) => {
   const peoplePage = useSelector(selectPages);

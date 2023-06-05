@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import {
   useQueryParameter,
   useReplaceQueryParameter,
-} from "../useParameter";
+} from "../hooks/useParameter";
 import {NavInput} from "./styled";
 
 const SearchBar = () => {
